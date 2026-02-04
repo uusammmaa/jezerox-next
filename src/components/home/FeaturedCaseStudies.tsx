@@ -30,15 +30,8 @@ export function FeaturedCaseStudies() {
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {caseStudies.map(({ title, description, href }, i) => (
-            <Card
-              key={title}
-              href={href}
-              glow
-              className={`opacity-0 animate-slide-up animation-fill-both ${
-                i === 0 ? "animation-delay-200" : i === 1 ? "animation-delay-300" : "animation-delay-400"
-              }`}
-            >
+          {caseStudies.map(({ title, description, href }) => (
+            <Card key={title} href={href} glow>
               <div className="aspect-video rounded-[var(--radius-md)] bg-[var(--navy-800)]" />
               <h3 className="mt-4 font-[family-name:var(--font-space-grotesk)] text-lg font-semibold text-[var(--text-primary)]">
                 {title}

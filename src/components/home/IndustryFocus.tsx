@@ -22,11 +22,10 @@ export function IndustryFocus() {
           </p>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {industries.map((name, i) => (
+          {industries.map((name) => (
             <span
               key={name}
-              className="rounded-[var(--radius-pill)] border border-[var(--border-subtle)] bg-[var(--navy-900)] px-4 py-2 text-sm font-medium text-[var(--text-secondary)] opacity-0 animate-fade-in animation-fill-both transition-colors duration-200 hover:border-[var(--accent-soft)] hover:text-[var(--text-primary)]"
-              style={{ animationDelay: `${0.1 + i * 0.06}s` }}
+              className="rounded-[var(--radius-pill)] border border-[var(--border-subtle)] bg-[var(--navy-900)] px-4 py-2 text-sm font-medium text-[var(--text-secondary)]"
             >
               {name}
             </span>

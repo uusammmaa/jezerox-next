@@ -3,7 +3,7 @@ import { Section, Button } from "@/components/ui";
 export function FinalCTA() {
   return (
     <Section id="final-cta">
-      <div className="rounded-[var(--radius-xl)] border border-[var(--border-subtle)] bg-[var(--navy-900)] px-8 py-12 text-center opacity-0 animate-fade-in animation-fill-both animation-delay-200 md:py-16">
+      <div className="rounded-[var(--radius-xl)] border border-[var(--border-subtle)] bg-[var(--navy-900)] px-8 py-12 text-center md:py-16">
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
             Ready to build your next product?
           </h2>

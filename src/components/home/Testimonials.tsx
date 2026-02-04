@@ -27,11 +27,8 @@ export function Testimonials() {
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {testimonials.map(({ quote, author, role }, i) => (
-            <Card
-              key={quote.slice(0, 24)}
-              className={`opacity-0 animate-slide-up animation-fill-both ${i === 0 ? "animation-delay-200" : "animation-delay-300"}`}
-            >
+          {testimonials.map(({ quote, author, role }) => (
+            <Card key={quote.slice(0, 24)}>
               <blockquote className="text-[var(--text-secondary)]">
                 &ldquo;{quote}&rdquo;
               </blockquote>

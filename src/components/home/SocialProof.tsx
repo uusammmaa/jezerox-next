@@ -28,11 +28,10 @@ export function SocialProof() {
           </div>
           {/* Stats below logos — single column stack */}
           <div className="grid gap-6 sm:grid-cols-3">
-            {stats.map(({ value, label, icon }, i) => (
+            {stats.map(({ value, label, icon }) => (
               <div
                 key={label}
-                className="rounded-[var(--radius-lg)] border border-[var(--border-subtle)] bg-[var(--navy-900)] p-6 text-center opacity-0 animate-slide-up animation-fill-both transition-[border-color,box-shadow,transform] duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:border-[var(--accent-soft)] hover:shadow-[0_8px_24px_rgba(5,10,20,0.35)]"
-                style={{ animationDelay: `${0.2 + i * 0.15}s` }}
+                className="rounded-[var(--radius-lg)] border border-[var(--border-subtle)] bg-[var(--navy-900)] p-6 text-center"
               >
                 <span className="text-2xl text-[var(--teal-500)]" aria-hidden>
                   {icon}
