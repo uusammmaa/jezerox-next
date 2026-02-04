@@ -1,5 +1,13 @@
 # JezeroX Software Agency Website Plan
 
+## Current status and next steps
+
+- **Done:** Steps 1–4; Home page built with shared components (single-column stack, Header, Footer, design tokens).
+- **Next:** Build remaining pages in this order: **Services** → **Contact** → **Work** → About → Industries → Careers → Insights → Legal → 404. Each page must use the same design (see `COMPONENTS.md` and `NEXT_STEPS.md`).
+- **Reference:** `NEXT_STEPS.md` = what to build next; `COMPONENTS.md` = shared components + design consistency + section checklist per page; `DESIGN_SYSTEM.md` = tokens and specs.
+
+---
+
 ## Goals and constraints
 - Build a modern, SEO-friendly software agency site for JezeroX.
 - Use a consistent design system and modern motion.
@@ -32,8 +40,9 @@
 
 ## Page sections (all pages)
 ### Home
+- **Layout:** Single-column stack (no two-column splits). Each section full width; where a design has left/right blocks, the right block goes below the left block.
 - Hero (tagline, subheading, CTA, product-style visual)
-- Social proof (logos, stats)
+- Social proof (logos, then stats below)
 - Services overview (6 cards)
 - Featured case studies (2-3)
 - Process overview (Discover > Design > Build > Scale)
@@ -140,31 +149,40 @@
 - "95% client retention"
 - "5+ industries served"
 
+### Visual direction (dark, futuristic, modern)
+- **Vibe:** Dark-first, high-contrast, tech-forward. Inspired by premium product/agency sites but **fully original**—no reuse of purchased or third-party theme assets to avoid copyright issues.
+- **Differentiation:** Our own color story (deep navy + electric blue/teal accents, no yellow–purple gradient), typography (Space Grotesk + Inter), and illustration style (geometric/abstract, single-accent line work, or mesh/grid visuals—not character-based line art from other themes).
+- **Futuristic cues:** Subtle glow on accents, optional grid/mesh backgrounds, glassmorphism on cards where it fits, crisp borders and sharp hierarchy.
+
 ### Logo direction
-- Wordmark: "JezeroX" with a clean geometric sans.
-- Icon: abstract "J" lightning or orbital mark (speed + precision).
-- Variants: full color, mono, reversed, favicon, social avatar.
+- Wordmark: "JezeroX" in clean geometric sans (Space Grotesk).
+- Icon: abstract "J" lightning or orbital mark (speed + precision). **Single accent color** (e.g. electric blue or teal)—no multi-color gradient to stay distinct from common theme lockups.
+- Variants: full color (navy + accent), mono (white/light on dark), reversed, favicon, social avatar.
 
 ### Image direction
-- Hero: abstract 3D gradient shape or generative wave.
-- Service visuals: clean vector or isometric tech scenes.
-- Case studies: product UI mockups in device frames.
-- Team: candid photography (optional placeholders).
+- Hero: abstract 3D shape, mesh, or generative wave in **our palette** (navy, blue, teal)—no stock theme gradients.
+- Service visuals: geometric icons, isometric tech scenes, or abstract line diagrams in brand colors only.
+- Case studies: product UI mockups in device frames; optional subtle grid or glow behind.
+- Team: candid photography or simple avatar placeholders.
+- **Avoid:** Character-based line-art illustrations that mirror purchased themes; use geometric/abstract or custom-commissioned art only.
 
 ## Motion and interaction plan
-- Hero subtle gradient animation (CSS or Lottie).
-- Section reveal on scroll (staggered cards).
-- Hover micro-interactions for cards and buttons.
+- Hero: subtle mesh/gradient animation in brand colors (CSS or Lottie); optional soft glow pulse on CTA.
+- Section reveal on scroll (staggered cards, subtle fade-up).
+- Hover: micro-interactions on cards and buttons (border glow, slight lift); accent glow on primary CTAs.
 - Stat counters (respect reduced motion).
 - Page transitions (fade/slide).
 - Sticky CTA on long pages.
+- Futuristic touch: very subtle grid or scan-line overlay on hero/sections where it supports the mood (optional, low opacity).
 
-## Design system (initial specs)
+## Design system (initial specs) — dark, futuristic, modern
+- **Visual direction:** Dark-first, high-contrast, original execution. No copied theme assets; all visuals in our palette and style.
 - Colors:
   - Primary: deep navy `#0B1220`
   - Accent: electric blue `#3C7DFF`
   - Secondary: teal `#1EC9A8`
   - Neutrals: `#F5F7FB`, `#9AA3B2`, `#1F2A3A`
+  - Optional: subtle glow (e.g. `box-shadow` with accent at low opacity) for buttons/cards.
 - Typography:
   - Headings: "Space Grotesk"
   - Body: "Inter"
@@ -173,8 +191,8 @@
   - 12-column grid, 1200-1320 max width
   - 8px spacing scale
 - Core components:
-  - Buttons (primary, secondary, ghost)
-  - Cards (service, case study, post)
+  - Buttons (primary, secondary, ghost); primary can use soft glow on hover.
+  - Cards (service, case study, post); optional thin border or glass effect.
   - Badges, pills
   - Accordion (FAQ)
   - Tabs / filters
@@ -257,6 +275,8 @@
    - Build layout, header, footer, and pages.
    - Implement reusable components and section blocks.
    - Deliverable: fully responsive site.
+   - **Done:** Home page; shared components (`src/components/ui`, `src/components/layout`); design tokens (`globals.css`); `plan/COMPONENTS.md`, `plan/NEXT_STEPS.md`.
+   - **Next (same design):** Services → Contact → Work → About → Industries → Careers → Insights → Privacy/Terms → 404. Section list per page: `COMPONENTS.md` (page-by-page checklist) and `PLAN.md` (Page sections).
 
 10. **Backend integration (if needed)**
     - Create Node.js API routes for forms.
