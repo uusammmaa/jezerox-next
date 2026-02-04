@@ -9,7 +9,7 @@ const testimonials = [
   },
   {
     quote:
-      "From discovery to launch, the team was focused on outcomes. We’d work with them again.",
+      "From discovery to launch, the team was focused on outcomes. We'd work with them again.",
     author: "Placeholder",
     role: "Client",
   },

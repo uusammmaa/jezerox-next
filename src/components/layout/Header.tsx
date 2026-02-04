@@ -108,8 +108,8 @@ export function Header() {
           ))}
           <Link
             href="/contact"
-className="mt-2 inline-flex justify-center rounded-md bg-accent px-4 py-2 text-sm font-semibold text-(--gray-100) hover:bg-accent-hover"
-          onClick={() => setMenuOpen(false)}
+            className="mt-2 inline-flex justify-center rounded-md bg-accent px-4 py-2 text-sm font-semibold text-(--gray-100) hover:bg-accent-hover"
+            onClick={() => setMenuOpen(false)}
           >
             Contact
           </Link>
