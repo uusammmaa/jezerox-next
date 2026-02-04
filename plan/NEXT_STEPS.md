@@ -6,25 +6,26 @@ Use this to continue implementation. All pages must follow the same design: see 
 
 ## Where you are
 
-- **Done:** Steps 1–4 (discovery, messaging, IA, design system); Home page built with shared components.
-- **Code:** `src/app/page.tsx` (Home), `src/components/ui`, `src/components/layout`, `src/components/home`. Design tokens in `src/app/globals.css`.
+- **Done:** Steps 1–4 (discovery, messaging, IA, design system); Home page and **Services** page built with shared components.
+- **Code:** `src/app/page.tsx` (Home), `src/app/services/page.tsx` (Services), `src/components/ui`, `src/components/layout`, `src/components/home`. Design tokens in `src/app/globals.css`.
 - **Layout:** Single-column stack; Header + Footer on every page; Section + Container for content.
 
 ---
 
 ## Next step (pick one and build)
 
-1. **Services page** (`/services`) — High value, reuses same 6 service cards as Home. Sections: Hero → Service categories (grid) → Engagement models → Delivery process → Tech stack → Case study highlights → FAQ → CTA. Copy: `BRAND_MESSAGING.md` (Services page).
-2. **Contact page** (`/contact`) — Conversion-focused. Sections: Hero → Contact form → Project brief checklist → Calendly/booking CTA → Locations/hours. Form: name, email, company, message; submit CTA: "Tell us about your product."
-3. **Work / Case studies** (`/work`) — Sections: Hero → Case study cards (with filters) → Outcomes highlights → CTA.
-4. **About** (`/about`) — Sections: Hero (mission) → Story/timeline → Values → Leadership bios → Culture → Security/compliance → CTA.
-5. **Industries** (`/industries`) — Sections: Hero → Industry cards → Outcomes by industry → Case study links → CTA.
-6. **Careers** (`/careers`) — Sections: Hero → Why JezeroX → Open roles → Hiring process → FAQ → CTA.
-7. **Insights** (`/insights`) — Sections: Hero → Topic filters → Featured post → Posts list → Newsletter CTA.
-8. **Legal** — `/privacy`, `/terms` (simple content pages).
-9. **404** — `/not-found` with CTA.
+1. **Contact page** (`/contact`) — *Next recommended.* Conversion-focused. Sections: Hero → Contact form → Project brief checklist → Calendly/booking CTA → Locations/hours. Form: name, email, company, message; submit CTA: "Tell us about your product."
+2. **Work / Case studies** (`/work`) — Sections: Hero → Case study cards (with filters) → Outcomes highlights → CTA.
+3. **About** (`/about`) — Sections: Hero (mission) → Story/timeline → Values → Leadership bios → Culture → Security/compliance → CTA.
+4. **Industries** (`/industries`) — Sections: Hero → Industry cards → Outcomes by industry → Case study links → CTA.
+5. **Careers** (`/careers`) — Sections: Hero → Why JezeroX → Open roles → Hiring process → FAQ → CTA.
+6. **Insights** (`/insights`) — Sections: Hero → Topic filters → Featured post → Posts list → Newsletter CTA.
+7. **Legal** — `/privacy`, `/terms` (simple content pages).
+8. **404** — `/not-found` with CTA.
 
-Suggested order: **Services** → **Contact** → **Work** → **About** → then Industries, Careers, Insights, Legal, 404.
+**Completed:** Services (`/services`).
+
+Suggested order: **Contact** → **Work** → **About** → then Industries, Careers, Insights, Legal, 404.
 
 ---
 
