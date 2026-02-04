@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "Product strategy",
-    description: "Discovery, roadmaps, MVP definition, and validation.",
+    description: "Discovery, roadmap, MVP definition, and validation.",
     icon: "◇",
   },
   {
@@ -136,14 +136,14 @@ export default function ServicesPage() {
           />
           <Container className="relative">
             <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-[family-name:var(--font-space-grotesk)] text-4xl font-bold tracking-tight text-[var(--text-primary)] sm:text-5xl md:text-6xl md:leading-[1.1]">
+              <h1 className="font-(family-name:--font-space-grotesk) text-4xl font-bold tracking-tight text-text-primary sm:text-5xl md:text-6xl md:leading-[1.1]">
                 Product strategy, design, and engineering in one team.
               </h1>
-              <p className="mt-6 text-lg text-[var(--text-secondary)] sm:text-xl">
+              <p className="mt-6 text-lg text-text-secondary sm:text-xl">
                 We help ambitious teams move from idea to scale with secure,
                 high-performing software.
               </p>
-              <p className="mt-3 text-[var(--text-muted)]">
+              <p className="mt-3 text-text-muted">
                 Transparent engagement models and senior delivery teams.
               </p>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -161,10 +161,10 @@ export default function ServicesPage() {
         {/* Service categories */}
         <Section id="service-categories">
           <div className="text-center">
-            <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
               End-to-end product engineering
             </h2>
-            <p className="mt-2 text-[var(--text-muted)]">
+            <p className="mt-2 text-text-muted">
               Strategy, UX, engineering, and growth in one focused team.
             </p>
           </div>
@@ -172,15 +172,15 @@ export default function ServicesPage() {
             {services.map(({ title, description, icon }) => (
               <Card key={title} className="h-full">
                 <span
-                  className="text-2xl text-[var(--blue-500)]"
+                  className="text-2xl text-accent"
                   aria-hidden
                 >
                   {icon}
                 </span>
-                <h3 className="mt-4 font-[family-name:var(--font-space-grotesk)] text-lg font-semibold text-[var(--text-primary)]">
+                <h3 className="mt-4 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
                   {title}
                 </h3>
-                <p className="mt-2 text-sm text-[var(--text-secondary)]">
+                <p className="mt-2 text-sm text-text-secondary">
                   {description}
                 </p>
               </Card>
@@ -191,20 +191,20 @@ export default function ServicesPage() {
         {/* Engagement models */}
         <Section id="engagement-models">
           <div className="text-center">
-            <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
               How we work with you
             </h2>
-            <p className="mt-2 text-[var(--text-muted)]">
+            <p className="mt-2 text-text-muted">
               Choose the engagement that fits your goals and timeline.
             </p>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {engagementModels.map(({ title, description }) => (
               <Card key={title} className="h-full">
-                <h3 className="font-[family-name:var(--font-space-grotesk)] text-lg font-semibold text-[var(--text-primary)]">
+                <h3 className="font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
                   {title}
                 </h3>
-                <p className="mt-2 text-sm text-[var(--text-secondary)]">
+                <p className="mt-2 text-sm text-text-secondary">
                   {description}
                 </p>
               </Card>
@@ -215,10 +215,10 @@ export default function ServicesPage() {
         {/* Delivery process */}
         <Section id="delivery-process">
           <div className="text-center">
-            <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
               Predictable delivery with measurable outcomes
             </h2>
-            <p className="mt-2 text-[var(--text-muted)]">
+            <p className="mt-2 text-text-muted">
               Each phase includes milestones, demos, and clear handoffs.
             </p>
           </div>
@@ -226,18 +226,18 @@ export default function ServicesPage() {
             {deliverySteps.map(({ name, duration, detail }, i) => (
               <div
                 key={name}
-                className="relative rounded-[var(--radius-lg)] border border-[var(--border-subtle)] bg-[var(--navy-900)] p-6"
+                className="relative rounded-lg border border-border bg-bg-surface p-6"
               >
-                <span className="text-sm font-semibold text-[var(--blue-500)]">
+                <span className="text-sm font-semibold text-accent">
                   Step {i + 1}
                 </span>
-                <h3 className="mt-2 font-[family-name:var(--font-space-grotesk)] text-lg font-semibold text-[var(--text-primary)]">
+                <h3 className="mt-2 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
                   {name}
                 </h3>
-                <p className="mt-1 text-sm font-medium text-[var(--text-muted)]">
+                <p className="mt-1 text-sm font-medium text-text-muted">
                   {duration}
                 </p>
-                <p className="mt-2 text-sm text-[var(--text-secondary)]">
+                <p className="mt-2 text-sm text-text-secondary">
                   {detail}
                 </p>
               </div>
@@ -248,10 +248,10 @@ export default function ServicesPage() {
         {/* Tech stack */}
         <Section id="tech-stack">
           <div className="text-center">
-            <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
               Modern stack, proven tools
             </h2>
-            <p className="mt-2 text-[var(--text-muted)]">
+            <p className="mt-2 text-text-muted">
               TypeScript, React, Next.js, Node.js, Python, AWS, GCP, Postgres,
               and modern DevOps tooling.
             </p>
@@ -259,7 +259,7 @@ export default function ServicesPage() {
               {techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-[var(--radius-pill)] border border-[var(--border-subtle)] bg-[var(--navy-800)] px-3 py-1.5 text-sm text-[var(--text-secondary)]"
+                  className="rounded-(--radius-pill) border border-border bg-bg-surface-2 px-3 py-1.5 text-sm text-text-secondary"
                 >
                   {tech}
                 </span>
@@ -271,24 +271,24 @@ export default function ServicesPage() {
         {/* Case study highlights */}
         <Section id="case-study-highlights">
           <div className="text-center">
-            <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
               Proof in production
             </h2>
-            <p className="mt-2 text-[var(--text-muted)]">
+            <p className="mt-2 text-text-muted">
               See how we improved time-to-market, reliability, and conversion.
             </p>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {caseStudyHighlights.map(({ title, description, href }) => (
               <Card key={title} href={href} glow>
-                <div className="aspect-video rounded-[var(--radius-md)] bg-[var(--navy-800)]" />
-                <h3 className="mt-4 font-[family-name:var(--font-space-grotesk)] text-lg font-semibold text-[var(--text-primary)]">
+                <div className="aspect-video rounded-md bg-bg-surface-2" />
+                <h3 className="mt-4 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
                   {title}
                 </h3>
-                <p className="mt-2 text-sm text-[var(--text-secondary)]">
+                <p className="mt-2 text-sm text-text-secondary">
                   {description}
                 </p>
-                <span className="mt-3 inline-block text-sm font-medium text-[var(--blue-500)]">
+                <span className="mt-3 inline-block text-sm font-medium text-accent">
                   Learn more →
                 </span>
               </Card>
@@ -299,10 +299,10 @@ export default function ServicesPage() {
         {/* FAQ */}
         <Section id="faq">
           <div className="text-center">
-            <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
               Common questions
             </h2>
-            <p className="mt-2 text-[var(--text-muted)]">
+            <p className="mt-2 text-text-muted">
               Timelines, budgets, and how we work with your team.
             </p>
           </div>
@@ -310,18 +310,18 @@ export default function ServicesPage() {
             {faqItems.map(({ question, answer }) => (
               <details
                 key={question}
-                className="group rounded-[var(--radius-lg)] border border-[var(--border-subtle)] bg-[var(--navy-900)] transition-colors hover:border-[var(--accent-soft)]"
+                className="group rounded-lg border border-border bg-bg-surface transition-colors hover:border-(--accent-soft)"
               >
-                <summary className="cursor-pointer list-none px-6 py-4 font-[family-name:var(--font-space-grotesk)] font-semibold text-[var(--text-primary)] [&::-webkit-details-marker]:hidden">
+                <summary className="cursor-pointer list-none px-6 py-4 font-(family-name:--font-space-grotesk) font-semibold text-text-primary [&::-webkit-details-marker]:hidden">
                   <span className="flex items-center justify-between gap-4">
                     {question}
-                    <span className="text-[var(--blue-500)] transition-transform group-open:rotate-180" aria-hidden>
+                    <span className="text-accent transition-transform group-open:rotate-180" aria-hidden>
                       ▼
                     </span>
                   </span>
                 </summary>
-                <div className="border-t border-[var(--border-subtle)] px-6 py-4">
-                  <p className="text-sm text-[var(--text-secondary)]">
+                <div className="border-t border-border px-6 py-4">
+                  <p className="text-sm text-text-secondary">
                     {answer}
                   </p>
                 </div>
@@ -332,11 +332,11 @@ export default function ServicesPage() {
 
         {/* CTA */}
         <Section id="cta">
-          <div className="rounded-[var(--radius-xl)] border border-[var(--border-subtle)] bg-[var(--navy-900)] px-8 py-12 text-center md:py-16">
-            <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+          <div className="rounded-xl border border-border bg-bg-surface px-8 py-12 text-center md:py-16">
+            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
               Start your next build with JezeroX
             </h2>
-            <p className="mt-3 text-[var(--text-muted)]">
+            <p className="mt-3 text-text-muted">
               Tell us about your product and timeline.
             </p>
             <div className="mt-8">

@@ -19,24 +19,24 @@ export function Testimonials() {
   return (
     <Section id="testimonials">
       <div className="text-center">
-          <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+          <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
             Teams trust JezeroX to deliver
           </h2>
-          <p className="mt-2 text-[var(--text-muted)]">
+          <p className="mt-2 text-text-muted">
             Clear outcomes, predictable delivery, and software that performs.
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {testimonials.map(({ quote, author, role }) => (
             <Card key={quote.slice(0, 24)}>
-              <blockquote className="text-[var(--text-secondary)]">
+              <blockquote className="text-text-secondary">
                 &ldquo;{quote}&rdquo;
               </blockquote>
               <footer className="mt-4">
-                <cite className="not-italic font-semibold text-[var(--text-primary)]">
+                <cite className="not-italic font-semibold text-text-primary">
                   {author}
                 </cite>
-                <span className="text-sm text-[var(--text-muted)]"> — {role}</span>
+                <span className="text-sm text-text-muted"> — {role}</span>
               </footer>
             </Card>
           ))}

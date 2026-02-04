@@ -1,5 +1,6 @@
 import { Section, Card } from "@/components/ui";
 
+// cspell:ignore roadmaps
 const services = [
   {
     title: "Product strategy",
@@ -37,10 +38,10 @@ export function ServicesOverview() {
   return (
     <Section id="services">
       <div className="text-center">
-          <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+          <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
             End-to-end product engineering
           </h2>
-          <p className="mt-2 text-[var(--text-muted)]">
+          <p className="mt-2 text-text-muted">
             Strategy, UX, engineering, and growth in one focused team.
           </p>
         </div>
@@ -48,15 +49,15 @@ export function ServicesOverview() {
           {services.map(({ title, description, icon }) => (
             <Card key={title} href="/services" className="h-full">
               <span
-                className="text-2xl text-[var(--blue-500)]"
+                className="text-2xl text-accent"
                 aria-hidden
               >
                 {icon}
               </span>
-              <h3 className="mt-4 font-[family-name:var(--font-space-grotesk)] text-lg font-semibold text-[var(--text-primary)]">
+              <h3 className="mt-4 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
                 {title}
               </h3>
-              <p className="mt-2 text-sm text-[var(--text-secondary)]">
+              <p className="mt-2 text-sm text-text-secondary">
                 {description}
               </p>
             </Card>

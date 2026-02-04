@@ -20,7 +20,7 @@ export function Section({
   id,
   className = "",
   fullWidth = false,
-}: SectionProps) {
+}: Readonly<SectionProps>) {
   const spacing = "py-12 md:py-16 lg:py-[var(--space-section)]";
   const content = fullWidth ? (
     children
@@ -32,7 +32,6 @@ export function Section({
     <section
       id={id}
       className={`${spacing} ${className}`.trim()}
-      aria-label={id ? undefined : undefined}
     >
       {content}
     </section>

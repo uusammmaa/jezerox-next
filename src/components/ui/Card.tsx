@@ -18,7 +18,7 @@ export function Card({
   className = "",
   href,
   glow = false,
-}: CardProps) {
+}: Readonly<CardProps>) {
   const styles = `${baseStyles} ${glow ? "hover:shadow-[var(--glow-accent)]" : ""} ${className}`;
 
   if (href) {

@@ -12,17 +12,17 @@ export function SocialProof() {
     <Section id="social-proof">
       <div className="flex flex-col gap-10 md:gap-12">
           <div className="text-center">
-            <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
               Trusted by teams building high-impact products
             </h2>
-            <p className="mt-2 text-[var(--text-muted)]">
+            <p className="mt-2 text-text-muted">
               Partners across fintech, health, SaaS, logistics, retail, and
               education.
             </p>
           </div>
           {/* Placeholder logos row */}
           <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-            <span className="text-sm font-medium text-[var(--text-muted)]">
+            <span className="text-sm font-medium text-text-muted">
               [Client logos]
             </span>
           </div>
@@ -31,15 +31,15 @@ export function SocialProof() {
             {stats.map(({ value, label, icon }) => (
               <div
                 key={label}
-                className="rounded-[var(--radius-lg)] border border-[var(--border-subtle)] bg-[var(--navy-900)] p-6 text-center"
+                className="rounded-lg border border-border bg-bg-surface p-6 text-center"
               >
-                <span className="text-2xl text-[var(--teal-500)]" aria-hidden>
+                <span className="text-2xl text-accent-teal" aria-hidden>
                   {icon}
                 </span>
-                <p className="mt-2 font-[family-name:var(--font-space-grotesk)] text-3xl font-bold text-[var(--text-primary)]">
+                <p className="mt-2 font-(family-name:--font-space-grotesk) text-3xl font-bold text-text-primary">
                   {value}
                 </p>
-                <p className="mt-1 text-sm text-[var(--text-muted)]">
+                <p className="mt-1 text-sm text-text-muted">
                   {label}
                 </p>
               </div>

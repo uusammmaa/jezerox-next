@@ -14,10 +14,10 @@ export function Container({
   children,
   className = "",
   as: Tag = "div",
-}: ContainerProps) {
+}: Readonly<ContainerProps>) {
   return (
     <Tag
-      className={`mx-auto w-full max-w-[var(--container-max)] px-[var(--container-padding)] sm:px-6 md:px-8 ${className}`}
+      className={`mx-auto w-full max-w-(--container-max) px-(--container-padding) sm:px-6 md:px-8 ${className}`}
     >
       {children}
     </Tag>

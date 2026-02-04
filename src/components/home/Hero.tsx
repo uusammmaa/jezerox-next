@@ -17,14 +17,14 @@ export function Hero() {
       />
       <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="font-[family-name:var(--font-space-grotesk)] text-4xl font-bold tracking-tight text-[var(--text-primary)] sm:text-5xl md:text-6xl md:leading-[1.1]">
+          <h1 className="font-(family-name:--font-space-grotesk) text-4xl font-bold tracking-tight text-text-primary sm:text-5xl md:text-6xl md:leading-[1.1]">
             Build faster. Scale smarter.
           </h1>
-          <p className="mt-6 text-lg text-[var(--text-secondary)] sm:text-xl">
+          <p className="mt-6 text-lg text-text-secondary sm:text-xl">
             JezeroX is a product engineering partner for ambitious teams. We
             design, build, and scale secure software from MVP to enterprise.
           </p>
-          <p className="mt-3 text-[var(--text-muted)]">
+          <p className="mt-3 text-text-muted">
             One senior team across strategy, design, engineering, and growth.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
