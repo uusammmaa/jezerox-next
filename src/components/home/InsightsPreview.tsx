@@ -19,14 +19,8 @@ export function InsightsPreview() {
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {posts.map(({ title, slug, date }, i) => (
-            <Card
-              key={title}
-              href={slug}
-              className={`opacity-0 animate-slide-up animation-fill-both ${
-                i === 0 ? "animation-delay-200" : i === 1 ? "animation-delay-300" : "animation-delay-400"
-              }`}
-            >
+          {posts.map(({ title, slug, date }) => (
+            <Card key={title} href={slug}>
               <div className="aspect-[16/10] rounded-[var(--radius-md)] bg-[var(--navy-800)]" />
               <h3 className="mt-4 font-[family-name:var(--font-space-grotesk)] text-lg font-semibold text-[var(--text-primary)]">
                 {title}

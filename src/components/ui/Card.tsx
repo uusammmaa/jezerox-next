@@ -11,7 +11,7 @@ interface CardProps {
 }
 
 const baseStyles =
-  "rounded-[var(--radius-lg)] border border-[var(--border-subtle)] bg-[var(--navy-900)] p-6 shadow-[0_1px_2px_rgba(5,10,20,0.4)] transition-[border-color,box-shadow,transform] duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:border-[var(--accent-soft)] hover:shadow-[0_8px_24px_rgba(5,10,20,0.35)]";
+  "rounded-[var(--radius-lg)] border border-[var(--border-subtle)] bg-[var(--navy-900)] p-6 shadow-[0_1px_2px_rgba(5,10,20,0.4)] transition-[border-color,box-shadow] duration-150 hover:border-[var(--accent-soft)] hover:shadow-[0_8px_24px_rgba(5,10,20,0.35)]";
 
 export function Card({
   children,

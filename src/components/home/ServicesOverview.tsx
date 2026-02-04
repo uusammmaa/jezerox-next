@@ -45,18 +45,8 @@ export function ServicesOverview() {
           </p>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ title, description, icon }, i) => (
-            <Card
-              key={title}
-              href="/services"
-              className={`h-full opacity-0 animate-slide-up animation-fill-both ${
-                i === 0 ? "animation-delay-200" :
-                i === 1 ? "animation-delay-300" :
-                i === 2 ? "animation-delay-400" :
-                i === 3 ? "animation-delay-500" :
-                i === 4 ? "animation-delay-600" : "animation-delay-700"
-              }`}
-            >
+          {services.map(({ title, description, icon }) => (
+            <Card key={title} href="/services" className="h-full">
               <span
                 className="text-2xl text-[var(--blue-500)]"
                 aria-hidden
