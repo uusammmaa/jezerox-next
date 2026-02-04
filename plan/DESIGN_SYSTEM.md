@@ -2,8 +2,9 @@
 Date: 2026-01-24
 
 ## Design principles
-- High-contrast, dark-first UI with electric accents.
-- Product-style layout: clean grid, minimal ornament, clear hierarchy.
+- **Dark, futuristic, modern:** High-contrast, dark-first UI with electric blue and teal accents. Tech-forward and premium without copying any purchased or third-party theme.
+- **Original only:** All visuals, illustrations, and gradients use this design system. No reuse of theme assets (e.g. no yellow–purple gradient lockups, no character-based line art from other themes) to avoid copyright issues.
+- Product-style layout: clean grid, minimal ornament, clear hierarchy. Optional futuristic touches: subtle glow, grid/mesh, or glass where it supports the mood.
 - Strong typographic rhythm with generous spacing.
 - Motion is subtle, purposeful, and accessible.
 
@@ -90,6 +91,11 @@ Date: 2026-01-24
 - shadow-md: 0 8px 24px rgba(5, 10, 20, 0.35)
 - shadow-lg: 0 16px 48px rgba(5, 10, 20, 0.45)
 
+### Glow (futuristic accent)
+- glow.accent: 0 0 20px rgba(60, 125, 255, 0.25), 0 0 40px rgba(60, 125, 255, 0.1)
+- glow.teal: 0 0 20px rgba(30, 201, 168, 0.2)
+- Use sparingly on primary CTAs and key cards; keep opacity low for accessibility.
+
 ### Motion
 - Duration: 150ms, 250ms, 350ms
 - Easing: cubic-bezier(0.16, 1, 0.3, 1)
@@ -116,7 +122,8 @@ Date: 2026-01-24
 
 ### Cards
 - Base: bg color.bg.surface, border 1px color.border.subtle, radius-lg, padding 24, shadow-sm
-- Hover: border color.accent.soft or shadow-md
+- Hover: border color.accent.soft or shadow-md; optional very subtle glow.accent for featured cards
+- Optional: glass variant with bg rgba(17, 26, 43, 0.6), backdrop-blur, for hero or highlight sections
 - Service card: icon 32, title h4, body text body
 - Case study card: image top, meta row (industry + year), results highlight
 - Post card: badge, title, excerpt, reading time
@@ -146,3 +153,9 @@ Date: 2026-01-24
 - Checkbox: 20x20, radius 4, border 1px color.border.subtle, check color.accent.primary
 - Focus: 2px outline color.focus, border color.accent.primary
 - Error: border color.error, helper text color.error
+
+## Visual asset direction (original, no theme copy)
+- **Logo:** Single accent (blue or teal) on navy/white—no multi-color gradients that resemble common themes.
+- **Illustrations:** Geometric, abstract, or mesh/grid only. No character-based line art from other themes; use custom or clearly licensed assets in brand colors.
+- **Hero/backgrounds:** Abstract 3D, mesh, or generative shapes in palette (#0B1220, #3C7DFF, #1EC9A8). Optional low-opacity grid overlay.
+- **Icons:** Outline or solid in accent/teal; consistent stroke weight.
