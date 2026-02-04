@@ -22,24 +22,24 @@ export function FeaturedCaseStudies() {
   return (
     <Section id="case-studies">
       <div className="text-center">
-          <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-semibold text-[var(--text-primary)] md:text-3xl">
+          <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
             Featured case studies
           </h2>
-          <p className="mt-2 text-[var(--text-muted)]">
+          <p className="mt-2 text-text-muted">
             Proof in production — see how we deliver.
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {caseStudies.map(({ title, description, href }) => (
             <Card key={title} href={href} glow>
-              <div className="aspect-video rounded-[var(--radius-md)] bg-[var(--navy-800)]" />
-              <h3 className="mt-4 font-[family-name:var(--font-space-grotesk)] text-lg font-semibold text-[var(--text-primary)]">
+              <div className="aspect-video rounded-md bg-bg-surface-2" />
+              <h3 className="mt-4 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
                 {title}
               </h3>
-              <p className="mt-2 text-sm text-[var(--text-secondary)]">
+              <p className="mt-2 text-sm text-text-secondary">
                 {description}
               </p>
-              <span className="mt-3 inline-block text-sm font-medium text-[var(--blue-500)]">
+              <span className="mt-3 inline-block text-sm font-medium text-accent">
                 Learn more →
               </span>
             </Card>

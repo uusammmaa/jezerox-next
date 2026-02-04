@@ -19,13 +19,13 @@ export function Header() {
 
   return (
     <header
-      className="sticky top-0 z-50 border-b border-[var(--border-subtle)] bg-[var(--navy-950)]/95 backdrop-blur-sm"
+      className="sticky top-0 z-50 border-b border-border bg-(--navy-950)/95 backdrop-blur-sm"
       role="banner"
     >
       <Container className="flex h-16 items-center justify-between md:h-18">
         <Link
           href="/"
-          className="font-[family-name:var(--font-space-grotesk)] text-xl font-bold tracking-tight text-[var(--text-primary)] hover:text-[var(--blue-400)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--blue-400)]"
+          className="font-(family-name:--font-space-grotesk) text-xl font-bold tracking-tight text-text-primary hover:text-(--blue-400) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue-400)"
           aria-label="JezeroX home"
         >
           JezeroX
@@ -40,7 +40,7 @@ export function Header() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="rounded-[var(--radius-md)] px-3 py-2 text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--navy-800)] hover:text-[var(--text-primary)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--blue-400)]"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary hover:bg-bg-surface-2 hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue-400)"
                 >
                   {label}
                 </Link>
@@ -49,14 +49,14 @@ export function Header() {
           </ul>
           <Link
             href="/contact"
-            className="ml-2 hidden rounded-[var(--radius-md)] bg-[var(--blue-500)] px-4 py-2 text-sm font-semibold text-[var(--gray-100)] hover:bg-[var(--blue-600)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--blue-400)] md:inline-flex"
+            className="ml-2 hidden rounded-md bg-accent px-4 py-2 text-sm font-semibold text-(--gray-100) hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue-400) md:inline-flex"
           >
             Contact
           </Link>
 
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-[var(--radius-md)] text-[var(--text-primary)] hover:bg-[var(--navy-800)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--blue-400)] md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-md text-text-primary hover:bg-bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue-400) md:hidden"
             onClick={() => setMenuOpen((o) => !o)}
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
@@ -92,7 +92,7 @@ export function Header() {
 
       <div
         id="mobile-nav"
-        className={`border-t border-[var(--border-subtle)] bg-[var(--navy-900)] md:hidden ${menuOpen ? "block" : "hidden"}`}
+        className={`border-t border-border bg-bg-surface md:hidden ${menuOpen ? "block" : "hidden"}`}
         aria-hidden={!menuOpen}
       >
         <Container className="flex flex-col gap-1 py-4">
@@ -100,7 +100,7 @@ export function Header() {
             <Link
               key={href}
               href={href}
-              className="rounded-[var(--radius-md)] px-3 py-2 text-[var(--text-secondary)] hover:bg-[var(--navy-800)] hover:text-[var(--text-primary)]"
+              className="rounded-md px-3 py-2 text-text-secondary hover:bg-bg-surface-2 hover:text-text-primary"
               onClick={() => setMenuOpen(false)}
             >
               {label}
@@ -108,8 +108,8 @@ export function Header() {
           ))}
           <Link
             href="/contact"
-            className="mt-2 inline-flex justify-center rounded-[var(--radius-md)] bg-[var(--blue-500)] px-4 py-2 text-sm font-semibold text-[var(--gray-100)] hover:bg-[var(--blue-600)]"
-            onClick={() => setMenuOpen(false)}
+className="mt-2 inline-flex justify-center rounded-md bg-accent px-4 py-2 text-sm font-semibold text-(--gray-100) hover:bg-accent-hover"
+          onClick={() => setMenuOpen(false)}
           >
             Contact
           </Link>
