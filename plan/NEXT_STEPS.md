@@ -6,8 +6,8 @@ Use this to continue implementation. All pages must follow the same design: see 
 
 ## Where you are
 
-- **Done:** Steps 1–4 (discovery, messaging, IA, design system); Home page, **Services** page, and **Contact** page built with shared components.
-- **Code:** `src/app/page.tsx` (Home), `src/app/services/page.tsx` (Services), `src/app/contact/page.tsx` (Contact), `src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/actions/contact-actions.ts`. Design tokens in `src/app/globals.css`.
+- **Done:** Steps 1–4 (discovery, messaging, IA, design system); Home page, **Services** page, **Contact** page, and **Work** page built with shared components.
+- **Code:** `src/app/page.tsx` (Home), `src/app/services/page.tsx` (Services), `src/app/contact/page.tsx` (Contact), `src/app/work/page.tsx` (Work), `src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`, `src/actions/contact-actions.ts`. Design tokens in `src/app/globals.css`.
 - **Contact CTA:** Booking link configured in the Contact page.
 - **Layout:** Single-column stack; Header + Footer on every page; Section + Container for content.
 
@@ -15,17 +15,16 @@ Use this to continue implementation. All pages must follow the same design: see 
 
 ## Next step (pick one and build)
 
-1. **Work / Case studies** (`/work`) — *Next recommended.* Sections: Hero → Case study cards (with filters) → Outcomes highlights → CTA.
-2. **About** (`/about`) — Sections: Hero (mission) → Story/timeline → Values → Leadership bios → Culture → Security/compliance → CTA.
-3. **Industries** (`/industries`) — Sections: Hero → Industry cards → Outcomes by industry → Case study links → CTA.
-4. **Careers** (`/careers`) — Sections: Hero → Why JezeroX → Open roles → Hiring process → FAQ → CTA.
-5. **Insights** (`/insights`) — Sections: Hero → Topic filters → Featured post → Posts list → Newsletter CTA.
-6. **Legal** — `/privacy`, `/terms` (simple content pages).
-7. **404** — `/not-found` with CTA.
+1. **About** (`/about`) — *Next recommended.* Sections: Hero (mission) → Story/timeline → Values → Leadership bios → Culture → Security/compliance → CTA.
+2. **Industries** (`/industries`) — Sections: Hero → Industry cards → Outcomes by industry → Case study links → CTA.
+3. **Careers** (`/careers`) — Sections: Hero → Why JezeroX → Open roles → Hiring process → FAQ → CTA.
+4. **Insights** (`/insights`) — Sections: Hero → Topic filters → Featured post → Posts list → Newsletter CTA.
+5. **Legal** — `/privacy`, `/terms` (simple content pages).
+6. **404** — `/not-found` with CTA.
 
-**Completed:** Services (`/services`), Contact (`/contact`).
+**Completed:** Home (`/`), Services (`/services`), Contact (`/contact`), Work (`/work`).
 
-Suggested order: **Work** → **About** → then Industries, Careers, Insights, Legal, 404.
+Suggested order: **About** → Industries → Careers → Insights → Legal → 404.
 
 ---
 

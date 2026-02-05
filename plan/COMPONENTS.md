@@ -47,7 +47,9 @@ Every page must follow these rules so the site looks and behaves the same:
 
 ---
 
-## Home-only components (`@/components/home`)
+## Page-specific components
+
+### `@/components/home`
 
 Use only on the homepage. Other pages build their own sections but reuse **ui** and **layout**.
 
@@ -62,6 +64,14 @@ Use only on the homepage. Other pages build their own sections but reuse **ui** 
 | Testimonials | Quote cards with attribution. |
 | InsightsPreview | Insights headline + 3 post cards + View all. |
 | FinalCTA | Ready to build… + Start a project. |
+
+### `@/components/work`
+
+Use only on the work/case studies page.
+
+| Component | Content |
+|-----------|--------|
+| CaseStudiesGrid | Interactive case study cards with industry filters, outcomes, and tech stack tags. Client component with state management. |
 
 ---
 
@@ -99,14 +109,14 @@ For a new page (e.g. Services): add `app/services/page.tsx`, use `Header` and `F
 
 Use this when building each page. Sections in order; copy from `BRAND_MESSAGING.md` and `PLAN.md`.
 
-**Built:** Home, Services, Contact. **Next:** Work.
+**Built:** Home, Services, Contact, Work. **Next:** About.
 
 | Page | Sections (in order) |
 |------|---------------------|
 | **Home** `/` ✓ | Hero → Social proof → Services overview → Featured case studies → Process → Industry focus → Testimonials → Insights preview → Final CTA |
 | **Services** `/services` ✓ | Hero → Service categories (grid, same 6 as Home) → Engagement models → Delivery process → Tech stack → Case study highlights → FAQ → CTA |
 | **Contact** `/contact` ✓ | Hero → Contact form → Project brief checklist → Calendly/booking CTA → Locations/hours |
-| **Work** `/work` | Hero → Case study cards (filters) → Outcomes highlights → CTA |
+| **Work** `/work` ✓ | Hero → Case study cards (filters) → Outcomes highlights → CTA |
 | **About** `/about` | Hero (mission) → Story/timeline → Values → Leadership bios → Culture → Security/compliance → CTA |
 | **Industries** `/industries` | Hero → Industry cards → Outcomes by industry → Case study links → CTA |
 | **Careers** `/careers` | Hero → Why JezeroX → Open roles → Hiring process → FAQ → CTA |

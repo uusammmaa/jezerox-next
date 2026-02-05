@@ -38,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
-      <body className="min-h-screen antialiased">
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`} suppressHydrationWarning>
+      <body className="min-h-screen antialiased" suppressHydrationWarning>
         {children}
       </body>
     </html>
