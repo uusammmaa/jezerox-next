@@ -1,4 +1,4 @@
-export { Button } from "./button";
-export { Card } from "./card";
-export { Container } from "./container";
-export { Section } from "./section";
+export { Button } from "./Button";
+export { Card } from "./Card";
+export { Container } from "./Container";
+export { Section } from "./Section";

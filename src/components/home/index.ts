@@ -1,9 +1,9 @@
 export { FeaturedCaseStudies } from "./featured-case-studies";
 export { FinalCTA } from "./final-cta";
-export { Hero } from "./hero";
+export { Hero } from "./Hero";
 export { IndustryFocus } from "./industry-focus";
 export { InsightsPreview } from "./insights-preview";
 export { ProcessOverview } from "./process-overview";
 export { ServicesOverview } from "./services-overview";
 export { SocialProof } from "./social-proof";
-export { Testimonials } from "./testimonials";
+export { Testimonials } from "./Testimonials";

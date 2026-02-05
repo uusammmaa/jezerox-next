@@ -2,7 +2,7 @@
 
 ## Current status and next steps
 
-- **Done:** Steps 1–4; Home page, **Services** page, and **Contact** page built with shared components (single-column stack, Header, Footer, design tokens).
+- **Done:** Steps 1–4; Home page, **Services** page, and **Contact** page built with shared components (single-column stack, Header, Footer, design tokens). Contact booking CTA configured with a Calendly link.
 - **Next:** Build remaining pages in this order: **Work** → About → Industries → Careers → Insights → Legal → 404. Each page must use the same design (see `COMPONENTS.md` and `NEXT_STEPS.md`).
 - **Reference:** `NEXT_STEPS.md` = what to build next; `COMPONENTS.md` = shared components + design consistency + section checklist per page; `DESIGN_SYSTEM.md` = tokens and specs.
 
