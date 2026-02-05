@@ -20,6 +20,8 @@ interface ButtonAsButton
 interface ButtonAsLink extends BaseProps {
   href: string;
   type?: never;
+  target?: string;
+  rel?: string;
 }
 
 type ButtonProps = ButtonAsButton | ButtonAsLink;

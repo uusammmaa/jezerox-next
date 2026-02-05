@@ -83,13 +83,15 @@ Use only on the homepage. Other pages build their own sections but reuse **ui** 
 ```
 src/
   app/           # Routes, layout, globals.css
+  actions/       # Server actions (e.g. contact-actions.ts for contact form)
   components/
     ui/           # Button, Card, Container, Section
     layout/       # Header, Footer
     home/         # Home page sections only
+    contact/      # ContactForm (Contact page only)
 ```
 
-For a new page (e.g. Services): add `app/services/page.tsx`, use `Header` and `Footer`, and build sections with `Section` + `Button` / `Card` as needed. Reuse the same tokens and component patterns.
+For a new page (e.g. Services): add `app/services/page.tsx`, use `Header` and `Footer`, and build sections with `Section` + `Button` / `Card` as needed. Reuse the same tokens and component patterns. Contact page uses `ContactForm` from `@/components/contact` and `submitContactForm` from `@/actions/contact-actions`.
 
 ---
 
@@ -97,13 +99,13 @@ For a new page (e.g. Services): add `app/services/page.tsx`, use `Header` and `F
 
 Use this when building each page. Sections in order; copy from `BRAND_MESSAGING.md` and `PLAN.md`.
 
-**Built:** Home, Services. **Next:** Contact.
+**Built:** Home, Services, Contact. **Next:** Work.
 
 | Page | Sections (in order) |
 |------|---------------------|
 | **Home** `/` ✓ | Hero → Social proof → Services overview → Featured case studies → Process → Industry focus → Testimonials → Insights preview → Final CTA |
 | **Services** `/services` ✓ | Hero → Service categories (grid, same 6 as Home) → Engagement models → Delivery process → Tech stack → Case study highlights → FAQ → CTA |
-| **Contact** `/contact` | Hero → Contact form → Project brief checklist → Calendly/booking CTA → Locations/hours |
+| **Contact** `/contact` ✓ | Hero → Contact form → Project brief checklist → Calendly/booking CTA → Locations/hours |
 | **Work** `/work` | Hero → Case study cards (filters) → Outcomes highlights → CTA |
 | **About** `/about` | Hero (mission) → Story/timeline → Values → Leadership bios → Culture → Security/compliance → CTA |
 | **Industries** `/industries` | Hero → Industry cards → Outcomes by industry → Case study links → CTA |
