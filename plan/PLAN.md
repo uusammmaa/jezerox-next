@@ -2,8 +2,8 @@
 
 ## Current status and next steps
 
-- **Done:** Steps 1–4; Home page and **Services** page built with shared components (single-column stack, Header, Footer, design tokens).
-- **Next:** Build remaining pages in this order: **Contact** → **Work** → About → Industries → Careers → Insights → Legal → 404. Each page must use the same design (see `COMPONENTS.md` and `NEXT_STEPS.md`).
+- **Done:** Steps 1–4; Home page, **Services** page, and **Contact** page built with shared components (single-column stack, Header, Footer, design tokens).
+- **Next:** Build remaining pages in this order: **Work** → About → Industries → Careers → Insights → Legal → 404. Each page must use the same design (see `COMPONENTS.md` and `NEXT_STEPS.md`).
 - **Reference:** `NEXT_STEPS.md` = what to build next; `COMPONENTS.md` = shared components + design consistency + section checklist per page; `DESIGN_SYSTEM.md` = tokens and specs.
 
 ---
@@ -275,8 +275,8 @@
    - Build layout, header, footer, and pages.
    - Implement reusable components and section blocks.
    - Deliverable: fully responsive site.
-- **Done:** Home page; **Services** page (`src/app/services/page.tsx`); shared components (`src/components/ui`, `src/components/layout`); design tokens (`globals.css`); `plan/COMPONENTS.md`, `plan/NEXT_STEPS.md`.
-  - **Next (same design):** Contact → Work → About → Industries → Careers → Insights → Privacy/Terms → 404. Section list per page: `COMPONENTS.md` (page-by-page checklist) and `PLAN.md` (Page sections).
+- **Done:** Home page; **Services** page (`src/app/services/page.tsx`); **Contact** page (`src/app/contact/page.tsx`) with form, project brief checklist, book-a-call CTA, locations; shared components (`src/components/ui`, `src/components/layout`, `src/components/contact`); contact form server action (`src/actions/contact-actions.ts`); design tokens (`globals.css`); `plan/COMPONENTS.md`, `plan/NEXT_STEPS.md`.
+  - **Next (same design):** Work → About → Industries → Careers → Insights → Privacy/Terms → 404. Section list per page: `COMPONENTS.md` (page-by-page checklist) and `PLAN.md` (Page sections).
 
 10. **Backend integration (if needed)**
     - Create Node.js API routes for forms.
