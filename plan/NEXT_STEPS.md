@@ -8,6 +8,7 @@ Use this to continue implementation. All pages must follow the same design: see 
 
 - **Done:** Steps 1–4 (discovery, messaging, IA, design system); Home page, **Services** page, and **Contact** page built with shared components.
 - **Code:** `src/app/page.tsx` (Home), `src/app/services/page.tsx` (Services), `src/app/contact/page.tsx` (Contact), `src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/actions/contact-actions.ts`. Design tokens in `src/app/globals.css`.
+- **Contact CTA:** Booking link configured in the Contact page.
 - **Layout:** Single-column stack; Header + Footer on every page; Section + Container for content.
 
 ---
