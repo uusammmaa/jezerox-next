@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Container } from "@/components/ui";
 
@@ -16,6 +17,7 @@ const navLinks = [
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header
@@ -36,16 +38,25 @@ export function Header() {
           aria-label="Primary navigation"
         >
           <ul className="hidden items-center gap-1 md:flex">
-            {navLinks.map(({ href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary hover:bg-bg-surface-2 hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue-400)"
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map(({ href, label }) => {
+              const isActive =
+                pathname === href ||
+                (href !== "/" && pathname.startsWith(`${href}/`));
+              return (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className={`rounded-md px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue-400) ${
+                      isActive
+                        ? "bg-bg-surface-2 text-text-primary"
+                        : "text-text-secondary hover:bg-bg-surface-2 hover:text-text-primary"
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <Link
             href="/contact"
@@ -96,16 +107,25 @@ export function Header() {
         aria-hidden={!menuOpen}
       >
         <Container className="flex flex-col gap-1 py-4">
-          {navLinks.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className="rounded-md px-3 py-2 text-text-secondary hover:bg-bg-surface-2 hover:text-text-primary"
-              onClick={() => setMenuOpen(false)}
-            >
-              {label}
-            </Link>
-          ))}
+          {navLinks.map(({ href, label }) => {
+            const isActive =
+              pathname === href ||
+              (href !== "/" && pathname.startsWith(`${href}/`));
+            return (
+              <Link
+                key={href}
+                href={href}
+                className={`rounded-md px-3 py-2 transition-colors ${
+                  isActive
+                    ? "bg-bg-surface-2 text-text-primary font-medium"
+                    : "text-text-secondary hover:bg-bg-surface-2 hover:text-text-primary"
+                }`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </Link>
+            );
+          })}
           <Link
             href="/contact"
             className="mt-2 inline-flex justify-center rounded-md bg-accent px-4 py-2 text-sm font-semibold text-(--gray-100) hover:bg-accent-hover"

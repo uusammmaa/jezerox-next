@@ -31,17 +31,17 @@ Every page must follow these rules so the site looks and behaves the same:
 
 ### `@/components/ui`
 
-| Component   | Use |
-|------------|-----|
+| Component | Use |
+| --- | --- |
 | **Container** | Max-width wrapper (1280px, responsive padding). Wrap page/section content. |
-| **Section**  | `<section>` + vertical padding + optional `Container`. Use for each page section. Pass `id` for anchor links; use `fullWidth` for full-bleed. |
-| **Button**   | `variant`: primary \| secondary \| ghost. `size`: sm \| md \| lg. Use `href` for links. Primary has soft glow. |
-| **Card**     | Surface with border, radius-lg, hover. Use `href` for clickable cards; `glow` for featured cards. |
+| **Section** | `<section>` + vertical padding + optional `Container`. Use for each page section. Pass `id` for anchor links; use `fullWidth` for full-bleed. |
+| **Button** | `variant`: primary \| secondary \| ghost. `size`: sm \| md \| lg. Use `href` for links. Primary has soft glow. |
+| **Card** | Surface with border, radius-lg, hover. Use `href` for clickable cards; `glow` for featured cards. |
 
 ### `@/components/layout`
 
 | Component | Use |
-|-----------|-----|
+| --- | --- |
 | **Header** | Sticky nav: logo, primary nav links, Contact CTA. Mobile: hamburger + drawer. Use on every page. |
 | **Footer** | Company, Services, Resources, Legal links + copyright. Use on every page. |
 
@@ -54,7 +54,7 @@ Every page must follow these rules so the site looks and behaves the same:
 Use only on the homepage. Other pages build their own sections but reuse **ui** and **layout**.
 
 | Component | Content |
-|-----------|--------|
+| --- | --- |
 | Hero | Tagline, subhead, CTAs (Start a project, See our work). |
 | SocialProof | Trusted by… + logos placeholder + stats (50+, 95%, 5+). |
 | ServicesOverview | End-to-end product engineering + 6 service cards. |
@@ -70,7 +70,7 @@ Use only on the homepage. Other pages build their own sections but reuse **ui** 
 Use only on the work/case studies page.
 
 | Component | Content |
-|-----------|--------|
+| --- | --- |
 | CaseStudiesGrid | Interactive case study cards with industry filters, outcomes, and tech stack tags. Client component with state management. |
 
 ---
@@ -90,7 +90,7 @@ Use only on the work/case studies page.
 
 ## File structure
 
-```
+```text
 src/
   app/           # Routes, layout, globals.css
   actions/       # Server actions (e.g. contact-actions.ts for contact form)
@@ -109,16 +109,16 @@ For a new page (e.g. Services): add `app/services/page.tsx`, use `Header` and `F
 
 Use this when building each page. Sections in order; copy from `BRAND_MESSAGING.md` and `PLAN.md`.
 
-**Built:** Home, Services, Contact, Work, About. **Next:** Industries.
+**Built:** Home, Services, Contact, Work, About, Industries. **Next:** Careers.
 
 | Page | Sections (in order) |
-|------|---------------------|
+| --- | --- |
 | **Home** `/` ✓ | Hero → Social proof → Services overview → Featured case studies → Process → Industry focus → Testimonials → Insights preview → Final CTA |
 | **Services** `/services` ✓ | Hero → Service categories (grid, same 6 as Home) → Engagement models → Delivery process → Tech stack → Case study highlights → FAQ → CTA |
 | **Contact** `/contact` ✓ | Hero → Contact form → Project brief checklist → Calendly/booking CTA → Locations/hours |
 | **Work** `/work` ✓ | Hero → Case study cards (filters) → Outcomes highlights → CTA |
 | **About** `/about` ✓ | Hero (mission) → Story/timeline → Values → Leadership bios → Culture → Security/compliance → CTA |
-| **Industries** `/industries` | Hero → Industry cards → Outcomes by industry → Case study links → CTA |
+| **Industries** `/industries` ✓ | Hero → Industry cards → Outcomes by industry → Case study links → CTA |
 | **Careers** `/careers` | Hero → Why JezeroX → Open roles → Hiring process → FAQ → CTA |
 | **Insights** `/insights` | Hero → Topic filters → Featured post → Posts list → Newsletter CTA |
 | **Privacy** `/privacy` | Content only (no Hero; use Section + prose) |

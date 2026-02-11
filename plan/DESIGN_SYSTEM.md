@@ -1,7 +1,9 @@
 # JezeroX Design System
+
 Date: 2026-01-24
 
 ## Design principles
+
 - **Dark, futuristic, modern:** High-contrast, dark-first UI with electric blue and teal accents. Tech-forward and premium without copying any purchased or third-party theme.
 - **Original only:** All visuals, illustrations, and gradients use this design system. No reuse of theme assets (e.g. no yellow–purple gradient lockups, no character-based line art from other themes) to avoid copyright issues.
 - Product-style layout: clean grid, minimal ornament, clear hierarchy. Optional futuristic touches: subtle glow, grid/mesh, or glass where it supports the mood.
@@ -9,7 +11,9 @@ Date: 2026-01-24
 - Motion is subtle, purposeful, and accessible.
 
 ## Tokens
+
 ### Color palette (base)
+
 - Navy 950: #0B1220
 - Navy 900: #111A2B
 - Navy 800: #1F2A3A
@@ -28,6 +32,7 @@ Date: 2026-01-24
 - Error: #F05C5C
 
 ### Color tokens (semantic)
+
 - color.bg.page: #0B1220
 - color.bg.surface: #111A2B
 - color.bg.surface-2: #1F2A3A
@@ -48,6 +53,7 @@ Date: 2026-01-24
 - color.overlay: rgba(11, 18, 32, 0.72)
 
 ### Typography
+
 - Font families:
   - Heading: Space Grotesk
   - Body: Inter
@@ -67,6 +73,7 @@ Date: 2026-01-24
 - Letter spacing: -0.02em for display and h1, 0 for body
 
 ### Spacing
+
 - 8px scale: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120
 - Section spacing:
   - Desktop: 96 to 120
@@ -74,12 +81,14 @@ Date: 2026-01-24
   - Mobile: 48
 
 ### Layout and grid
+
 - 12-column grid, max width 1200 to 1320
 - Gutter: 24 desktop, 16 mobile
 - Container padding: 24 to 32
 - Breakpoints: 640, 768, 1024, 1280, 1440
 
 ### Radius
+
 - radius-sm: 8
 - radius-md: 12
 - radius-lg: 16
@@ -87,22 +96,27 @@ Date: 2026-01-24
 - radius-pill: 9999
 
 ### Shadows
+
 - shadow-sm: 0 1px 2px rgba(5, 10, 20, 0.4)
 - shadow-md: 0 8px 24px rgba(5, 10, 20, 0.35)
 - shadow-lg: 0 16px 48px rgba(5, 10, 20, 0.45)
 
 ### Glow (futuristic accent)
+
 - glow.accent: 0 0 20px rgba(60, 125, 255, 0.25), 0 0 40px rgba(60, 125, 255, 0.1)
 - glow.teal: 0 0 20px rgba(30, 201, 168, 0.2)
 - Use sparingly on primary CTAs and key cards; keep opacity low for accessibility.
 
 ### Motion
+
 - Duration: 150ms, 250ms, 350ms
 - Easing: cubic-bezier(0.16, 1, 0.3, 1)
 - Respect prefers-reduced-motion for all animations
 
 ## Component specs
+
 ### Buttons
+
 - Base: radius-md, font weight 600, letter spacing 0.01em, transition 150ms
 - Sizes:
   - sm: height 32, padding 8 12, text 14/20
@@ -121,6 +135,7 @@ Date: 2026-01-24
 - Focus: 2px outline color.focus
 
 ### Cards
+
 - Base: bg color.bg.surface, border 1px color.border.subtle, radius-lg, padding 24, shadow-sm
 - Hover: border color.accent.soft or shadow-md; optional very subtle glow.accent for featured cards
 - Optional: glass variant with bg rgba(17, 26, 43, 0.6), backdrop-blur, for hero or highlight sections
@@ -129,21 +144,25 @@ Date: 2026-01-24
 - Post card: badge, title, excerpt, reading time
 
 ### Badges and pills
+
 - Badge: height 24, padding 4 10, radius-pill, text 12/16, bg color.bg.surface-2
 - Pill (filters/tags): height 32, padding 6 14, radius-pill, text 12/16
 
 ### Accordion (FAQ)
+
 - Container: border-top and border-bottom color.border.subtle
 - Item header: min height 56, text 16/24, icon 20
 - Item body: text body, padding 16 0 24
 - Interaction: 250ms expand and collapse
 
 ### Tabs and filters
+
 - Tab: height 36, padding 6 14, radius-pill, border 1px color.border.subtle
 - Active: bg color.bg.surface-2, border color.accent.primary, text color.text.primary
 - Hover: bg color.bg.surface-2
 
 ### Forms
+
 - Input:
   - height 48, padding 12 16, radius-md, bg color.bg.surface
   - border 1px color.border.subtle, text color.text.primary
@@ -155,6 +174,7 @@ Date: 2026-01-24
 - Error: border color.error, helper text color.error
 
 ## Visual asset direction (original, no theme copy)
+
 - **Logo:** Single accent (blue or teal) on navy/white—no multi-color gradients that resemble common themes.
 - **Illustrations:** Geometric, abstract, or mesh/grid only. No character-based line art from other themes; use custom or clearly licensed assets in brand colors.
 - **Hero/backgrounds:** Abstract 3D, mesh, or generative shapes in palette (#0B1220, #3C7DFF, #1EC9A8). Optional low-opacity grid overlay.

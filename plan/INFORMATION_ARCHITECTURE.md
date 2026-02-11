@@ -1,13 +1,16 @@
 # Information Architecture - JezeroX
+
 Date: 2026-01-24
 
 ## IA principles
+
 - Keep navigation simple and conversion-focused.
 - Support SEO with clear, keyword-aligned URLs.
 - Ensure each page has a single primary CTA.
 - Maintain consistent section ordering where possible.
 
 ## Sitemap and URL structure (confirmed)
+
 - Home: `/`
 - Services: `/services`
 - Service detail: `/services/[slug]`
@@ -23,6 +26,7 @@ Date: 2026-01-24
 - System: `/not-found`
 
 ## Primary navigation
+
 - Home
 - Services
 - Industries
@@ -33,12 +37,14 @@ Date: 2026-01-24
 - Contact (primary CTA)
 
 ## Footer navigation
+
 - Company: About, Careers, Contact
 - Services: Services index, key service slugs
 - Resources: Insights
 - Legal: Privacy, Terms
 
 ## Page-to-section matrix (final)
+
 | Page | Sections |
 | --- | --- |
 | `/` Home | Hero; Social proof (logos + stats); Services overview (6 cards); Featured case studies (2-3); Process overview; Industry focus; Testimonials; Insights preview; Final CTA + contact teaser |
@@ -57,6 +63,7 @@ Date: 2026-01-24
 | `/not-found` | 404 with CTA |
 
 ## Slug conventions
+
 - Use lowercase, hyphenated slugs (`/services/product-strategy`).
 - Keep slugs short and keyword-aligned.
 - Avoid duplicate intent across Services and Industries pages.
