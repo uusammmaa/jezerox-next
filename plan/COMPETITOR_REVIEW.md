@@ -1,11 +1,16 @@
+<!-- cSpell:ignore tkxel -->
+
 # Competitor Review - JezeroX
+
 Date: 2026-01-24
 
 Sources:
-- https://tkxel.com/
-- https://10pearls.com/
+
+- <https://tkxel.com/>
+- <https://10pearls.com/>
 
 ## tkxel.com - Observations
+
 - Positioning/hero: "AI, Product & Software Engineering Partner" with an AI success story and outcome metrics in the hero.
 - Primary CTAs: "Let's talk", "Book free consultation", "Explore AI services", "View all services", "Work with us", "All case studies".
 - Navigation/IA: top nav with Services, Customers, Company, Resources, Careers; mega-menu lists many sub-services and resource types.
@@ -22,6 +27,7 @@ Sources:
   - Partnerships
   - Whitepapers/podcasts/resources blocks
   - Contact form with marketing and SMS consent
+
 - Proof patterns:
   - Large numeric stats and outcome bullets
   - Certifications and awards
@@ -32,6 +38,7 @@ Sources:
   - Resource promos embedded into the homepage
 
 ## 10pearls.com - Observations
+
 - Positioning/hero: "AI-Powered Global Digital Engineering Partner".
 - Primary CTAs: "Let's connect", "Let's talk", "Read case study".
 - Navigation/IA: hamburger menu, section jump navigation; industries and services emphasized.
@@ -55,14 +62,16 @@ Sources:
   - Strong AI-first positioning
 
 ## Key patterns across both
+
 - Clear hero positioning with AI emphasis
 - Multiple proof blocks: stats, case studies, testimonials, awards
 - Long-form homepage with many sections
 - Embedded resources/insights for SEO
 - Engagement model or process sections
-- Clear conversion path: CTAs and contact/discovery flow
+  - Clear conversion path: CTAs and contact/discovery flow
 
 ## Decisions for JezeroX (do differently)
+
 - Simpler navigation and fewer service categories (avoid mega-menu overload).
 - More concise homepage (fewer, stronger sections).
 - Product-style visuals with minimal, modern layout.
@@ -72,6 +81,7 @@ Sources:
 - Process section with timeframes and deliverables.
 
 ## Opportunities for JezeroX
+
 - Publish "AI productization" POV and engineering playbooks.
 - Highlight accelerators and reusable components for speed.
 - Offer transparent engagement models and starter packages.

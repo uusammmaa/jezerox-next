@@ -43,7 +43,7 @@ Suggested order: ~~About~~ → ~~Industries~~ → **Careers** → Insights → L
 ## Reference files
 
 | Need | File |
-|------|------|
+| ------ | ------ |
 | Section list per page | `PLAN.md` (Page sections), `INFORMATION_ARCHITECTURE.md` (page-to-section matrix) |
 | Copy and headlines | `BRAND_MESSAGING.md` |
 | Shared components and layout rules | `COMPONENTS.md` |

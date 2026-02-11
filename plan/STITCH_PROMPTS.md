@@ -1,12 +1,12 @@
 # Stitch design prompts — JezeroX
 
-Copy and paste the prompts below into Stitch (https://stitch.withgoogle.com/) to generate designs. Use the **Master prompt** first for the overall direction, then use **Page-specific prompts** for each screen.
+Copy and paste the prompts below into Stitch (<https://stitch.withgoogle.com/>) to generate designs. Use the **Master prompt** first for the overall direction, then use **Page-specific prompts** for each screen.
 
 ---
 
 ## Master prompt (use first for direction)
 
-```
+```text
 Design a dark, futuristic, modern website for JezeroX, a software product engineering agency. Brand: "Build faster. Scale smarter." — product strategy, design, engineering, and growth for ambitious teams.
 
 Visual style:
@@ -28,7 +28,7 @@ Output: clean, professional, conversion-focused. Accessible contrast and clear h
 
 Use this when you attach the current JezeroX homepage screenshot in Stitch’s **Redesign** mode. It tells Stitch to keep the dark futuristic vibe but use our design system and include all sections from the plan.
 
-```
+```text
 Redesign this homepage for JezeroX. Keep the same dark, futuristic, modern vibe and overall flow but make it clearly original (our colors, typography, and visuals only — no copy of any theme).
 
 Design system:
@@ -99,7 +99,7 @@ Output: professional, conversion-focused, high contrast. Same general structure 
 
 Use this in Stitch **Redesign** with your current homepage screenshot (e.g. `stitch/screen.png`) to get the same design but with stacked layout instead of two columns.
 
-```
+```text
 Same design and content, but change the layout to single-column stacking:
 
 - Where there is a left section and a right section side by side, put the RIGHT section BELOW the LEFT section (full width each).
@@ -115,7 +115,7 @@ Keep header, hero, and footer as they are. No two-column layouts on the page —
 
 ## Home page (from scratch)
 
-```
+```text
 JezeroX homepage, dark futuristic modern. Sections in order:
 
 1. Hero: headline "Build faster. Scale smarter." — subhead "JezeroX is a product engineering partner for ambitious teams. We design, build, and scale secure software from MVP to enterprise." Primary CTA "Start a project", secondary "See our work". Right side: abstract geometric or mesh visual in navy/blue/teal (no character art).
@@ -139,7 +139,7 @@ Header: JezeroX wordmark (left), nav: Home, Services, Industries, Work, About, I
 
 ## Services index page
 
-```
+```text
 JezeroX Services page, same dark futuristic style (navy #0B1220, blue #3C7DFF, teal #1EC9A8, Space Grotesk + Inter). Hero: "Product strategy, UX, engineering, and growth in one expert team." Then: service categories grid (same six services as home), engagement models section (fixed scope, retainer, team extension), delivery process, tech stack/tools, case study highlights, FAQ accordion, final CTA. Same header/footer as home. Clean cards, optional glow on hover.
 ```
 
@@ -147,7 +147,7 @@ JezeroX Services page, same dark futuristic style (navy #0B1220, blue #3C7DFF, t
 
 ## Contact page
 
-```
+```text
 JezeroX Contact page, dark futuristic (navy #0B1220, blue #3C7DFF, teal #1EC9A8). Hero: short headline + subhead. Main: contact form (name, email, company, message) with primary submit "Tell us about your product"; project brief checklist (bullet list); Calendly/booking CTA; locations/hours. Same header/footer. Form inputs: dark surface, subtle border, focus state with blue. One column or form left / CTA right layout.
 ```
 
@@ -155,7 +155,7 @@ JezeroX Contact page, dark futuristic (navy #0B1220, blue #3C7DFF, teal #1EC9A8)
 
 ## About page
 
-```
+```text
 JezeroX About page, dark futuristic style. Hero: mission statement. Sections: story and timeline, values (3–4 pillars), leadership bios (cards with photo placeholder, name, role), culture and principles, security and compliance, CTA. Navy backgrounds, blue/teal accents, Space Grotesk + Inter, card-based layout.
 ```
 
@@ -163,7 +163,7 @@ JezeroX About page, dark futuristic style. Hero: mission statement. Sections: st
 
 ## Case studies index (/work)
 
-```
+```text
 JezeroX Work / Case studies page. Hero: "See our work" or similar. Case study cards in grid with filter pills (industry/topic). Each card: image area, title, client/industry, short outcome. Stats or outcomes highlight strip. Final CTA. Same dark system (navy, blue, teal), same header/footer.
 ```
 
@@ -171,7 +171,7 @@ JezeroX Work / Case studies page. Hero: "See our work" or similar. Case study ca
 
 ## Short one-liner (for quick Stitch experiments)
 
-```
+```text
 Dark futuristic software agency site: JezeroX. Navy #0B1220 background, electric blue #3C7DFF and teal #1EC9A8 accents. Space Grotesk + Inter. Geometric/mesh visuals only, no character art. Subtle glow on CTAs, clean grid, "Build faster. Scale smarter."
 ```
 
