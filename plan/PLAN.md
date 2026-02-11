@@ -2,8 +2,8 @@
 
 ## Current status and next steps
 
-- **Done:** Steps 1–4; Home page, **Services** page, **Contact** page, **Work** page, **About** page, **Industries** page, **Careers** page, **Insights** page, **Privacy** page, and **Terms** page built with shared components (single-column stack, Header, Footer, design tokens). Contact booking CTA configured with a Calendly link. Header now highlights active page.
-- **Next:** Build remaining pages: **404**. Each page must use the same design (see `COMPONENTS.md` and `NEXT_STEPS.md`).
+- **Done:** Steps 1–4; Home page, **Services** page, **Contact** page, **Work** page, **About** page, **Industries** page, **Careers** page, **Insights** page, **Privacy** page, **Terms** page, and **404** page built with shared components (single-column stack, Header, Footer, design tokens). Contact booking CTA configured with a Calendly link. Header now highlights active page.
+- **Next:** All core pages complete. Proceed to backend integration, SEO, QA, and launch (Steps 10–13).
 - **Reference:** `NEXT_STEPS.md` = what to build next; `COMPONENTS.md` = shared components + design consistency + section checklist per page; `DESIGN_SYSTEM.md` = tokens and specs.
 
 ---
@@ -310,8 +310,8 @@
    - Build layout, header, footer, and pages.
    - Implement reusable components and section blocks.
    - Deliverable: fully responsive site.
-   - **Done:** Home page; **Services** page (`src/app/services/page.tsx`); **Contact** page (`src/app/contact/page.tsx`) with form, project brief checklist, book-a-call CTA, locations; **Work** page (`src/app/work/page.tsx`) with case study cards, filters, outcomes; **About** page (`src/app/about/page.tsx`) with mission hero, story/timeline, values, leadership bios, culture, security/compliance; **Industries** page (`src/app/industries/page.tsx`) with industry cards, outcomes, case study links; **Careers** page (`src/app/careers/page.tsx`) with hero, why JezeroX benefits, open roles, hiring process timeline, FAQ, CTA; **Insights** page (`src/app/insights/page.tsx`) with hero, topic filters, featured post, posts list, newsletter CTA; **Privacy** page (`src/app/privacy/page.tsx`) with privacy policy content; **Terms** page (`src/app/terms/page.tsx`) with terms of service content; shared components (`src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`, `src/components/insights`); Header with active page highlighting; contact form server action (`src/actions/contact-actions.ts`); design tokens (`globals.css`); `plan/COMPONENTS.md`, `plan/NEXT_STEPS.md`.
-   - **Next (same design):** 404 page. Section list per page: `COMPONENTS.md` (page-by-page checklist) and `PLAN.md` (Page sections).
+   - **Done:** Home page; **Services** page (`src/app/services/page.tsx`); **Contact** page (`src/app/contact/page.tsx`) with form, project brief checklist, book-a-call CTA, locations; **Work** page (`src/app/work/page.tsx`) with case study cards, filters, outcomes; **About** page (`src/app/about/page.tsx`) with mission hero, story/timeline, values, leadership bios, culture, security/compliance; **Industries** page (`src/app/industries/page.tsx`) with industry cards, outcomes, case study links; **Careers** page (`src/app/careers/page.tsx`) with hero, why JezeroX benefits, open roles, hiring process timeline, FAQ, CTA; **Insights** page (`src/app/insights/page.tsx`) with hero, topic filters, featured post, posts list, newsletter CTA; **Privacy** page (`src/app/privacy/page.tsx`) with privacy policy content; **Terms** page (`src/app/terms/page.tsx`) with terms of service content; **404** page (`src/app/not-found.tsx`) with 404 heading, message, and CTAs; shared components (`src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`, `src/components/insights`); Header with active page highlighting; contact form server action (`src/actions/contact-actions.ts`); design tokens (`globals.css`); `plan/COMPONENTS.md`, `plan/NEXT_STEPS.md`.
+   - **Next:** All core pages complete. Proceed to backend integration (Step 10), SEO (Step 11), QA (Step 12), and launch (Step 13).
 
 10. **Backend integration (if needed)**
     - Create Node.js API routes for forms.

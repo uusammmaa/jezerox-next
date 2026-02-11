@@ -109,7 +109,7 @@ For a new page (e.g. Services): add `app/services/page.tsx`, use `Header` and `F
 
 Use this when building each page. Sections in order; copy from `BRAND_MESSAGING.md` and `PLAN.md`.
 
-**Built:** Home, Services, Contact, Work, About, Industries, Careers, Insights, Privacy, Terms. **Next:** 404.
+**Built:** Home, Services, Contact, Work, About, Industries, Careers, Insights, Privacy, Terms, 404. **All core pages complete.**
 
 | Page | Sections (in order) |
 | --- | --- |
@@ -123,4 +123,4 @@ Use this when building each page. Sections in order; copy from `BRAND_MESSAGING.
 | **Insights** `/insights` ✓ | Hero → Topic filters → Featured post → Posts list → Newsletter CTA |
 | **Privacy** `/privacy` ✓ | Content only (no Hero; use Section + prose) |
 | **Terms** `/terms` ✓ | Content only |
-| **404** `/not-found` | CTA + link home |
+| **404** `/not-found` ✓ | 404 heading, message, CTAs (Go Home, Contact Us) |
