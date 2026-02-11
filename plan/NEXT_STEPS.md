@@ -6,13 +6,8 @@ Use this to continue implementation. All pages must follow the same design: see 
 
 ## Where you are
 
-<<<<<<< Updated upstream
-- **Done:** Steps 1–4 (discovery, messaging, IA, design system); Home page, **Services** page, **Contact** page, and **Work** page built with shared components.
-- **Code:** `src/app/page.tsx` (Home), `src/app/services/page.tsx` (Services), `src/app/contact/page.tsx` (Contact), `src/app/work/page.tsx` (Work), `src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`, `src/actions/contact-actions.ts`. Design tokens in `src/app/globals.css`.
-=======
 - **Done:** Steps 1–4 (discovery, messaging, IA, design system); Home page, **Services** page, **Contact** page, **Work** page, and **About** page built with shared components.
 - **Code:** `src/app/page.tsx` (Home), `src/app/services/page.tsx` (Services), `src/app/contact/page.tsx` (Contact), `src/app/work/page.tsx` (Work), `src/app/about/page.tsx` (About), `src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`, `src/actions/contact-actions.ts`. Design tokens in `src/app/globals.css`.
->>>>>>> Stashed changes
 - **Contact CTA:** Booking link configured in the Contact page.
 - **Layout:** Single-column stack; Header + Footer on every page; Section + Container for content.
 
@@ -20,27 +15,16 @@ Use this to continue implementation. All pages must follow the same design: see 
 
 ## Next step (pick one and build)
 
-<<<<<<< Updated upstream
-1. **About** (`/about`) — *Next recommended.* Sections: Hero (mission) → Story/timeline → Values → Leadership bios → Culture → Security/compliance → CTA.
-2. **Industries** (`/industries`) — Sections: Hero → Industry cards → Outcomes by industry → Case study links → CTA.
-=======
 1. ~~**About** (`/about`) — Done.~~ Sections: Hero (mission) → Story/timeline → Values → Leadership bios → Culture → Security/compliance → CTA.
 2. **Industries** (`/industries`) — *Next recommended.* Sections: Hero → Industry cards → Outcomes by industry → Case study links → CTA.
->>>>>>> Stashed changes
 3. **Careers** (`/careers`) — Sections: Hero → Why JezeroX → Open roles → Hiring process → FAQ → CTA.
 4. **Insights** (`/insights`) — Sections: Hero → Topic filters → Featured post → Posts list → Newsletter CTA.
 5. **Legal** — `/privacy`, `/terms` (simple content pages).
 6. **404** — `/not-found` with CTA.
 
-<<<<<<< Updated upstream
-**Completed:** Home (`/`), Services (`/services`), Contact (`/contact`), Work (`/work`).
-
-Suggested order: **About** → Industries → Careers → Insights → Legal → 404.
-=======
 **Completed:** Home (`/`), Services (`/services`), Contact (`/contact`), Work (`/work`), About (`/about`).
 
 Suggested order: ~~About~~ → **Industries** → Careers → Insights → Legal → 404.
->>>>>>> Stashed changes
 
 ---
 

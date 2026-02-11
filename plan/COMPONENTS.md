@@ -109,11 +109,7 @@ For a new page (e.g. Services): add `app/services/page.tsx`, use `Header` and `F
 
 Use this when building each page. Sections in order; copy from `BRAND_MESSAGING.md` and `PLAN.md`.
 
-<<<<<<< Updated upstream
-**Built:** Home, Services, Contact, Work. **Next:** About.
-=======
 **Built:** Home, Services, Contact, Work, About. **Next:** Industries.
->>>>>>> Stashed changes
 
 | Page | Sections (in order) |
 |------|---------------------|
@@ -121,11 +117,7 @@ Use this when building each page. Sections in order; copy from `BRAND_MESSAGING.
 | **Services** `/services` ✓ | Hero → Service categories (grid, same 6 as Home) → Engagement models → Delivery process → Tech stack → Case study highlights → FAQ → CTA |
 | **Contact** `/contact` ✓ | Hero → Contact form → Project brief checklist → Calendly/booking CTA → Locations/hours |
 | **Work** `/work` ✓ | Hero → Case study cards (filters) → Outcomes highlights → CTA |
-<<<<<<< Updated upstream
-| **About** `/about` | Hero (mission) → Story/timeline → Values → Leadership bios → Culture → Security/compliance → CTA |
-=======
 | **About** `/about` ✓ | Hero (mission) → Story/timeline → Values → Leadership bios → Culture → Security/compliance → CTA |
->>>>>>> Stashed changes
 | **Industries** `/industries` | Hero → Industry cards → Outcomes by industry → Case study links → CTA |
 | **Careers** `/careers` | Hero → Why JezeroX → Open roles → Hiring process → FAQ → CTA |
 | **Insights** `/insights` | Hero → Topic filters → Featured post → Posts list → Newsletter CTA |
