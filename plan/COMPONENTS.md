@@ -109,7 +109,7 @@ For a new page (e.g. Services): add `app/services/page.tsx`, use `Header` and `F
 
 Use this when building each page. Sections in order; copy from `BRAND_MESSAGING.md` and `PLAN.md`.
 
-**Built:** Home, Services, Contact, Work, About, Industries, Careers, Insights. **Next:** Legal (Privacy, Terms), 404.
+**Built:** Home, Services, Contact, Work, About, Industries, Careers, Insights, Privacy, Terms. **Next:** 404.
 
 | Page | Sections (in order) |
 | --- | --- |
@@ -121,6 +121,6 @@ Use this when building each page. Sections in order; copy from `BRAND_MESSAGING.
 | **Industries** `/industries` ✓ | Hero → Industry cards → Outcomes by industry → Case study links → CTA |
 | **Careers** `/careers` ✓ | Hero → Why JezeroX → Open roles → Hiring process → FAQ → CTA |
 | **Insights** `/insights` ✓ | Hero → Topic filters → Featured post → Posts list → Newsletter CTA |
-| **Privacy** `/privacy` | Content only (no Hero; use Section + prose) |
-| **Terms** `/terms` | Content only |
+| **Privacy** `/privacy` ✓ | Content only (no Hero; use Section + prose) |
+| **Terms** `/terms` ✓ | Content only |
 | **404** `/not-found` | CTA + link home |
