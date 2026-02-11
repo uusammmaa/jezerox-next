@@ -6,8 +6,8 @@ Use this to continue implementation. All pages must follow the same design: see 
 
 ## Where you are
 
-- **Done:** Steps 1–4 (discovery, messaging, IA, design system); Home page, **Services** page, **Contact** page, **Work** page, **About** page, **Industries** page, **Careers** page, and **Insights** page built with shared components.
-- **Code:** `src/app/page.tsx` (Home), `src/app/services/page.tsx` (Services), `src/app/contact/page.tsx` (Contact), `src/app/work/page.tsx` (Work), `src/app/about/page.tsx` (About), `src/app/industries/page.tsx` (Industries), `src/app/careers/page.tsx` (Careers), `src/app/insights/page.tsx` (Insights), `src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`, `src/components/insights`, `src/actions/contact-actions.ts`. Design tokens in `src/app/globals.css`.
+- **Done:** Steps 1–4 (discovery, messaging, IA, design system); Home page, **Services** page, **Contact** page, **Work** page, **About** page, **Industries** page, **Careers** page, **Insights** page, **Privacy** page, and **Terms** page built with shared components.
+- **Code:** `src/app/page.tsx` (Home), `src/app/services/page.tsx` (Services), `src/app/contact/page.tsx` (Contact), `src/app/work/page.tsx` (Work), `src/app/about/page.tsx` (About), `src/app/industries/page.tsx` (Industries), `src/app/careers/page.tsx` (Careers), `src/app/insights/page.tsx` (Insights), `src/app/privacy/page.tsx` (Privacy), `src/app/terms/page.tsx` (Terms), `src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`, `src/components/insights`, `src/actions/contact-actions.ts`. Design tokens in `src/app/globals.css`.
 - **Contact CTA:** Booking link configured in the Contact page.
 - **Layout:** Single-column stack; Header + Footer on every page; Section + Container for content.
 
@@ -19,12 +19,12 @@ Use this to continue implementation. All pages must follow the same design: see 
 2. ~~**Industries** (`/industries`) — Done.~~ Sections: Hero → Industry cards → Outcomes by industry → Case study links → CTA.
 3. ~~**Careers** (`/careers`) — Done.~~ Sections: Hero → Why JezeroX → Open roles → Hiring process → FAQ → CTA.
 4. ~~**Insights** (`/insights`) — Done.~~ Sections: Hero → Topic filters → Featured post → Posts list → Newsletter CTA.
-5. **Legal** — `/privacy`, `/terms` (simple content pages). *Next recommended.*
-6. **404** — `/not-found` with CTA.
+5. ~~**Legal** (`/privacy`, `/terms`) — Done.~~ Simple content pages with prose styling.
+6. **404** — `/not-found` with CTA. *Next recommended.*
 
-**Completed:** Home (`/`), Services (`/services`), Contact (`/contact`), Work (`/work`), About (`/about`), Industries (`/industries`), Careers (`/careers`), Insights (`/insights`).
+**Completed:** Home (`/`), Services (`/services`), Contact (`/contact`), Work (`/work`), About (`/about`), Industries (`/industries`), Careers (`/careers`), Insights (`/insights`), Privacy (`/privacy`), Terms (`/terms`).
 
-Suggested order: ~~About~~ → ~~Industries~~ → ~~Careers~~ → ~~Insights~~ → **Legal** → 404.
+Suggested order: ~~About~~ → ~~Industries~~ → ~~Careers~~ → ~~Insights~~ → ~~Legal~~ → **404**.
 
 ---
 
