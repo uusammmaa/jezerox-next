@@ -2,13 +2,8 @@
 
 ## Current status and next steps
 
-<<<<<<< Updated upstream
-- **Done:** Steps 1–4; Home page, **Services** page, **Contact** page, and **Work** page built with shared components (single-column stack, Header, Footer, design tokens). Contact booking CTA configured with a Calendly link.
-- **Next:** Build remaining pages in this order: **About** → Industries → Careers → Insights → Legal → 404. Each page must use the same design (see `COMPONENTS.md` and `NEXT_STEPS.md`).
-=======
 - **Done:** Steps 1–4; Home page, **Services** page, **Contact** page, **Work** page, and **About** page built with shared components (single-column stack, Header, Footer, design tokens). Contact booking CTA configured with a Calendly link.
 - **Next:** Build remaining pages in this order: **Industries** → Careers → Insights → Legal → 404. Each page must use the same design (see `COMPONENTS.md` and `NEXT_STEPS.md`).
->>>>>>> Stashed changes
 - **Reference:** `NEXT_STEPS.md` = what to build next; `COMPONENTS.md` = shared components + design consistency + section checklist per page; `DESIGN_SYSTEM.md` = tokens and specs.
 
 ---
@@ -280,13 +275,8 @@
    - Build layout, header, footer, and pages.
    - Implement reusable components and section blocks.
    - Deliverable: fully responsive site.
-<<<<<<< Updated upstream
-- **Done:** Home page; **Services** page (`src/app/services/page.tsx`); **Contact** page (`src/app/contact/page.tsx`) with form, project brief checklist, book-a-call CTA, locations; **Work** page (`src/app/work/page.tsx`) with case study cards, filters, outcomes; shared components (`src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`); contact form server action (`src/actions/contact-actions.ts`); design tokens (`globals.css`); `plan/COMPONENTS.md`, `plan/NEXT_STEPS.md`.
-  - **Next (same design):** About → Industries → Careers → Insights → Privacy/Terms → 404. Section list per page: `COMPONENTS.md` (page-by-page checklist) and `PLAN.md` (Page sections).
-=======
 - **Done:** Home page; **Services** page (`src/app/services/page.tsx`); **Contact** page (`src/app/contact/page.tsx`) with form, project brief checklist, book-a-call CTA, locations; **Work** page (`src/app/work/page.tsx`) with case study cards, filters, outcomes; **About** page (`src/app/about/page.tsx`) with mission hero, story/timeline, values, leadership bios, culture, security/compliance; shared components (`src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`); contact form server action (`src/actions/contact-actions.ts`); design tokens (`globals.css`); `plan/COMPONENTS.md`, `plan/NEXT_STEPS.md`.
   - **Next (same design):** Industries → Careers → Insights → Privacy/Terms → 404. Section list per page: `COMPONENTS.md` (page-by-page checklist) and `PLAN.md` (Page sections).
->>>>>>> Stashed changes
 
 10. **Backend integration (if needed)**
     - Create Node.js API routes for forms.
