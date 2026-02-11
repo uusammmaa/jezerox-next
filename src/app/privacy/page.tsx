@@ -186,8 +186,9 @@ export default function PrivacyPage() {
                         href="mailto:info@jezerox.com"
                         className="text-accent hover:underline"
                       >
-                        info@jezerox.com</a>
-                      .
+                        info@jezerox.com
+                      </a>
+                      {"."}
                     </p>
                   </div>
 
