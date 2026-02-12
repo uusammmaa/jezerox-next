@@ -114,6 +114,12 @@ export function ContactForm() {
         error={fieldErrors.message?.[0]}
       />
 
+      {/* Honeypot field - hidden from users, bots will fill it */}
+      <div style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }} aria-hidden="true">
+        <label htmlFor="contact-website">Website</label>
+        <input type="text" id="contact-website" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
+
       <Button type="submit" variant="primary" size="lg" disabled={isPending}>
         {isPending ? "Sending…" : "Tell us about your product."}
       </Button>

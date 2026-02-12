@@ -6,8 +6,9 @@ Use this to continue implementation. All pages must follow the same design: see 
 
 ## Where you are
 
-- **Done:** Steps 1–4 (discovery, messaging, IA, design system); Home page, **Services** page, **Contact** page, **Work** page, **About** page, **Industries** page, **Careers** page, **Insights** page, **Privacy** page, **Terms** page, and **404** page built with shared components.
-- **Code:** `src/app/page.tsx` (Home), `src/app/services/page.tsx` (Services), `src/app/contact/page.tsx` (Contact), `src/app/work/page.tsx` (Work), `src/app/about/page.tsx` (About), `src/app/industries/page.tsx` (Industries), `src/app/careers/page.tsx` (Careers), `src/app/insights/page.tsx` (Insights), `src/app/privacy/page.tsx` (Privacy), `src/app/terms/page.tsx` (Terms), `src/app/not-found.tsx` (404), `src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`, `src/components/insights`, `src/actions/contact-actions.ts`. Design tokens in `src/app/globals.css`.
+- **Done:** Steps 1–4 (discovery, messaging, IA, design system); Steps 5–9 (all pages); **Step 10 (Backend integration)** — Contact form with email sending, rate limiting, and honeypot protection.
+- **Code:** `src/app/page.tsx` (Home), `src/app/services/page.tsx` (Services), `src/app/contact/page.tsx` (Contact), `src/app/work/page.tsx` (Work), `src/app/about/page.tsx` (About), `src/app/industries/page.tsx` (Industries), `src/app/careers/page.tsx` (Careers), `src/app/insights/page.tsx` (Insights), `src/app/privacy/page.tsx` (Privacy), `src/app/terms/page.tsx` (Terms), `src/app/not-found.tsx` (404), `src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`, `src/components/insights`, `src/actions/contact-actions.ts`, `src/lib/rate-limit.ts`. Design tokens in `src/app/globals.css`.
+- **Contact Form:** Email sending via Resend, rate limiting (5 requests per 15 minutes), honeypot spam protection, and dedicated email subdomain (`contact.jezerox.com`) for sending/receiving contact submissions.
 - **Contact CTA:** Booking link configured in the Contact page.
 - **Layout:** Single-column stack; Header + Footer on every page; Section + Container for content.
 
@@ -54,7 +55,7 @@ Suggested order: ~~About~~ → ~~Industries~~ → ~~Careers~~ → ~~Insights~~ �
 
 ## After pages are built
 
-- Step 10: Backend (contact form API, validation, email).
+- ~~Step 10: Backend (contact form API, validation, email).~~ **Done.** Contact form integrated with Resend email service, rate limiting (5 requests per 15 minutes per IP/email), honeypot spam protection, and subdomain-based email routing (`contact.jezerox.com`). See `.env.example` for required environment variables.
 - Step 11: SEO (metadata, schema, sitemap, robots).
 - Step 12: QA (accessibility, Lighthouse, security headers).
 - Step 13: Launch.
