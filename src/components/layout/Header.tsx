@@ -24,6 +24,12 @@ export function Header() {
       className="sticky top-0 z-50 border-b border-border bg-(--navy-950)/95 backdrop-blur-sm"
       role="banner"
     >
+      <Link
+        href="#main-content"
+        className="skip-link focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue-400)"
+      >
+        Skip to main content
+      </Link>
       <Container className="flex h-16 items-center justify-between md:h-18">
         <Link
           href="/"

@@ -77,3 +77,45 @@ body {
   outline: 2px solid var(--blue-400);
   outline-offset: 2px;
 }
+
+/* Screen reader only - visually hidden, announced to assistive tech */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link - visually hidden until focused, for keyboard users */
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link:focus {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  top: 1rem;
+  left: 1rem;
+  z-index: 60;
+  background: var(--blue-500);
+  color: var(--gray-100);
+  border-radius: var(--radius-md);
+}
