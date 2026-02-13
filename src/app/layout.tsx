@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { getSiteUrl } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -14,15 +17,31 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteUrl = getSiteUrl();
+const defaultTitle = "JezeroX — Build faster. Scale smarter.";
+const defaultDescription =
+  "JezeroX is a product engineering partner for ambitious teams. We design, build, and scale secure software from MVP to enterprise.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "JezeroX — Build faster. Scale smarter.",
+    default: defaultTitle,
     template: "%s | JezeroX",
   },
-  description:
-    "JezeroX is a product engineering partner for ambitious teams. We design, build, and scale secure software from MVP to enterprise.",
+  description: defaultDescription,
+  robots: "index, follow",
   openGraph: {
+    title: defaultTitle,
+    description: defaultDescription,
+    url: siteUrl,
+    siteName: "JezeroX",
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
   },
 };
 
@@ -40,7 +59,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`} suppressHydrationWarning>
       <body className="min-h-screen antialiased" suppressHydrationWarning>
+        <JsonLd />
         {children}
+        <Analytics />
       </body>
     </html>
   );

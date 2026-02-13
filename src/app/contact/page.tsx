@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Section, Button, Container } from "@/components/ui";
 import { ContactForm } from "@/components/contact";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Contact",
   description:
     "Tell us about your product. JezeroX responds within 24 hours. Book a call or send a message.",
-};
+  path: "/contact",
+});
 
 const projectBriefChecklist = [
   "What problem are you solving?",

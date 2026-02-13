@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Section } from "@/components/ui";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Terms of Service",
   description:
     "JezeroX Terms of Service. Read our terms and conditions for using our website and services.",
-};
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

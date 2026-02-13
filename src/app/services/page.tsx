@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Section, Button, Card, Container } from "@/components/ui";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Services",
   description:
-    "Product strategy, design, and engineering in one team. Transparent engagement models and senior delivery for ambitious teams.",
-};
+    "Product strategy, UX/UI design, and engineering in one team. Custom software development and MVP development with transparent engagement models.",
+  path: "/services",
+});
 
 const services = [
   {

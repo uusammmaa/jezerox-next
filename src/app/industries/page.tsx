@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Section, Button, Card, Container } from "@/components/ui";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Industries",
   description:
-    "Deep expertise across fintech, healthcare, retail, logistics, SaaS, and education. We build secure, scalable software for regulated and high-growth teams.",
-};
+    "Deep expertise across fintech, healthcare, retail, logistics, SaaS, and education. Software agency for regulated and high-growth teams.",
+  path: "/industries",
+});
 
 const industries = [
   {

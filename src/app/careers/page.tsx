@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Section, Button, Card, Container } from "@/components/ui";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Careers",
   description:
     "Join JezeroX and build software that matters. Senior-only teams, transparent culture, and opportunities to ship products that scale.",
-};
+  path: "/careers",
+});
 
 const benefits = [
   {
