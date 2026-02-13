@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Section } from "@/components/ui";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy",
   description:
     "JezeroX Privacy Policy. Learn how we collect, use, and protect your personal information.",
-};
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

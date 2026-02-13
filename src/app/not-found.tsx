@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Section, Button } from "@/components/ui";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Page Not Found",
   description: "The page you're looking for doesn't exist.",
-};
+  path: "/404",
+  robots: "noindex, follow",
+});
 
 export default function NotFound() {
   return (

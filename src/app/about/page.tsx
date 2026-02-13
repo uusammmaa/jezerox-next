@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Section, Button, Card, Container } from "@/components/ui";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "About",
   description:
     "JezeroX is a product engineering partner for ambitious teams. Learn about our mission, values, leadership, and how we deliver secure, scalable software.",
-};
+  path: "/about",
+});
 
 const milestones = [
   {

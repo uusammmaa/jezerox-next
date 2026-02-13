@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Section, Button, Container } from "@/components/ui";
 import { CaseStudiesGrid } from "@/components/work/CaseStudiesGrid";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Work",
   description:
-    "Case studies showcasing how JezeroX delivers secure, high-performing software from MVP to enterprise scale.",
-};
+    "Case studies showcasing how JezeroX delivers secure, high-performing software from MVP to enterprise scale. Product development agency results.",
+  path: "/work",
+});
 
 const outcomes = [
   {

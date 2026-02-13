@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Section, Container } from "@/components/ui";
 import { PostsGrid } from "@/components/insights";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Insights",
   description:
     "Engineering playbooks, AI productization strategies, and growth lessons for product leaders building software that scales.",
-};
+  path: "/insights",
+});
 
 export default function InsightsPage() {
   return (
