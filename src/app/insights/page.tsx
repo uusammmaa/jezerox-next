@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Insights",
   description:
-    "Engineering playbooks, AI productization strategies, and growth lessons for product leaders building software that scales.",
+    "Engineering playbooks, AI productization, machine learning in production, and growth lessons for product leaders.",
   path: "/insights",
 });
 

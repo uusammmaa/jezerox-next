@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = createPageMetadata({
   title: "Build faster. Scale smarter.",
   description:
-    "JezeroX is a software agency that designs, builds, and scales digital products for startups and enterprises. Product strategy, UX, engineering, and growth in one expert team.",
+    "JezeroX is a product engineering partner for ambitious teams. We design, build, and scale secure software from MVP to enterprise, including AI, data automation, and custom machine learning solutions.",
   path: "/",
 });
 

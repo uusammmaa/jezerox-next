@@ -112,7 +112,7 @@ export default function ContactPage() {
               Prefer to talk first?
             </h2>
             <p className="mt-3 text-text-muted">
-              Book a call with our team. No commitment—we will listen and
+              Book a call with our team. No commitment, we will listen and
               suggest next steps.
             </p>
             <div className="mt-8">

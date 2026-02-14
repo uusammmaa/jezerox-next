@@ -33,7 +33,8 @@ const services = [
   },
   {
     title: "Data, AI, and automation",
-    description: "Intelligent workflows and insights.",
+    description:
+      "Custom AI and machine learning: LLM integration, predictive analytics, intelligent workflows, and production ML systems. From prototype to scalable, reliable AI products.",
     icon: Brain,
     bullets: ["Intelligent workflows", "Insights", "Automation"],
   },
