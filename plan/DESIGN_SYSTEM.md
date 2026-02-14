@@ -175,7 +175,7 @@ Date: 2026-01-24
 
 ## Visual asset direction (original, no theme copy)
 
-- **Logo:** Single accent (blue or teal) on navy/white—no multi-color gradients that resemble common themes.
+- **Logo:** design-02.png (full logo with symbol + wordmark, gradient) in header and footer. logo-mark.png (symbol only) for favicon and structured data (JSON-LD).
 - **Illustrations:** Geometric, abstract, or mesh/grid only. No character-based line art from other themes; use custom or clearly licensed assets in brand colors.
 - **Hero/backgrounds:** Abstract 3D, mesh, or generative shapes in palette (#0B1220, #3C7DFF, #1EC9A8). Optional low-opacity grid overlay.
 - **Icons:** Outline or solid in accent/teal; consistent stroke weight.

@@ -42,8 +42,8 @@ Every page must follow these rules so the site looks and behaves the same:
 
 | Component | Use |
 | --- | --- |
-| **Header** | Sticky nav: logo, primary nav links, Contact CTA. Mobile: hamburger + drawer. Use on every page. |
-| **Footer** | Company, Services, Resources, Legal links + copyright. Use on every page. |
+| **Header** | Sticky nav: design-02.png logo (left), primary nav links, Contact CTA. Mobile: hamburger + drawer. Use on every page. |
+| **Footer** | design-02.png logo, Company, Services, Resources, Legal links + copyright. Use on every page. |
 
 ---
 

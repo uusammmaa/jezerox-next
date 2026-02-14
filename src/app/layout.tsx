@@ -24,6 +24,9 @@ const defaultDescription =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: "/logo-mark.png",
+  },
   title: {
     default: defaultTitle,
     template: "%s | JezeroX",

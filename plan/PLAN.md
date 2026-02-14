@@ -175,9 +175,20 @@
 
 ### Logo direction
 
-- Wordmark: "JezeroX" in clean geometric sans (Space Grotesk).
-- Icon: abstract "J" lightning or orbital mark (speed + precision). **Single accent color** (e.g. electric blue or teal)—no multi-color gradient to stay distinct from common theme lockups.
-- Variants: full color (navy + accent), mono (white/light on dark), reversed, favicon, social avatar.
+- **Primary logo:** design-02.png — full logo (symbol + wordmark "JEZEROX") with gradient. Used in header and footer.
+- **Symbol only:** logo-mark.png — for favicon, JSON-LD structured data, and compact contexts.
+- Variants in `/public`: logo-black.png, logo-white.png, logo-transparent.png, logo-symbol-black.png, logo-symbol-white.png.
+
+### Logo assets (in `/public`)
+
+Naming omits brand prefix; context is JezeroX. Files:
+
+- `logo-design.ai` — Source design
+- `design-02.png` — **Primary logo** (symbol + wordmark, gradient). Used in header and footer.
+- `design-01.jpg`, `design-01.png`, `design-02.jpg` — Design variants
+- `logo-black.png`, `logo-white.png`, `logo-transparent.png` — Full logo variants
+- `logo-mark.png` — Symbol only (favicon, JSON-LD, compact contexts)
+- `logo-symbol-black.png`, `logo-symbol-white.png` — Symbol variants
 
 ### Image direction
 
@@ -295,10 +306,11 @@
    - Create case study narratives (placeholders if needed).
    - Deliverable: content files per page.
 
-7. **Asset creation**
+7. **Asset creation** ✅ Done
    - Create logo set and favicon.
    - Produce hero illustration, service icons, and case study images.
    - Deliverable: SVG/PNG assets in `/public`.
+   - **Done:** Logo set in `/public`. design-02.png in header and footer; logo-mark.png as favicon and JSON-LD; logo-black/white/transparent, logo-symbol-black/white, design variants. See "Logo assets" above.
 
 8. **Motion and interaction**
    - Implement key animations and hover states.
