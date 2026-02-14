@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui";
 
 const footerGroups = [
@@ -62,6 +63,15 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
+          <Link href="/" className="flex items-center" aria-label="JezeroX home">
+            <Image
+              src="/design-02.png"
+              alt=""
+              width={120}
+              height={32}
+              className="h-7 w-auto opacity-90"
+            />
+          </Link>
           <p className="text-sm text-text-muted">
             © {year} JezeroX. All rights reserved.
           </p>

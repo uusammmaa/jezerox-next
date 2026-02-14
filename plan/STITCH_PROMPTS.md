@@ -35,7 +35,7 @@ Design system:
 - Background: deep navy #0B1220, surfaces #111A2B and #1F2A3A.
 - Accents: electric blue #3C7DFF (primary CTAs, links), teal #1EC9A8 (secondary). No yellow–purple or multi-color gradients.
 - Typography: Space Grotesk headings, Inter body. 12-column grid, max width ~1200–1320px.
-- Logo: wordmark "JezeroX" with single accent (blue or teal).
+- Logo: design-02.png (full logo: symbol + wordmark "JEZEROX" with gradient). Use in header and footer.
 - Visuals: geometric, abstract, or mesh/grid only — no character-based line art. Navy, blue, teal only.
 - Futuristic: subtle blue/teal glow on CTAs and key cards; optional grid/mesh background; optional glassmorphism; radius 8–16px.
 
@@ -132,7 +132,7 @@ JezeroX homepage, dark futuristic modern. Sections in order:
 
 7. Final CTA: "Tell us about your product." + Contact teaser. Primary button with subtle glow.
 
-Header: JezeroX wordmark (left), nav: Home, Services, Industries, Work, About, Insights, Careers — Contact as primary CTA button. Footer: company links, services, legal. Dark navy background throughout, Space Grotesk + Inter, 12-column grid.
+Header: JezeroX logo (design-02.png, left), nav: Home, Services, Industries, Work, About, Insights, Careers — Contact as primary CTA button. Footer: design-02.png logo, company links, services, legal. Dark navy background throughout, Space Grotesk + Inter, 12-column grid.
 ```
 
 ---
