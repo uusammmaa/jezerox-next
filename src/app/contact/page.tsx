@@ -117,7 +117,7 @@ export default function ContactPage() {
             </p>
             <div className="mt-8">
               <Button
-                href="https://calendly.com/usamaakram17/discovery-consultation-call"
+                href={process.env.CALENDLY_BOOKING_URL || ""}
                 variant="secondary"
                 size="lg"
                 target="_blank"
