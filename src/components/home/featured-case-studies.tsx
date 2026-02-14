@@ -1,50 +1,61 @@
-import { Section, Card } from "@/components/ui";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Section } from "@/components/ui";
 
-const caseStudies = [
-  {
-    title: "Fintech platform modernization",
-    description: "Reduced time-to-market and improved reliability for a regulated payments product.",
-    href: "/work",
-  },
-  {
-    title: "Healthcare data analytics dashboard",
-    description: "Secure, HIPAA-aligned dashboards for clinical and operations teams.",
-    href: "/work",
-  },
-  {
-    title: "SaaS growth and optimization",
-    description: "Conversion and activation improvements with clear attribution.",
-    href: "/work",
-  },
-] as const;
+const featuredCaseStudy = {
+  label: "Latest Work",
+  title: "Fintech platform modernization",
+  description:
+    "We collaborated with a regulated payments provider to reduce time-to-market and improve reliability. Delivered a production-ready platform with clear compliance controls.",
+  metrics: [
+    { value: "34%", label: "Cost Reduction" },
+    { value: "2.4ms", label: "Processing Latency" },
+  ],
+  href: "/work",
+};
 
 export function FeaturedCaseStudies() {
   return (
-    <Section id="case-studies">
-      <div className="text-center">
-          <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-            Featured case studies
+    <Section id="case-studies" className="bg-bg-surface-2">
+      <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+        <div className="relative">
+          <div className="pointer-events-none absolute -top-10 -left-10 h-40 w-40 rounded-full bg-[var(--blue-500)]/20 blur-[100px]" />
+          <div
+            className="relative z-10 aspect-video overflow-hidden rounded-xl border border-border shadow-2xl"
+            aria-hidden
+          >
+            <div className="h-full w-full bg-gradient-to-br from-[var(--navy-800)] to-[var(--navy-900)]" />
+          </div>
+        </div>
+        <div>
+          <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.2em] text-[var(--blue-500)]">
+            {featuredCaseStudy.label}
           </h2>
-          <p className="mt-2 text-text-muted">
-            Proof in production — see how we deliver.
+          <h3 className="mb-8 font-(family-name:--font-space-grotesk) text-4xl font-bold text-text-primary">
+            {featuredCaseStudy.title}
+          </h3>
+          <p className="mb-10 text-lg leading-relaxed text-text-muted">
+            {featuredCaseStudy.description}
           </p>
+          <div className="mb-12 grid grid-cols-2 gap-8">
+            {featuredCaseStudy.metrics.map(({ value, label }) => (
+              <div key={label}>
+                <p className="font-(family-name:--font-space-grotesk) text-3xl font-bold text-text-primary">
+                  {value}
+                </p>
+                <p className="text-sm text-text-muted">{label}</p>
+              </div>
+            ))}
+          </div>
+          <Link
+            href={featuredCaseStudy.href}
+            className="group inline-flex items-center gap-2 font-bold text-[var(--blue-500)] transition-colors hover:text-[var(--blue-400)]"
+          >
+            Read full case study
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {caseStudies.map(({ title, description, href }) => (
-            <Card key={title} href={href} glow>
-              <div className="aspect-video rounded-md bg-bg-surface-2" />
-              <h3 className="mt-4 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                {title}
-              </h3>
-              <p className="mt-2 text-sm text-text-secondary">
-                {description}
-              </p>
-              <span className="mt-3 inline-block text-sm font-medium text-accent">
-                Learn more →
-              </span>
-            </Card>
-          ))}
-        </div>
+      </div>
     </Section>
   );
 }

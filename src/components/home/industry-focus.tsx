@@ -11,8 +11,10 @@ const industries = [
 
 export function IndustryFocus() {
   return (
-    <Section id="industries">
-      <div className="text-center">
+    <Section id="industries" className="relative border-t border-border bg-bg-surface-2">
+      <div className="pointer-events-none absolute inset-0 grid-pattern opacity-20" aria-hidden />
+      <div className="relative z-10">
+        <div className="text-center">
           <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
             Built for regulated and high-growth teams
           </h2>
@@ -25,12 +27,13 @@ export function IndustryFocus() {
           {industries.map((name) => (
             <span
               key={name}
-              className="rounded-(--radius-pill) border border-border bg-bg-surface px-4 py-2 text-sm font-medium text-text-secondary"
+              className="glass rounded-full px-4 py-2 text-sm font-medium text-text-secondary"
             >
               {name}
             </span>
           ))}
         </div>
+      </div>
     </Section>
   );
 }

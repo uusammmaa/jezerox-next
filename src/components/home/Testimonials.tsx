@@ -17,7 +17,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <Section id="testimonials">
+    <Section id="testimonials" className="border-t border-border bg-bg-surface">
       <div className="text-center">
           <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
             Teams trust JezeroX to deliver
@@ -28,7 +28,7 @@ export function Testimonials() {
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {testimonials.map(({ quote, author, role }) => (
-            <Card key={quote.slice(0, 24)}>
+            <Card key={quote.slice(0, 24)} className="glass">
               <blockquote className="text-text-secondary">
                 &ldquo;{quote}&rdquo;
               </blockquote>

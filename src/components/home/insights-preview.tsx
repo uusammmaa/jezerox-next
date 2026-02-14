@@ -9,7 +9,7 @@ const posts = [
 
 export function InsightsPreview() {
   return (
-    <Section id="insights">
+    <Section id="insights" className="border-t border-border bg-bg-surface-2">
       <div className="text-center">
           <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
             Insights for product leaders
@@ -20,8 +20,8 @@ export function InsightsPreview() {
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {posts.map(({ title, slug, date }) => (
-            <Card key={title} href={slug}>
-              <div className="aspect-16/10 rounded-md bg-bg-surface-2" />
+            <Card key={title} href={slug} className="glass">
+              <div className="aspect-video rounded-md bg-bg-surface-2" />
               <h3 className="mt-4 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
                 {title}
               </h3>

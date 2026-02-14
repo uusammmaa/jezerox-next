@@ -34,7 +34,7 @@ New designs created in Google Stitch. Each page will be shared as HTML and conve
 
 | Page | Route | Status |
 |------|-------|--------|
-| Home | `/` | Pending |
+| Home | `/` | Done |
 | Services | `/services` | Pending |
 | Contact | `/contact` | Pending |
 | Work | `/work` | Pending |
