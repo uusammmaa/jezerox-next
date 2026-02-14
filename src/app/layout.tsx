@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 import { getSiteUrl } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/json-ld";
 import "./globals.css";
