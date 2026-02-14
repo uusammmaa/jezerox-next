@@ -7,7 +7,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "JezeroX",
   url: siteUrl,
-  logo: `${siteUrl}/favicon.ico`,
+  logo: `${siteUrl}/logo-mark.png`,
   description:
     "JezeroX is a product engineering partner for ambitious teams. We design, build, and scale secure software from MVP to enterprise.",
   foundingDate: "2019",
@@ -32,7 +32,7 @@ const websiteSchema = {
     name: "JezeroX",
     logo: {
       "@type": "ImageObject",
-      url: `${siteUrl}/favicon.ico`,
+      url: `${siteUrl}/logo-mark.png`,
     },
   },
 };
