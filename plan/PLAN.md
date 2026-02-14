@@ -2,8 +2,7 @@
 
 ## Current status and next steps
 
-- **Done:** Steps 1–4; Steps 5–9 (all pages); **Step 10 (Backend integration)** — Contact form with Resend email service, dedicated email subdomain (`contact.jezerox.com`), rate limiting, and honeypot spam protection; **Step 11 (SEO and analytics)** — metadata, structured data, sitemap, robots.txt, Open Graph/Twitter cards, Vercel Analytics; **Step 12 (QA and security)** — security headers (`src/proxy.ts`), skip link, Lighthouse audit, `plan/QA_REPORT.md`.
-- **Next:** Step 13 — Launch.
+- **Done:** Steps 1–4; Steps 5–9 (all pages); **Step 10 (Backend integration)** — Contact form with Resend email service, dedicated email subdomain (`contact.jezerox.com`), rate limiting, and honeypot spam protection; **Step 11 (SEO and analytics)** — metadata, structured data, sitemap, robots.txt, Open Graph/Twitter cards, Vercel Analytics; **Step 12 (QA and security)** — security headers (`src/proxy.ts`), skip link, Lighthouse audit, `plan/QA_REPORT.md`; **Step 13 (Launch)** — deployed to Vercel, custom domains `jezerox.com` and `www.jezerox.com` configured via cPanel DNS.
 - **Reference:** `NEXT_STEPS.md` = what to build next; `COMPONENTS.md` = shared components + design consistency + section checklist per page; `DESIGN_SYSTEM.md` = tokens and specs.
 
 ---
@@ -311,7 +310,7 @@
    - Implement reusable components and section blocks.
    - Deliverable: fully responsive site.
    - **Done:** Home page; **Services** page (`src/app/services/page.tsx`); **Contact** page (`src/app/contact/page.tsx`) with form, project brief checklist, book-a-call CTA, locations; **Work** page (`src/app/work/page.tsx`) with case study cards, filters, outcomes; **About** page (`src/app/about/page.tsx`) with mission hero, story/timeline, values, leadership bios, culture, security/compliance; **Industries** page (`src/app/industries/page.tsx`) with industry cards, outcomes, case study links; **Careers** page (`src/app/careers/page.tsx`) with hero, why JezeroX benefits, open roles, hiring process timeline, FAQ, CTA; **Insights** page (`src/app/insights/page.tsx`) with hero, topic filters, featured post, posts list, newsletter CTA; **Privacy** page (`src/app/privacy/page.tsx`) with privacy policy content; **Terms** page (`src/app/terms/page.tsx`) with terms of service content; **404** page (`src/app/not-found.tsx`) with 404 heading, message, and CTAs; shared components (`src/components/ui`, `src/components/layout`, `src/components/home`, `src/components/contact`, `src/components/work`, `src/components/insights`); Header with active page highlighting; contact form server action (`src/actions/contact-actions.ts`); design tokens (`globals.css`); `plan/COMPONENTS.md`, `plan/NEXT_STEPS.md`.
-   - **Next:** All core pages complete. Proceed to launch (Step 13).
+   - **Done:** All core pages complete. Step 13 (Launch) complete.
 
 10. **Backend integration (if needed)** ✅ Done
     - Create Node.js API routes for forms.
@@ -332,7 +331,8 @@
     - Deliverable: QA report and fixes.
     - **Done:** Security headers via `src/proxy.ts` (X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, CSP); skip link and `.sr-only` for accessibility; Lighthouse scores: Performance 97, Accessibility 96, Best Practices 96, SEO 100. See `plan/QA_REPORT.md`.
 
-13. **Launch**
+13. **Launch** ✅ Done
     - Final content review.
     - Deploy and monitor.
     - Deliverable: live site with monitoring.
+    - **Done:** Deployed to Vercel. Live at https://jezerox.com and https://www.jezerox.com. DNS configured via cPanel (A record for apex, CNAME for www). Vercel Analytics active.
