@@ -9,7 +9,7 @@ const steps = [
 
 export function ProcessOverview() {
   return (
-    <Section id="process">
+    <Section id="process" className="border-t border-border bg-bg-surface">
       <div className="text-center">
           <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
             Discover. Design. Build. Scale.
@@ -22,7 +22,7 @@ export function ProcessOverview() {
           {steps.map(({ name, duration, detail }, i) => (
             <div
               key={name}
-              className="relative rounded-lg border border-border bg-bg-surface p-6"
+              className="glass relative rounded-xl p-6"
             >
               <span className="text-sm font-semibold text-accent">
                 Step {i + 1}

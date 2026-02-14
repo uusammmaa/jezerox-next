@@ -1,7 +1,5 @@
 # JezeroX Brand Messaging and Core Copy
 
-Date: 2026-01-24
-
 ## Final tagline and subheading
 
 - Primary tagline: Build faster. Scale smarter.
