@@ -24,6 +24,35 @@ Single source of truth for AI. Read this first. For design tokens see `DESIGN_SY
 
 ---
 
+## Design refresh (page-by-page)
+
+New designs created in Google Stitch. Each page will be shared as HTML and converted to the app.
+
+**Workflow:** Share HTML → Convert to React/TSX + Tailwind → Apply design system tokens → Keep Header/Footer layout.
+
+**Pages to update:**
+
+| Page | Route | Status |
+|------|-------|--------|
+| Home | `/` | Pending |
+| Services | `/services` | Pending |
+| Contact | `/contact` | Pending |
+| Work | `/work` | Pending |
+| About | `/about` | Pending |
+| Industries | `/industries` | Pending |
+| Careers | `/careers` | Pending |
+| Insights | `/insights` | Pending |
+| Privacy | `/privacy` | Pending |
+| Terms | `/terms` | Pending |
+
+**Conversion rules:**
+- Use design tokens from `DESIGN_SYSTEM.md` (colors, typography, spacing)
+- Use copy from `BRAND_MESSAGING.md` where applicable
+- Preserve layout: Header → `<main id="main-content">` → sections → Footer
+- Use existing components: Section, Container, Button, Card, Header, Footer
+
+---
+
 ## Next steps (dynamic routes)
 
 - `/services/[slug]` — Service detail template
