@@ -21,6 +21,7 @@ Single source of truth for AI. Read this first. For design tokens see `DESIGN_SY
 - `src/actions/contact-actions.ts`
 - `src/lib/rate-limit.ts`, `src/lib/seo.ts`
 - `src/proxy.ts` — security headers (at src root, not in app)
+- `lucide-react` — icons (hero, services, featured case studies)
 
 ---
 
@@ -51,6 +52,13 @@ New designs created in Google Stitch. Each page will be shared as HTML and conve
 - Preserve layout: Header → `<main id="main-content">` → sections → Footer
 - Use existing components: Section, Container, Button, Card, Header, Footer
 
+**Home page design pattern (reference for other pages):**
+- Header: glass styling, h-20
+- Hero: badge, gradient headline, grid-pattern + hero-glow overlays, CTAs (primary + secondary glass)
+- Sections: alternating `bg-bg-surface` / `bg-bg-surface-2` + `border-t border-border` for delineation
+- Cards: glass class, rounded-xl, Lucide icons
+- CTA block: full-width `bg-accent`, rounded-3xl, grid-pattern overlay
+
 ---
 
 ## Next steps (dynamic routes)
@@ -80,6 +88,8 @@ Use when building dynamic routes.
 - Colors: `var(--navy-950)`, `var(--blue-500)`, `var(--teal-500)`, `var(--text-primary)`, `var(--text-muted)` (see globals.css).
 - Typography: `font-[family-name:var(--font-space-grotesk)]` for headings; Inter for body.
 - Add `metadata` (title, description) per route.
+- Utilities (globals.css): `.glass`, `.hero-glow`, `.grid-pattern` for nav and hero/card styling.
+- Hero CTAs: primary and secondary buttons must match size (h-12, px-5, text-base) for visual parity.
 
 ---
 
@@ -114,3 +124,10 @@ From `.env.example`; copy to `.env.local` for local dev. Set in Vercel for produ
 - Lighthouse: Perf 97, A11y 96, BP 96, SEO 100
 - Security headers via `src/proxy.ts`
 - Known follow-ups: color contrast on `--text-muted`; LCP ~2.55s (monitor); unused JS (defer)
+
+## SEO and best practices (pending)
+
+- Add Open Graph image for social shares
+- Fix Insights preview links (`href="#"` → `/insights`)
+- Heading hierarchy: section labels (e.g. "Core Expertise") as span; main titles as h2
+- Align home page metadata description with BRAND_MESSAGING

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
 import { Section, Button, Card, Container } from "@/components/ui";
+import { FaqSchema } from "@/components/seo/faq-schema";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Services",
   description:
-    "Product strategy, UX/UI design, and engineering in one team. Custom software development and MVP development with transparent engagement models.",
+    "Product strategy, UX/UI design, and engineering in one team. AI development, machine learning, and custom software from MVP to enterprise.",
   path: "/services",
 });
 
@@ -28,7 +29,8 @@ const services = [
   },
   {
     title: "Data, AI, and automation",
-    description: "Intelligent workflows and insights.",
+    description:
+      "Custom AI and machine learning: LLM integration, predictive analytics, intelligent workflows, and production ML systems. From prototype to scalable, reliable AI products.",
     icon: "⬢",
   },
   {
@@ -97,6 +99,16 @@ const caseStudyHighlights = [
 
 const faqItems = [
   {
+    question: "Do you build custom AI and machine learning solutions?",
+    answer:
+      "Yes. JezeroX builds intelligent workflows, LLM integrations, predictive analytics, and production AI systems. We help teams move AI from prototype to scalable products with clear reliability and observability.",
+  },
+  {
+    question: "What does AI productization mean?",
+    answer:
+      "Moving AI features from proof-of-concept to production: model deployment, monitoring, guardrails, and integration with your existing product. We focus on reliability, latency, and user trust.",
+  },
+  {
     question: "What engagement model fits our project?",
     answer:
       "Fixed scope works best for defined MVPs with clear deliverables. Retainers suit ongoing product and engineering support. Team extension lets you embed senior JezeroX engineers into your team.",
@@ -121,6 +133,7 @@ const faqItems = [
 export default function ServicesPage() {
   return (
     <>
+      <FaqSchema items={faqItems} />
       <Header />
       <main id="main-content" className="min-h-screen">
         {/* Hero */}
@@ -168,6 +181,10 @@ export default function ServicesPage() {
             </h2>
             <p className="mt-2 text-text-muted">
               Strategy, UX, engineering, and growth in one focused team.
+            </p>
+            <p className="mt-2 text-text-muted">
+              Our Data, AI, and automation practice delivers custom LLMs,
+              predictive models, and intelligent workflows.
             </p>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -308,22 +325,34 @@ export default function ServicesPage() {
               Timelines, budgets, and how we work with your team.
             </p>
           </div>
-          <div className="mx-auto mt-10 max-w-2xl space-y-2">
+          <div
+            className="mx-auto mt-10 max-w-2xl space-y-2"
+            itemScope
+            itemType="https://schema.org/FAQPage"
+          >
             {faqItems.map(({ question, answer }) => (
               <details
                 key={question}
                 className="group rounded-lg border border-border bg-bg-surface transition-colors hover:border-(--accent-soft)"
+                itemScope
+                itemProp="mainEntity"
+                itemType="https://schema.org/Question"
               >
                 <summary className="cursor-pointer list-none px-6 py-4 font-(family-name:--font-space-grotesk) font-semibold text-text-primary [&::-webkit-details-marker]:hidden">
-                  <span className="flex items-center justify-between gap-4">
+                  <span className="flex items-center justify-between gap-4" itemProp="name">
                     {question}
                     <span className="text-accent transition-transform group-open:rotate-180" aria-hidden>
                       ▼
                     </span>
                   </span>
                 </summary>
-                <div className="border-t border-border px-6 py-4">
-                  <p className="text-sm text-text-secondary">
+                <div
+                  className="border-t border-border px-6 py-4"
+                  itemScope
+                  itemProp="acceptedAnswer"
+                  itemType="https://schema.org/Answer"
+                >
+                  <p className="text-sm text-text-secondary" itemProp="text">
                     {answer}
                   </p>
                 </div>

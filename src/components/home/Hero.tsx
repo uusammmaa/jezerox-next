@@ -29,7 +29,9 @@ export function Hero() {
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-lg text-text-secondary md:text-xl">
             JezeroX is a product engineering partner for ambitious teams. We
-            design, build, and scale secure software from MVP to enterprise.
+            design, build, and scale secure software from MVP to
+            enterprise, including AI, data automation, and custom machine
+            learning.
           </p>
           <p className="mt-3 text-text-muted">
             One senior team across strategy, design, engineering, and growth.
