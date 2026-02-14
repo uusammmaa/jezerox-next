@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Container } from "@/components/ui";
@@ -33,10 +34,17 @@ export function Header() {
       <Container className="flex h-16 items-center justify-between md:h-18">
         <Link
           href="/"
-          className="font-(family-name:--font-space-grotesk) text-xl font-bold tracking-tight text-text-primary hover:text-(--blue-400) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue-400)"
+          className="flex items-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue-400)"
           aria-label="JezeroX home"
         >
-          JezeroX
+          <Image
+            src="/design-02.png"
+            alt="JezeroX"
+            width={140}
+            height={36}
+            className="h-8 w-auto md:h-9"
+            priority
+          />
         </Link>
 
         <nav
