@@ -14,7 +14,12 @@ Use this checklist when deploying to production. Do not edit the plan file; this
 
 ---
 
-## Phase 2: Deploy to Vercel
+## Phase 2: Deploy to Vercel (Complete)
+
+- [x] Deployed to Vercel
+- [x] Custom domains: `jezerox.com` and `www.jezerox.com`
+- [x] DNS configured via cPanel (A record for apex, CNAME for www)
+- [x] SSL certificates active
 
 ### 2.1 Connect and Configure
 
@@ -57,17 +62,17 @@ Add these in Vercel Project Settings → Environment Variables (Production):
 
 ## Phase 3: Post-Launch Smoke Tests
 
-Run these after the site is live:
+**Live site:** https://jezerox.com | https://www.jezerox.com
 
-- [ ] Homepage loads at production URL
-- [ ] All nav links work (Home, Services, Industries, Work, About, Insights, Careers, Contact)
-- [ ] Footer links work (About, Careers, Contact, Services, Insights, Privacy, Terms)
-- [ ] Contact form submits and email arrives
-- [ ] "Book a call" opens Calendly (correct URL)
-- [ ] `/sitemap.xml` resolves
-- [ ] `/robots.txt` resolves
-- [ ] 404 page renders for invalid routes (e.g. `/invalid-page`)
-- [ ] Run Lighthouse on production (targets: Perf 97+, A11y 96+, BP 96+, SEO 100)
+- [x] Homepage loads at production URL
+- [x] All nav links work (Home, Services, Industries, Work, About, Insights, Careers, Contact)
+- [x] Footer links work (About, Careers, Contact, Services, Insights, Privacy, Terms)
+- [x] Contact form submits and email arrives
+- [x] "Book a call" opens Calendly (correct URL)
+- [x] `/sitemap.xml` resolves
+- [x] `/robots.txt` resolves
+- [x] 404 page renders for invalid routes (e.g. `/invalid-page`)
+- [x] Run Lighthouse on production (targets: Perf 97+, A11y 96+, BP 96+, SEO 100)
 
 ---
 
