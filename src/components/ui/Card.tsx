@@ -1,33 +1,39 @@
 import { type ReactNode } from "react";
 import Link from "next/link";
+import { cn } from "@/lib/cn";
 
 interface CardProps {
   children: ReactNode;
   className?: string;
-  /** Optional link wrapper */
   href?: string;
-  /** Optional hover glow (featured cards) */
+  /** Show the animated gradient hairline border on hover */
+  interactive?: boolean;
+  /** Featured cards: add a soft magenta glow on hover */
   glow?: boolean;
 }
 
-const baseStyles =
-  "rounded-[var(--radius-lg)] border border-[var(--border-subtle)] bg-[var(--navy-900)] p-6 shadow-[0_1px_2px_rgba(5,10,20,0.4)] transition-[border-color,box-shadow] duration-150 hover:border-[var(--accent-soft)] hover:shadow-[0_8px_24px_rgba(5,10,20,0.35)]";
+const base =
+  "relative rounded-[var(--radius-xl)] border border-line bg-ink-850 p-6 transition-[transform,background,border-color,box-shadow] duration-300 ease-[var(--ease-out)]";
+const hover = "hover:-translate-y-1 hover:bg-ink-800";
 
-export function Card({
-  children,
-  className = "",
-  href,
-  glow = false,
-}: Readonly<CardProps>) {
-  const styles = `${baseStyles} ${glow ? "hover:shadow-[var(--glow-accent)]" : ""} ${className}`;
-
+export function Card({ children, className, href, interactive = true, glow = false }: Readonly<CardProps>) {
+  const classes = cn(
+    base,
+    interactive && [hover, "gradient-border"],
+    glow && "hover:shadow-[var(--glow-magenta)]",
+    className,
+  );
   if (href) {
+    const external = href.startsWith("http");
     return (
-      <Link href={href} className={`block ${styles}`}>
+      <Link
+        href={href}
+        className={cn("block", classes)}
+        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      >
         {children}
       </Link>
     );
   }
-
-  return <div className={styles}>{children}</div>;
+  return <div className={classes}>{children}</div>;
 }

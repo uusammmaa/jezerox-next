@@ -12,6 +12,8 @@ export interface PageMetadataOptions {
   path: string;
   /** Override for noIndex pages (e.g. 404). Default: index, follow */
   robots?: Metadata["robots"];
+  /** Page-specific SEO keywords */
+  keywords?: string[];
 }
 
 export function createPageMetadata({
@@ -19,6 +21,7 @@ export function createPageMetadata({
   description,
   path,
   robots = "index, follow",
+  keywords,
 }: PageMetadataOptions): Metadata {
   const baseUrl = getSiteUrl();
   const url = path === "/" ? baseUrl : `${baseUrl}${path}`;
@@ -27,6 +30,7 @@ export function createPageMetadata({
     title,
     description,
     robots,
+    keywords,
     alternates: {
       canonical: url,
     },

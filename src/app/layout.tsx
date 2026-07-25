@@ -1,43 +1,49 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import { Analytics } from "@vercel/analytics/next";
 import { getSiteUrl } from "@/lib/seo";
+import { company } from "@/lib/content";
 import { JsonLd } from "@/components/seo/json-ld";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
   display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
+  weight: ["500", "600", "700", "800"],
 });
 
 const siteUrl = getSiteUrl();
-const defaultTitle = "JezeroX — Build faster. Scale smarter.";
+const defaultTitle = `${company.brand} — AI Automation, AI Agents & Full-Stack Development`;
 const defaultDescription =
-  "JezeroX is a product engineering partner for ambitious teams. We design, build, and scale secure software from MVP to enterprise.";
+  "JezeroX builds AI automation (n8n, Make, Zapier), AI agents & RAG systems, and full-stack web apps. Top-rated engineer, 25+ projects, 4.9★. A Skycap LLC company.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  icons: {
-    icon: "/logo-mark.png",
-  },
+  icons: { icon: "/logo-mark.png" },
   title: {
     default: defaultTitle,
     template: "%s | JezeroX",
   },
   description: defaultDescription,
+  keywords: [
+    "AI automation agency",
+    "n8n developer",
+    "AI agent developer",
+    "RAG developer",
+    "Next.js developer",
+    "React developer",
+    "workflow automation",
+    "hire AI automation expert",
+  ],
   robots: "index, follow",
   openGraph: {
     title: defaultTitle,
     description: defaultDescription,
     url: siteUrl,
-    siteName: "JezeroX",
+    siteName: company.brand,
     locale: "en_US",
     type: "website",
   },
@@ -51,16 +57,18 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0B1220",
+  themeColor: "#08070C",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${bricolage.variable} ${GeistSans.variable} ${GeistMono.variable}`}
+      suppressHydrationWarning
+    >
       <body className="min-h-screen antialiased" suppressHydrationWarning>
         <JsonLd />
         {children}
