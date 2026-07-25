@@ -1,6 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
+
+const HeroScene = dynamic(() => import("./HeroScene"), { ssr: false });
 
 const nodes = [
   { label: "AI Agents", x: 50, y: 5, color: "var(--magenta)" },
@@ -12,28 +15,26 @@ const nodes = [
 ];
 
 /**
- * Animated "AI system" orbit for the hero: a glowing core, rotating rings,
- * capability nodes floating on animated connectors, with subtle cursor parallax.
- * Decorative — hidden from assistive tech; CSS animations respect reduced motion.
+ * Hero visual: a 3D distorted core (react-three-fiber) inside a rotating orbit of
+ * capability nodes on animated connectors, with cursor parallax. Falls back to a
+ * static gradient core when the viewer prefers reduced motion.
  */
 export function HeroVisual() {
   const ref = useRef<HTMLDivElement>(null);
+  const [use3d, setUse3d] = useState(false);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    if (
-      !window.matchMedia("(pointer: fine)").matches ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    )
-      return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setUse3d(!reduce);
 
+    const el = ref.current;
+    if (!el || reduce || !window.matchMedia("(pointer: fine)").matches) return;
     let raf = 0;
     const target = { x: 0, y: 0 };
     const cur = { x: 0, y: 0 };
     const onMove = (e: MouseEvent) => {
-      target.x = (e.clientX / window.innerWidth - 0.5) * 20;
-      target.y = (e.clientY / window.innerHeight - 0.5) * 20;
+      target.x = (e.clientX / window.innerWidth - 0.5) * 18;
+      target.y = (e.clientY / window.innerHeight - 0.5) * 18;
     };
     const loop = () => {
       cur.x += (target.x - cur.x) * 0.06;
@@ -51,7 +52,6 @@ export function HeroVisual() {
 
   return (
     <div className="relative mx-auto aspect-square w-full max-w-[480px]" aria-hidden>
-      {/* ambient glow */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{ background: "radial-gradient(closest-side, rgba(196,47,134,0.22), rgba(75,74,207,0.12), transparent 72%)" }}
@@ -65,29 +65,35 @@ export function HeroVisual() {
               <stop offset="1" stopColor="var(--amber)" />
             </linearGradient>
           </defs>
-
-          {/* connectors */}
           <g fill="none" stroke="url(#hv-grad)" strokeWidth="1.5" opacity="0.7">
             {nodes.map((n) => (
               <line key={n.label} className="flow-dash" x1="200" y1="200" x2={n.x * 4} y2={n.y * 4} />
             ))}
           </g>
-
-          {/* rings */}
           <circle cx="200" cy="200" r="172" fill="none" stroke="var(--line-strong)" strokeWidth="1" strokeDasharray="2 8" className="spin-slow" />
           <circle cx="200" cy="200" r="120" fill="none" stroke="rgba(243,240,249,0.08)" strokeWidth="1" />
-
-          {/* core */}
-          <circle cx="200" cy="200" r="46" fill="none" stroke="url(#hv-grad)" strokeWidth="1.5" opacity="0.5" />
-          <circle cx="200" cy="200" r="30" fill="#0d0b14" stroke="url(#hv-grad)" strokeWidth="2" />
-          <circle cx="200" cy="200" r="15" fill="url(#hv-grad)" className="pulse-soft" />
+          {/* static core fallback (reduced motion / pre-hydration) */}
+          {!use3d ? (
+            <>
+              <circle cx="200" cy="200" r="46" fill="none" stroke="url(#hv-grad)" strokeWidth="1.5" opacity="0.5" />
+              <circle cx="200" cy="200" r="30" fill="#0d0b14" stroke="url(#hv-grad)" strokeWidth="2" />
+              <circle cx="200" cy="200" r="15" fill="url(#hv-grad)" />
+            </>
+          ) : null}
         </svg>
 
-        {/* node chips */}
+        {/* 3D core */}
+        {use3d ? (
+          <div className="absolute left-1/2 top-1/2 h-[52%] w-[52%] -translate-x-1/2 -translate-y-1/2">
+            <HeroScene />
+          </div>
+        ) : null}
+
+        {/* capability nodes */}
         {nodes.map((n, i) => (
           <div
             key={n.label}
-            className="float-loop absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full border border-line bg-ink-900/80 px-3 py-1.5 font-mono text-[0.68rem] uppercase tracking-wide text-fg-secondary backdrop-blur"
+            className="float-loop absolute z-10 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full border border-line bg-ink-900/80 px-3 py-1.5 font-mono text-[0.68rem] uppercase tracking-wide text-fg-secondary backdrop-blur"
             style={{ left: `${n.x}%`, top: `${n.y}%`, animationDelay: `${i * 0.5}s` }}
           >
             <span className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full align-middle" style={{ background: n.color }} />
