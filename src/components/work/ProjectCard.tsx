@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { TechTag } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { type Project } from "@/lib/content";
+import { ProjectVisual } from "./ProjectVisual";
 
 /** Project/case-study card. Shared by the Home "selected work" grid and /work. */
 export function ProjectCard({ project, wide = false }: { project: Project; wide?: boolean }) {
@@ -24,6 +25,14 @@ export function ProjectCard({ project, wide = false }: { project: Project; wide?
               sizes="(max-width: 768px) 100vw, 420px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink-850 via-ink-850/10 to-transparent" />
+          </>
+        ) : project.visual ? (
+          <>
+            <ProjectVisual
+              variant={project.visual}
+              className="absolute inset-0 h-full w-full transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink-850 via-transparent to-transparent" />
           </>
         ) : (
           <>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { Section, SectionHeading, IconTile, GradientText, TechTag, Reveal } from "@/components/ui";
-import { cn } from "@/lib/cn";
 import { services } from "@/lib/content";
 
 export function ServicesOverview() {
@@ -13,13 +12,13 @@ export function ServicesOverview() {
         <SectionHeading
           eyebrow="What we do"
           title={<>Intelligent software, <GradientText>end to end.</GradientText></>}
-          lede="Strategy, design, engineering, and AI in one focused team — led by an AI automation & agents practice."
+          lede="AI automation, agents, full-stack builds, and consulting — one senior engineer across all of it."
         />
       </Reveal>
 
-      <div className="mt-14 grid gap-4 md:grid-cols-6">
+      <div className="mt-14 grid gap-4 lg:grid-cols-2">
         {/* Feature service */}
-        <Reveal className="md:col-span-3 md:row-span-2">
+        <Reveal>
           <Link
             href={`/services/${feature.slug}`}
             className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[var(--radius-2xl)] border border-line bg-ink-850 p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-ink-800 gradient-border"
@@ -38,7 +37,7 @@ export function ServicesOverview() {
               </ul>
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-2">
-              {feature.stack.slice(0, 5).map((s) => (
+              {feature.stack.slice(0, 6).map((s) => (
                 <TechTag key={s}>{s}</TechTag>
               ))}
               <ArrowUpRight className="ml-auto h-5 w-5 text-fg-faint transition-colors group-hover:text-magenta" />
@@ -46,29 +45,33 @@ export function ServicesOverview() {
           </Link>
         </Reveal>
 
-        {/* Remaining services */}
-        {rest.map((s, i) => (
-          <Reveal key={s.slug} className="md:col-span-3" delay={(i + 1) * 90}>
-            <Link
-              href={`/services/${s.slug}`}
-              className={cn(
-                "group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-2xl)] border border-line bg-ink-850 p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-ink-800 gradient-border",
-              )}
-            >
-              <div className="flex items-start justify-between">
-                <IconTile icon={s.icon} />
-                <ArrowUpRight className="h-5 w-5 text-fg-faint transition-colors group-hover:text-magenta" />
-              </div>
-              <h3 className="mt-5 text-xl font-bold">{s.title}</h3>
-              <p className="mt-2 text-sm text-fg-muted">{s.short}</p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {s.stack.slice(0, 4).map((t) => (
-                  <TechTag key={t}>{t}</TechTag>
-                ))}
-              </div>
-            </Link>
-          </Reveal>
-        ))}
+        {/* Remaining services, stacked */}
+        <div className="grid gap-4">
+          {rest.map((s, i) => (
+            <Reveal key={s.slug} delay={(i + 1) * 90}>
+              <Link
+                href={`/services/${s.slug}`}
+                className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-2xl)] border border-line bg-ink-850 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-ink-800 gradient-border"
+              >
+                <div className="flex items-start gap-4">
+                  <IconTile icon={s.icon} />
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center justify-between gap-3">
+                      <h3 className="text-xl font-bold">{s.title}</h3>
+                      <ArrowUpRight className="h-5 w-5 shrink-0 text-fg-faint transition-colors group-hover:text-magenta" />
+                    </div>
+                    <p className="mt-1.5 text-sm text-fg-muted">{s.short}</p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {s.stack.slice(0, 5).map((t) => (
+                        <TechTag key={t}>{t}</TechTag>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </Section>
   );

@@ -30,7 +30,7 @@ export default function ServicesPage() {
 
         {/* Service cards */}
         <Section>
-          <div className="grid gap-5 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2">
             {services.map((s, i) => (
               <Reveal key={s.slug} delay={i * 90}>
                 <Link

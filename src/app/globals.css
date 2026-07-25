@@ -225,6 +225,56 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+/* Animated flow connectors (project visuals + hero) */
+.flow-dash {
+  stroke-dasharray: 5 7;
+  animation: flow-dash 1.4s linear infinite;
+}
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+/* Gentle float loop, staggered via inline animation-delay */
+.float-loop {
+  animation: float-loop 6s ease-in-out infinite;
+}
+@keyframes float-loop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Slow spin for the hero orbit ring */
+.spin-slow {
+  animation: spin-slow 40s linear infinite;
+  transform-origin: center;
+}
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Soft pulsing glow */
+.pulse-soft {
+  animation: pulse-soft 3.5s ease-in-out infinite;
+}
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 /* Skip link */
 .skip-link {
   position: absolute;

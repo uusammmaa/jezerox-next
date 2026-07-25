@@ -5,6 +5,7 @@ import { ArrowLeft, Check, Sparkles } from "lucide-react";
 import { Header, Footer } from "@/components/layout";
 import { PageHero, CtaBand } from "@/components/common";
 import { Section, SectionHeading, Container, TechTag, GradientText, IconTile, Reveal, BrowserFrame } from "@/components/ui";
+import { ProjectVisual } from "@/components/work";
 import { createPageMetadata } from "@/lib/seo";
 import { projects, getProject } from "@/lib/content";
 
@@ -79,6 +80,20 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
               ))}
             </div>
           </Section>
+        ) : project.visual ? (
+          <Section>
+            <Reveal>
+              <SectionHeading eyebrow="Preview" title={<>A look at the <GradientText>interface</GradientText></>} />
+            </Reveal>
+            <Reveal delay={100}>
+              <div className="mt-10 overflow-hidden rounded-[var(--radius-lg)] border border-line shadow-[var(--shadow-lg)]">
+                <ProjectVisual variant={project.visual} className="aspect-[16/9] w-full" />
+              </div>
+              <p className="mt-3 text-sm text-fg-faint">
+                Representative illustration — this engagement&apos;s UI is anonymized.
+              </p>
+            </Reveal>
+          </Section>
         ) : null}
 
         {/* Challenge */}
@@ -142,7 +157,7 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
 
         <CtaBand
           title={<>Have a similar <GradientText animate>project?</GradientText></>}
-          subtitle="Tell me about it and I'll respond within 24 hours."
+          subtitle="Tell me about it and I'll respond within a few hours."
           secondary={{ label: "More work", href: "/work" }}
         />
       </main>

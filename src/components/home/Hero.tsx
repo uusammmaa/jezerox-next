@@ -9,6 +9,7 @@ import {
   Reveal,
 } from "@/components/ui";
 import { company } from "@/lib/content";
+import { HeroVisual } from "./HeroVisual";
 
 export function Hero() {
   return (
@@ -24,7 +25,8 @@ export function Hero() {
         }}
       />
       <Container className="relative z-10">
-        <div className="max-w-3xl">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)]">
+          <div className="max-w-2xl">
           <Reveal>
             <Eyebrow>AI Systems · Automation · Full-Stack</Eyebrow>
           </Reveal>
@@ -70,6 +72,10 @@ export function Hero() {
               <span className="text-fg-faint">/</span>
               <span>{company.responseTime}</span>
             </div>
+          </Reveal>
+          </div>
+          <Reveal delay={300} className="hidden lg:block">
+            <HeroVisual />
           </Reveal>
         </div>
       </Container>
