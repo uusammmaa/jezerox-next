@@ -1,25 +1,21 @@
 import { type ReactNode } from "react";
+import { cn } from "@/lib/cn";
 
 interface ContainerProps {
   children: ReactNode;
   className?: string;
-  as?: "div" | "section" | "main";
 }
 
-/**
- * Max-width container with responsive padding. Use for page content.
- * Design: 12-column feel, max 1280px, padding 24–32px.
- */
-export function Container({
-  children,
-  className = "",
-  as: Tag = "div",
-}: Readonly<ContainerProps>) {
+/** Max-width wrapper with responsive gutters. */
+export function Container({ children, className }: Readonly<ContainerProps>) {
   return (
-    <Tag
-      className={`mx-auto w-full max-w-(--container-max) px-(--container-padding) sm:px-6 md:px-8 ${className}`}
+    <div
+      className={cn(
+        "mx-auto w-full max-w-(--container-max) px-5 sm:px-6 lg:px-10",
+        className,
+      )}
     >
       {children}
-    </Tag>
+    </div>
   );
 }

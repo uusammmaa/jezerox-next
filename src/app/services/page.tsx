@@ -1,353 +1,121 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowUpRight, Check } from "lucide-react";
 import { Header, Footer } from "@/components/layout";
-import { Section, Button, Card, Container } from "@/components/ui";
+import { PageHero, CtaBand } from "@/components/common";
+import { Section, SectionHeading, Button, IconTile, TechTag, GradientText, Reveal } from "@/components/ui";
 import { createPageMetadata } from "@/lib/seo";
+import { services, processSteps, techGroups } from "@/lib/content";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Services",
+  title: "Services — AI Automation, AI Agents & Full-Stack Development",
   description:
-    "Product strategy, UX/UI design, and engineering in one team. Custom software development and MVP development with transparent engagement models.",
+    "AI automation (n8n, Make, Zapier), AI agents & RAG systems, and full-stack Next.js/React/Angular development. One senior engineer, MVP to enterprise.",
   path: "/services",
 });
-
-const services = [
-  {
-    title: "Product strategy",
-    description: "Discovery, roadmap, MVP definition, and validation.",
-    icon: "◇",
-  },
-  {
-    title: "UX and UI design",
-    description: "Research, design systems, prototypes, and usability.",
-    icon: "◈",
-  },
-  {
-    title: "Web and mobile engineering",
-    description: "Scalable apps built with modern stacks.",
-    icon: "⬡",
-  },
-  {
-    title: "Data, AI, and automation",
-    description: "Intelligent workflows and insights.",
-    icon: "⬢",
-  },
-  {
-    title: "Cloud, DevOps, and security",
-    description: "Infrastructure, observability, and compliance.",
-    icon: "▷",
-  },
-  {
-    title: "Growth and optimization",
-    description: "Analytics, experiments, and conversion improvements.",
-    icon: "▶",
-  },
-] as const;
-
-const engagementModels = [
-  {
-    title: "Fixed scope",
-    description: "Best for defined MVPs with clear deliverables.",
-  },
-  {
-    title: "Retainer",
-    description: "Ongoing product and engineering support.",
-  },
-  {
-    title: "Team extension",
-    description: "Embed senior engineers into your team.",
-  },
-] as const;
-
-const deliverySteps = [
-  { name: "Discover", duration: "1 to 2 weeks", detail: "Goals, scope, roadmap, risks." },
-  { name: "Design", duration: "2 to 4 weeks", detail: "Prototypes, UI system, usability validation." },
-  { name: "Build", duration: "4 to 12+ weeks", detail: "Production-ready web or mobile product." },
-  { name: "Scale", duration: "Ongoing", detail: "Performance, analytics, reliability, and growth." },
-] as const;
-
-const techStack = [
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Python",
-  "AWS",
-  "GCP",
-  "Postgres",
-  "DevOps",
-];
-
-const caseStudyHighlights = [
-  {
-    title: "Fintech platform modernization",
-    description: "Reduced time-to-market and improved reliability for a regulated payments product.",
-    href: "/work",
-  },
-  {
-    title: "Healthcare data analytics dashboard",
-    description: "Secure, HIPAA-aligned dashboards for clinical and operations teams.",
-    href: "/work",
-  },
-  {
-    title: "SaaS growth and optimization",
-    description: "Conversion and activation improvements with clear attribution.",
-    href: "/work",
-  },
-] as const;
-
-const faqItems = [
-  {
-    question: "What engagement model fits our project?",
-    answer:
-      "Fixed scope works best for defined MVPs with clear deliverables. Retainers suit ongoing product and engineering support. Team extension lets you embed senior JezeroX engineers into your team.",
-  },
-  {
-    question: "What are typical timelines?",
-    answer:
-      "Discovery runs 1–2 weeks; design 2–4 weeks; build 4–12+ weeks depending on scope. Scale is ongoing. We align on milestones and demos at every phase.",
-  },
-  {
-    question: "How do you handle budgets and pricing?",
-    answer:
-      "We provide transparent estimates after discovery. Fixed-scope projects have agreed deliverables and price. Retainers and team extension are typically monthly with clear capacity.",
-  },
-  {
-    question: "How do we work together day to day?",
-    answer:
-      "We use your tools (Slack, Jira, etc.) and our delivery process. You get a dedicated lead, regular demos, and async updates. We respect time zones and response SLAs.",
-  },
-] as const;
 
 export default function ServicesPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="min-h-screen">
-        {/* Hero */}
-        <section
-          className="relative overflow-hidden py-16 md:py-24 lg:py-32"
-          aria-label="Services hero"
+      <main id="main" className="min-h-screen">
+        <PageHero
+          eyebrow="Services"
+          title={<>Automation, AI agents & <GradientText>full-stack</GradientText> — one senior team.</>}
+          lede="Whether you need a workflow automated, an AI agent shipped, or a product built end to end, you work directly with a senior engineer who's done it in production."
         >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `linear-gradient(var(--border-subtle) 1px, transparent 1px),
-                linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px)`,
-              backgroundSize: "48px 48px",
-            }}
-          />
-          <Container className="relative">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-(family-name:--font-space-grotesk) text-4xl font-bold tracking-tight text-text-primary sm:text-5xl md:text-6xl md:leading-[1.1]">
-                Product strategy, design, and engineering in one team.
-              </h1>
-              <p className="mt-6 text-lg text-text-secondary sm:text-xl">
-                We help ambitious teams move from idea to scale with secure,
-                high-performing software.
-              </p>
-              <p className="mt-3 text-text-muted">
-                Transparent engagement models and senior delivery teams.
-              </p>
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <Button href="/contact" variant="primary" size="lg">
-                  Start a project
-                </Button>
-                <Button href="/work" variant="secondary" size="lg">
-                  See our work
-                </Button>
-              </div>
-            </div>
-          </Container>
-        </section>
+          <Button href="/contact" variant="primary" size="lg">Start a project</Button>
+          <Button href="/work" variant="secondary" size="lg">See our work</Button>
+        </PageHero>
 
-        {/* Service categories */}
-        <Section id="service-categories">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              End-to-end product engineering
-            </h2>
-            <p className="mt-2 text-text-muted">
-              Strategy, UX, engineering, and growth in one focused team.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map(({ title, description, icon }) => (
-              <Card key={title} className="h-full">
-                <span
-                  className="text-2xl text-accent"
-                  aria-hidden
+        {/* Service cards */}
+        <Section>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {services.map((s, i) => (
+              <Reveal key={s.slug} delay={i * 90}>
+                <Link
+                  href={`/services/${s.slug}`}
+                  className="group flex h-full flex-col rounded-[var(--radius-2xl)] border border-line bg-ink-850 p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-ink-800 gradient-border"
                 >
-                  {icon}
-                </span>
-                <h3 className="mt-4 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                  {title}
-                </h3>
-                <p className="mt-2 text-sm text-text-secondary">
-                  {description}
-                </p>
-              </Card>
-            ))}
-          </div>
-        </Section>
-
-        {/* Engagement models */}
-        <Section id="engagement-models">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              How we work with you
-            </h2>
-            <p className="mt-2 text-text-muted">
-              Choose the engagement that fits your goals and timeline.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-3">
-            {engagementModels.map(({ title, description }) => (
-              <Card key={title} className="h-full">
-                <h3 className="font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                  {title}
-                </h3>
-                <p className="mt-2 text-sm text-text-secondary">
-                  {description}
-                </p>
-              </Card>
-            ))}
-          </div>
-        </Section>
-
-        {/* Delivery process */}
-        <Section id="delivery-process">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Predictable delivery with measurable outcomes
-            </h2>
-            <p className="mt-2 text-text-muted">
-              Each phase includes milestones, demos, and clear handoffs.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {deliverySteps.map(({ name, duration, detail }, i) => (
-              <div
-                key={name}
-                className="relative rounded-lg border border-border bg-bg-surface p-6"
-              >
-                <span className="text-sm font-semibold text-accent">
-                  Step {i + 1}
-                </span>
-                <h3 className="mt-2 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                  {name}
-                </h3>
-                <p className="mt-1 text-sm font-medium text-text-muted">
-                  {duration}
-                </p>
-                <p className="mt-2 text-sm text-text-secondary">
-                  {detail}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        {/* Tech stack */}
-        <Section id="tech-stack">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Modern stack, proven tools
-            </h2>
-            <p className="mt-2 text-text-muted">
-              TypeScript, React, Next.js, Node.js, Python, AWS, GCP, Postgres,
-              and modern DevOps tooling.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-2">
-              {techStack.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-(--radius-pill) border border-border bg-bg-surface-2 px-3 py-1.5 text-sm text-text-secondary"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-        </Section>
-
-        {/* Case study highlights */}
-        <Section id="case-study-highlights">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Proof in production
-            </h2>
-            <p className="mt-2 text-text-muted">
-              See how we improved time-to-market, reliability, and conversion.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {caseStudyHighlights.map(({ title, description, href }) => (
-              <Card key={title} href={href} glow>
-                <div className="aspect-video rounded-md bg-bg-surface-2" />
-                <h3 className="mt-4 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                  {title}
-                </h3>
-                <p className="mt-2 text-sm text-text-secondary">
-                  {description}
-                </p>
-                <span className="mt-3 inline-block text-sm font-medium text-accent">
-                  Learn more →
-                </span>
-              </Card>
-            ))}
-          </div>
-        </Section>
-
-        {/* FAQ */}
-        <Section id="faq">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Common questions
-            </h2>
-            <p className="mt-2 text-text-muted">
-              Timelines, budgets, and how we work with your team.
-            </p>
-          </div>
-          <div className="mx-auto mt-10 max-w-2xl space-y-2">
-            {faqItems.map(({ question, answer }) => (
-              <details
-                key={question}
-                className="group rounded-lg border border-border bg-bg-surface transition-colors hover:border-(--accent-soft)"
-              >
-                <summary className="cursor-pointer list-none px-6 py-4 font-(family-name:--font-space-grotesk) font-semibold text-text-primary [&::-webkit-details-marker]:hidden">
-                  <span className="flex items-center justify-between gap-4">
-                    {question}
-                    <span className="text-accent transition-transform group-open:rotate-180" aria-hidden>
-                      ▼
-                    </span>
+                  <div className="flex items-start justify-between">
+                    <IconTile icon={s.icon} size="lg" />
+                    <ArrowUpRight className="h-5 w-5 text-fg-faint transition-colors group-hover:text-magenta" />
+                  </div>
+                  <h2 className="mt-6 text-2xl font-bold">{s.title}</h2>
+                  <p className="mt-3 text-fg-muted">{s.short}</p>
+                  <ul className="mt-6 grid flex-1 gap-2.5">
+                    {s.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-2.5 text-sm text-fg-secondary">
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-magenta" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {s.stack.slice(0, 4).map((t) => (
+                      <TechTag key={t}>{t}</TechTag>
+                    ))}
+                  </div>
+                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-magenta">
+                    Explore {s.title}
+                    <ArrowUpRight className="h-4 w-4" />
                   </span>
-                </summary>
-                <div className="border-t border-border px-6 py-4">
-                  <p className="text-sm text-text-secondary">
-                    {answer}
-                  </p>
-                </div>
-              </details>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </Section>
 
-        {/* CTA */}
-        <Section id="cta">
-          <div className="rounded-xl border border-border bg-bg-surface px-8 py-12 text-center md:py-16">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Start your next build with JezeroX
-            </h2>
-            <p className="mt-3 text-text-muted">
-              Tell us about your product and timeline.
-            </p>
-            <div className="mt-8">
-              <Button href="/contact" variant="primary" size="lg">
-                Start a project
-              </Button>
-            </div>
+        {/* Process */}
+        <Section tone="surface">
+          <Reveal>
+            <SectionHeading
+              eyebrow="How we work"
+              title={<>Clear scope. Fast delivery. <GradientText>No surprises.</GradientText></>}
+              lede="A lean process with agreed scope and price up front, and demos at every stage."
+            />
+          </Reveal>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {processSteps.map((step, i) => (
+              <Reveal key={step.name} delay={i * 80}>
+                <div className="h-full rounded-[var(--radius-xl)] border border-line bg-ink-850 p-7">
+                  <div className="font-display text-4xl font-bold"><GradientText>{i + 1}</GradientText></div>
+                  <h3 className="mt-3 text-lg font-semibold">{step.name}</h3>
+                  <p className="mt-1 font-mono text-[0.7rem] uppercase tracking-widest text-fg-faint">{step.duration}</p>
+                  <p className="mt-3 text-sm text-fg-muted">{step.detail}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </Section>
+
+        {/* Tech */}
+        <Section>
+          <Reveal>
+            <SectionHeading center eyebrow="Toolkit" title={<>The <GradientText>modern stack.</GradientText></>} />
+          </Reveal>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {techGroups.map((g, i) => (
+              <Reveal key={g.label} delay={i * 70}>
+                <div className="h-full rounded-[var(--radius-xl)] border border-line bg-ink-850 p-6">
+                  <IconTile icon={g.icon} />
+                  <h3 className="mt-4 font-semibold">{g.label}</h3>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {g.items.map((t) => (
+                      <TechTag key={t}>{t}</TechTag>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Section>
+
+        <CtaBand
+          title={<>Not sure which you need? <GradientText animate>Let's talk.</GradientText></>}
+          subtitle="Tell me the problem and I'll recommend the right approach — no obligation."
+          secondary={{ label: "See our work", href: "/work" }}
+        />
       </main>
       <Footer />
     </>

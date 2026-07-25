@@ -1,22 +1,25 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/layout";
+import { Marquee } from "@/components/ui";
 import { createPageMetadata } from "@/lib/seo";
+import { capabilities } from "@/lib/content";
 import {
   Hero,
-  SocialProof,
+  StatsBar,
   ServicesOverview,
-  FeaturedCaseStudies,
+  AiSpotlight,
+  Industries,
+  FeaturedWork,
   ProcessOverview,
-  IndustryFocus,
   Testimonials,
-  InsightsPreview,
+  Expectations,
   FinalCTA,
 } from "@/components/home";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Build faster. Scale smarter.",
+  title: "AI Automation, AI Agents & Full-Stack Development",
   description:
-    "JezeroX is a software agency that designs, builds, and scales digital products for startups and enterprises. Product strategy, UX, engineering, and growth in one expert team.",
+    "JezeroX builds AI automation (n8n, Make, Zapier), AI agents & RAG systems, and full-stack web apps. 25+ projects delivered, 4.9★. A Skycap LLC company.",
   path: "/",
 });
 
@@ -24,15 +27,17 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="min-h-screen">
+      <main id="main" className="min-h-screen">
         <Hero />
-        <SocialProof />
+        <StatsBar />
+        <Marquee items={capabilities} />
         <ServicesOverview />
-        <FeaturedCaseStudies />
+        <AiSpotlight />
+        <Industries />
+        <FeaturedWork />
         <ProcessOverview />
-        <IndustryFocus />
         <Testimonials />
-        <InsightsPreview />
+        <Expectations />
         <FinalCTA />
       </main>
       <Footer />

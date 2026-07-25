@@ -104,7 +104,7 @@ export async function submitContactForm(
     // Silently reject - don't let bots know the honeypot worked
     return {
       success: true,
-      message: "Thanks for reaching out. We'll respond within 24 hours.",
+      message: "Thanks for reaching out. We'll respond within a few hours.",
     };
   }
 
@@ -163,6 +163,6 @@ export async function submitContactForm(
 
   return {
     success: true,
-    message: "Thanks for reaching out. We'll respond within 24 hours.",
+    message: "Thanks for reaching out. We'll respond within a few hours.",
   };
 }

@@ -1,60 +1,42 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Container } from "@/components/ui";
-
-const footerGroups = [
-  {
-    label: "Company",
-    links: [
-      { href: "/about", label: "About" },
-      { href: "/careers", label: "Careers" },
-      { href: "/contact", label: "Contact" },
-    ],
-  },
-  {
-    label: "Services",
-    links: [
-      { href: "/services", label: "Services" },
-    ],
-  },
-  {
-    label: "Resources",
-    links: [
-      { href: "/insights", label: "Insights" },
-    ],
-  },
-  {
-    label: "Legal",
-    links: [
-      { href: "/privacy", label: "Privacy" },
-      { href: "/terms", label: "Terms" },
-    ],
-  },
-] as const;
+import { Container, Button } from "@/components/ui";
+import { company, footerNav } from "@/lib/content";
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer
-      className="border-t border-border bg-bg-surface"
-      role="contentinfo"
-    >
-      <Container className="py-12 md:py-16">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {footerGroups.map(({ label, links }) => (
-            <div key={label}>
-              <h3 className="mb-4 font-(family-name:--font-space-grotesk) text-sm font-semibold uppercase tracking-wider text-text-muted">
-                {label}
-              </h3>
-              <ul className="space-y-2">
-                {links.map(({ href, label: linkLabel }) => (
-                  <li key={href}>
-                    <Link
-                      href={href}
-                      className="text-sm text-text-secondary hover:text-(--blue-400) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--blue-400)"
-                    >
-                      {linkLabel}
+    <footer className="border-t border-line bg-ink-900" role="contentinfo">
+      <Container>
+        <div className="grid gap-12 py-16 md:grid-cols-[1.6fr_1fr_1fr_1fr] md:py-20">
+          <div>
+            <Link href="/" aria-label="JezeroX home" className="inline-flex">
+              <Image src="/design-02.png" alt="JezeroX" width={140} height={32} className="h-7 w-auto" />
+            </Link>
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-fg-muted">
+              {company.positioning}
+            </p>
+            <p className="mt-5 font-mono text-[0.7rem] uppercase tracking-[0.12em] text-fg-faint">
+              {company.entityLine}
+            </p>
+            <div className="mt-6">
+              <Button href="/contact" variant="secondary" size="sm">
+                Start a project
+              </Button>
+            </div>
+          </div>
+
+          {footerNav.map((col) => (
+            <div key={col.heading}>
+              <h2 className="font-mono text-[0.72rem] uppercase tracking-[0.16em] text-fg-faint">
+                {col.heading}
+              </h2>
+              <ul className="mt-5 flex flex-col gap-3">
+                {col.links.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="text-sm text-fg-muted transition-colors hover:text-fg">
+                      {l.label}
                     </Link>
                   </li>
                 ))}
@@ -62,19 +44,24 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
-          <Link href="/" className="flex items-center" aria-label="JezeroX home">
-            <Image
-              src="/design-02.png"
-              alt=""
-              width={120}
-              height={32}
-              className="h-7 w-auto opacity-90"
-            />
-          </Link>
-          <p className="text-sm text-text-muted">
-            © {year} JezeroX. All rights reserved.
+
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-line py-7 sm:flex-row">
+          <p className="text-xs text-fg-faint">
+            © {year} {company.legalName}. All rights reserved.
           </p>
+          <div className="flex items-center gap-6">
+            {company.socials.map((s) => (
+              <Link
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-medium text-fg-muted transition-colors hover:text-fg"
+              >
+                {s.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </Container>
     </footer>

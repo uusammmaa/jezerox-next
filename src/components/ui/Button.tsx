@@ -1,5 +1,6 @@
 import { type ButtonHTMLAttributes, type ReactNode } from "react";
 import Link from "next/link";
+import { cn } from "@/lib/cn";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md" | "lg";
@@ -16,54 +17,47 @@ interface ButtonAsButton
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> {
   href?: never;
 }
-
 interface ButtonAsLink extends BaseProps {
   href: string;
-  type?: never;
   target?: string;
   rel?: string;
 }
-
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
-const variantStyles: Record<Variant, string> = {
+const base =
+  "inline-flex items-center justify-center gap-2 font-semibold rounded-[var(--radius-md)] transition-[transform,box-shadow,background,border-color,filter] duration-200 ease-[var(--ease-out)] disabled:opacity-40 disabled:pointer-events-none whitespace-nowrap";
+
+const sizes: Record<Size, string> = {
+  sm: "h-9 px-4 text-sm",
+  md: "h-11 px-5 text-sm",
+  lg: "h-[3.25rem] px-7 text-base",
+};
+
+const variants: Record<Variant, string> = {
   primary:
-    "bg-[var(--blue-500)] text-[var(--gray-100)] border border-[var(--blue-500)] hover:bg-[var(--blue-600)] hover:border-[var(--blue-600)] active:bg-[var(--blue-600)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--blue-400)] shadow-[var(--glow-accent)]",
+    "text-[#0a0710] shadow-[0_8px_30px_rgba(196,47,134,0.28)] hover:shadow-[0_10px_40px_rgba(196,47,134,0.42)] hover:brightness-105 active:brightness-95",
   secondary:
-    "bg-transparent text-[var(--blue-500)] border border-[var(--blue-500)] hover:bg-[var(--accent-soft)] active:bg-[var(--blue-600)] active:text-[var(--gray-100)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--blue-400)]",
-  ghost:
-    "bg-transparent text-[var(--text-primary)] border border-transparent hover:bg-[var(--navy-800)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--blue-400)]",
+    "glass text-fg border-line-strong hover:border-fg/25 hover:bg-white/5",
+  ghost: "text-fg hover:bg-ink-800",
 };
 
-const sizeStyles: Record<Size, string> = {
-  sm: "h-8 px-3 text-sm",
-  md: "h-10 px-4 text-sm",
-  lg: "h-12 px-5 text-base",
-};
+// CTA gradient chosen so near-black label keeps AA contrast across the sweep.
+const primaryStyle = { background: "linear-gradient(100deg, var(--magenta) 0%, var(--amber-deep) 100%)" };
 
-const baseStyles =
-  "inline-flex items-center justify-center font-semibold rounded-[var(--radius-md)] transition-colors duration-150 disabled:opacity-40 disabled:pointer-events-none";
-
-export function Button({
-  variant = "primary",
-  size = "md",
-  children,
-  className = "",
-  ...props
-}: ButtonProps) {
-  const styles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+export function Button({ variant = "primary", size = "md", children, className, ...props }: ButtonProps) {
+  const classes = cn(base, sizes[size], variants[variant], className);
+  const style = variant === "primary" ? primaryStyle : undefined;
 
   if ("href" in props && props.href) {
     const { href, ...rest } = props;
     return (
-      <Link href={href} className={styles} {...rest}>
+      <Link href={href} className={classes} style={style} {...rest}>
         {children}
       </Link>
     );
   }
-
   return (
-    <button type="button" className={styles} {...(props as ButtonAsButton)}>
+    <button type="button" className={classes} style={style} {...(props as ButtonAsButton)}>
       {children}
     </button>
   );

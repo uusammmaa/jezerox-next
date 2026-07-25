@@ -1,9 +1,10 @@
-export { FeaturedCaseStudies } from "./featured-case-studies";
-export { FinalCTA } from "./final-cta";
 export { Hero } from "./Hero";
-export { IndustryFocus } from "./industry-focus";
-export { InsightsPreview } from "./insights-preview";
-export { ProcessOverview } from "./process-overview";
+export { StatsBar } from "./stats-bar";
 export { ServicesOverview } from "./services-overview";
-export { SocialProof } from "./social-proof";
+export { AiSpotlight } from "./ai-spotlight";
+export { Industries } from "./industries";
+export { FeaturedWork } from "./featured-work";
+export { ProcessOverview } from "./process-overview";
 export { Testimonials } from "./Testimonials";
+export { Expectations } from "./expectations";
+export { FinalCTA } from "./final-cta";

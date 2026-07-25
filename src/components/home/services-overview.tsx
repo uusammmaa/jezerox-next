@@ -1,68 +1,78 @@
-import { Section, Card } from "@/components/ui";
-
-// cspell:ignore roadmaps
-const services = [
-  {
-    title: "Product strategy",
-    description: "Discovery, roadmaps, MVP definition, and validation.",
-    icon: "◇",
-  },
-  {
-    title: "UX and UI design",
-    description: "Research, design systems, prototypes, and usability.",
-    icon: "◈",
-  },
-  {
-    title: "Web and mobile engineering",
-    description: "Scalable apps built with modern stacks.",
-    icon: "⬡",
-  },
-  {
-    title: "Data, AI, and automation",
-    description: "Intelligent workflows and insights.",
-    icon: "⬢",
-  },
-  {
-    title: "Cloud, DevOps, and security",
-    description: "Infrastructure, observability, and compliance.",
-    icon: "▷",
-  },
-  {
-    title: "Growth and optimization",
-    description: "Analytics, experiments, and conversion improvements.",
-    icon: "▶",
-  },
-] as const;
+import Link from "next/link";
+import { ArrowUpRight, Check } from "lucide-react";
+import { Section, SectionHeading, IconTile, GradientText, TechTag, Reveal } from "@/components/ui";
+import { services } from "@/lib/content";
 
 export function ServicesOverview() {
+  const [feature, ...rest] = services;
+
   return (
     <Section id="services">
-      <div className="text-center">
-          <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-            End-to-end product engineering
-          </h2>
-          <p className="mt-2 text-text-muted">
-            Strategy, UX, engineering, and growth in one focused team.
-          </p>
-        </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ title, description, icon }) => (
-            <Card key={title} href="/services" className="h-full">
-              <span
-                className="text-2xl text-accent"
-                aria-hidden
+      <Reveal>
+        <SectionHeading
+          eyebrow="What we do"
+          title={<>Intelligent software, <GradientText>end to end.</GradientText></>}
+          lede="AI automation, agents, full-stack builds, and consulting — one senior engineer across all of it."
+        />
+      </Reveal>
+
+      <div className="mt-14 grid gap-4 lg:grid-cols-2">
+        {/* Feature service */}
+        <Reveal>
+          <Link
+            href={`/services/${feature.slug}`}
+            className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[var(--radius-2xl)] border border-line bg-ink-850 p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-ink-800 gradient-border"
+          >
+            <div>
+              <IconTile icon={feature.icon} size="lg" />
+              <h3 className="mt-6 text-3xl font-bold">{feature.title}</h3>
+              <p className="mt-3 max-w-md text-fg-muted">{feature.description}</p>
+              <ul className="mt-6 grid gap-2.5">
+                {feature.bullets.map((b) => (
+                  <li key={b} className="flex items-start gap-2.5 text-sm text-fg-secondary">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-magenta" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+              {feature.stack.slice(0, 6).map((s) => (
+                <TechTag key={s}>{s}</TechTag>
+              ))}
+              <ArrowUpRight className="ml-auto h-5 w-5 text-fg-faint transition-colors group-hover:text-magenta" />
+            </div>
+          </Link>
+        </Reveal>
+
+        {/* Remaining services, stacked */}
+        <div className="grid gap-4">
+          {rest.map((s, i) => (
+            <Reveal key={s.slug} delay={(i + 1) * 90}>
+              <Link
+                href={`/services/${s.slug}`}
+                className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-2xl)] border border-line bg-ink-850 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-ink-800 gradient-border"
               >
-                {icon}
-              </span>
-              <h3 className="mt-4 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                {title}
-              </h3>
-              <p className="mt-2 text-sm text-text-secondary">
-                {description}
-              </p>
-            </Card>
+                <div className="flex items-start gap-4">
+                  <IconTile icon={s.icon} />
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center justify-between gap-3">
+                      <h3 className="text-xl font-bold">{s.title}</h3>
+                      <ArrowUpRight className="h-5 w-5 shrink-0 text-fg-faint transition-colors group-hover:text-magenta" />
+                    </div>
+                    <p className="mt-1.5 text-sm text-fg-muted">{s.short}</p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {s.stack.slice(0, 5).map((t) => (
+                        <TechTag key={t}>{t}</TechTag>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </Reveal>
           ))}
         </div>
+      </div>
     </Section>
   );
 }
