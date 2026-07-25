@@ -42,3 +42,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Owner reference material (not part of the site)
+/upwork profile.png
+/Work history on Upwork.md
