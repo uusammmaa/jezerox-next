@@ -95,7 +95,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
 
         <CtaBand
           title={<>Build it <GradientText animate>right</GradientText> the first time.</>}
-          subtitle="Tell me about your project and I'll respond within 24 hours."
+          subtitle="Tell me about your project and I'll respond within a few hours."
           secondary={{ label: "Read more insights", href: "/insights" }}
         />
       </main>

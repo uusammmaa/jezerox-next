@@ -27,7 +27,7 @@ export default function WorkPage() {
         </Section>
         <CtaBand
           title={<>Want results like these on <GradientText animate>your project?</GradientText></>}
-          subtitle="Tell me what you're building and I'll respond within 24 hours."
+          subtitle="Tell me what you're building and I'll respond within a few hours."
           secondary={{ label: "View services", href: "/services" }}
         />
       </main>

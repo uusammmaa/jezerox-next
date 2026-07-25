@@ -14,7 +14,7 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 const credentials = [
-  { icon: Star, label: "4.9★ · 25+ projects (Upwork)" },
+  { icon: Star, label: "Top Rated · 100% Job Success (Upwork)" },
   { icon: Briefcase, label: "5+ years, enterprise + startups" },
   { icon: GraduationCap, label: "BSc (Hons) Software Engineering, Lancaster University (UK)" },
   { icon: MapPin, label: "Remote-first · Worldwide" },
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 <p className="text-lg leading-relaxed text-fg-secondary">
                   Over 5+ years I&apos;ve built enterprise fintech dashboards, real-time AI SaaS
                   platforms, and security software — then went deep on AI automation and agents,
-                  becoming a top-rated freelancer with a 4.9★ average across 25+ projects.
+                  becoming a Top Rated freelancer with 100% Job Success across 25+ projects.
                 </p>
                 <p className="mt-4 text-lg leading-relaxed text-fg-secondary">
                   {company.brand}, operating as {company.legalName}, is how I bring that same
@@ -148,7 +148,7 @@ export default function AboutPage() {
 
         <CtaBand
           title={<>Let&apos;s build something <GradientText animate>great together.</GradientText></>}
-          subtitle="Tell me about your goals and I'll respond within 24 hours."
+          subtitle="Tell me about your goals and I'll respond within a few hours."
           secondary={{ label: "See our work", href: "/work" }}
         />
       </main>

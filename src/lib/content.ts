@@ -19,6 +19,7 @@ import {
   Database,
   Cpu,
   Layers,
+  Compass,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -40,7 +41,7 @@ export const company = {
     process.env.NEXT_PUBLIC_CALENDLY_URL ??
     process.env.CALENDLY_BOOKING_URL ??
     "https://calendly.com/usamaakram17/discovery-consultation-call",
-  responseTime: "Responds within 24 hours",
+  responseTime: "Responds within a few hours",
   // Public reviews profile — powers the "Top Rated on Upwork" proof link.
   upworkUrl: "https://www.upwork.com/freelancers/~0163ea60c05bc57535",
   socials: [
@@ -92,10 +93,19 @@ export const services: Service[] = [
     keywords: [
       "n8n developer",
       "n8n automation expert",
+      "n8n consultant",
       "Make.com automation",
       "Zapier expert",
+      "AI automation agency",
       "workflow automation agency",
       "business process automation",
+      "API integration",
+      "data automation",
+      "email automation",
+      "CRM automation",
+      "Google Sheets automation",
+      "web scraping automation",
+      "no-code automation",
     ],
     problems: [
       "Your team copies data between tools by hand every day.",
@@ -120,7 +130,7 @@ export const services: Service[] = [
       "Reliable, observable automations you can trust",
       "A system your team can extend without me",
     ],
-    stack: ["n8n", "Make", "Zapier", "Apify", "OpenAI", "Supabase", "Google Sheets", "Webhooks"],
+    stack: ["n8n", "Make", "Zapier", "Apify", "OpenAI", "Supabase", "Airtable", "Google Sheets", "Slack", "Gmail", "HubSpot", "Notion", "Twilio", "REST APIs", "Webhooks", "Cron"],
     faqs: [
       { q: "Do you work with n8n, Make, and Zapier?", a: "Yes — all three. n8n is my primary tool for complex, self-hosted, or AI-heavy workflows; Make and Zapier are great for lighter integrations. I'll recommend the right one for your case and budget." },
       { q: "Can you fix or finish an existing automation?", a: "Absolutely. A lot of my work is rescuing stalled or fragile flows, untangling them, and getting them reliably into production — with monitoring so they stay that way." },
@@ -140,10 +150,17 @@ export const services: Service[] = [
       "AI agent developer",
       "RAG developer",
       "build AI chatbot",
+      "custom GPT developer",
       "multi-agent systems",
       "OpenAI developer",
+      "Claude developer",
+      "LangChain developer",
       "LLM integration",
-      "AI consultant",
+      "vector database",
+      "semantic search",
+      "AI customer support",
+      "document Q&A",
+      "chatbot for my website",
     ],
     problems: [
       "Your AI demo works in the room but not in production.",
@@ -168,7 +185,7 @@ export const services: Service[] = [
       "Automations that take real action, not just chat",
       "Confidence in quality via evals and monitoring",
     ],
-    stack: ["OpenAI", "LangChain", "RAG", "Pinecone", "Supabase", "n8n", "Python", "TypeScript"],
+    stack: ["OpenAI", "Claude", "LangChain", "LlamaIndex", "LangGraph", "RAG", "Pinecone", "Weaviate", "pgvector", "Embeddings", "Function calling", "Vercel AI SDK", "FastAPI", "Python"],
     faqs: [
       { q: "What is RAG and do I need it?", a: "Retrieval-augmented generation grounds the model in your own documents and data so answers are accurate and citeable instead of made up. If you want an assistant that knows your business, you need it." },
       { q: "Can the agent actually do things, not just answer?", a: "Yes. I build tool-using and multi-agent systems that take real actions — updating records, sending messages, running workflows via n8n — with guardrails around them." },
@@ -190,8 +207,15 @@ export const services: Service[] = [
       "Angular developer",
       "full-stack developer",
       "MERN stack developer",
+      "React Native developer",
+      "Node.js developer",
+      "TypeScript developer",
       "SaaS development",
+      "MVP development",
       "AI SaaS developer",
+      "Stripe integration",
+      "web app development",
+      "hire full stack developer",
     ],
     problems: [
       "You need an MVP built fast without cutting corners.",
@@ -216,13 +240,64 @@ export const services: Service[] = [
       "Clean architecture your team can build on",
       "Enterprise-grade quality from an experienced engineer",
     ],
-    stack: ["Next.js", "React", "Angular", "TypeScript", "Node", "NestJS", "Tailwind", "Stripe"],
+    stack: ["Next.js", "React", "Angular", "React Native", "TypeScript", "Node", "NestJS", "Tailwind", "Prisma", "Postgres", "GraphQL", "tRPC", "Stripe", "AWS", "Vercel", "Docker"],
     faqs: [
-      { q: "What stacks do you build in?", a: "Next.js and React for web, Angular for enterprise front ends, Node/NestJS and TypeScript on the back end. 5+ years shipping production apps in fintech, SaaS, and AI." },
+      { q: "What stacks do you build in?", a: "Next.js and React for web, React Native for mobile, Angular for enterprise front ends, Node/NestJS and TypeScript on the back end. 5+ years shipping production apps in fintech, SaaS, and AI." },
       { q: "Can you add AI to my existing app?", a: "Yes — that's a sweet spot. I integrate LLMs, RAG, and automations into existing products with the same care as the rest of the codebase." },
       { q: "Do you do fixed-scope or ongoing work?", a: "Both. Fixed-scope for defined MVPs and features; ongoing retainer or team-extension when you need senior capacity over time." },
     ],
     relatedProjectSlug: "ai-lie-detection-saas",
+    featured: true,
+  },
+  {
+    slug: "ai-consulting",
+    title: "AI Consulting",
+    short: "Strategy, audits & a clear roadmap to ship AI that actually pays off.",
+    description:
+      "Not sure where AI fits — or burned by a build that never shipped? I help teams find the highest-ROI use cases, choose the right architecture and models, and de-risk the first project. From a single strategy call to fractional AI-engineer support.",
+    icon: Compass,
+    keywords: [
+      "AI consultant",
+      "AI strategy consulting",
+      "fractional AI engineer",
+      "AI advisor",
+      "AI readiness audit",
+      "LLM strategy",
+      "AI roadmap",
+      "generative AI consultant",
+      "AI implementation consultant",
+      "hire AI expert",
+    ],
+    problems: [
+      "You know you need AI but not where to start.",
+      "You've spent on AI that never shipped or paid off.",
+      "You want a second opinion on an AI build.",
+      "Your team needs to level up on LLMs and automation.",
+    ],
+    bullets: [
+      "AI opportunity audit & prioritized roadmap",
+      "Architecture, model & vendor selection",
+      "Proof-of-concept scoping & de-risking",
+      "Team workshops & fractional support",
+    ],
+    deliverables: [
+      "A prioritized AI roadmap tied to ROI",
+      "Clear architecture & tool recommendations",
+      "A scoped, de-risked first project",
+      "Hands-on guidance or fractional AI-engineer time",
+    ],
+    outcomes: [
+      "Confidence in where AI actually helps",
+      "Budget spent on AI that ships",
+      "A partner who has built this before",
+    ],
+    stack: ["OpenAI", "Claude", "n8n", "RAG", "LangChain", "Python", "TypeScript", "Vector DBs"],
+    faqs: [
+      { q: "Do you offer one-off consulting?", a: "Yes — from a single strategy call or audit to an ongoing fractional-AI-engineer retainer. I scope it to exactly what you need." },
+      { q: "Can you review an existing AI project?", a: "Absolutely. I do architecture reviews and second opinions on stalled or underperforming AI builds, with concrete, prioritized next steps." },
+      { q: "Do you train teams?", a: "Yes — practical, hands-on workshops on LLMs, RAG, and automation so your team can build and maintain with confidence." },
+    ],
+    relatedProjectSlug: "rag-multi-agent",
     featured: true,
   },
 ];
@@ -238,18 +313,27 @@ export function getService(slug: string): Service | undefined {
 export const capabilities: string[] = [
   "AI Automation",
   "n8n Workflows",
-  "LLM Integration",
+  "Make & Zapier",
+  "AI Agents",
   "RAG Systems",
+  "LLM Integration",
   "Multi-Agent AI",
+  "Vector Search",
+  "Pinecone",
+  "LangChain",
+  "OpenAI & Claude",
   "Web Scraping",
+  "AI Consulting",
   "Next.js",
   "React",
+  "React Native",
   "Angular",
   "TypeScript",
   "Node & NestJS",
+  "GraphQL",
   "Stripe & Payments",
   "Supabase",
-  "OpenAI API",
+  "AWS & Vercel",
   "Cloud & DevOps",
 ];
 
@@ -286,6 +370,8 @@ export interface Project {
   image?: string;
   /** Real screenshots for the case-study detail page (optional) */
   gallery?: { src: string; caption: string }[];
+  /** Themed SVG illustration when there's no real screenshot */
+  visual?: "workflow" | "dashboard" | "saas" | "marketplace" | "agent";
   featured?: boolean;
 }
 
@@ -354,6 +440,7 @@ export const projects: Project[] = [
     ],
     stack: ["n8n", "OpenAI", "Apify", "Google Sheets"],
     icon: Bot,
+    visual: "workflow",
     featured: true,
   },
   {
@@ -384,6 +471,7 @@ export const projects: Project[] = [
     ],
     stack: ["RAG", "OpenAI", "n8n", "Vector DB", "Automation"],
     icon: Sparkles,
+    visual: "agent",
     featured: false,
   },
   {
@@ -448,6 +536,7 @@ export const projects: Project[] = [
     ],
     stack: ["Angular", "React", "TypeScript", "Nx", "Tailwind"],
     icon: ShieldCheck,
+    visual: "dashboard",
     featured: true,
   },
   {
@@ -478,6 +567,7 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "React", "face-api.js", "Stripe", "Firebase"],
     icon: Cpu,
+    visual: "saas",
     featured: true,
   },
   {
@@ -508,6 +598,7 @@ export const projects: Project[] = [
     ],
     stack: ["React", "Tailwind", "Stripe", "OAuth"],
     icon: Boxes,
+    visual: "marketplace",
     featured: false,
   },
 ];
@@ -630,6 +721,7 @@ export const footerNav: { heading: string; links: { href: string; label: string 
       { href: "/services/ai-automation", label: "AI Automation" },
       { href: "/services/ai-agents", label: "AI Agents & RAG" },
       { href: "/services/web-development", label: "Web & App Dev" },
+      { href: "/services/ai-consulting", label: "AI Consulting" },
     ],
   },
   {

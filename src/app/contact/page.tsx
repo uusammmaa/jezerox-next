@@ -10,7 +10,7 @@ import { company } from "@/lib/content";
 export const metadata: Metadata = createPageMetadata({
   title: "Contact — Start a Project with JezeroX",
   description:
-    "Tell JezeroX about your AI automation, AI agent, or full-stack project. Direct line to a senior engineer. Response within 24 hours.",
+    "Tell JezeroX about your AI automation, AI agent, or full-stack project. Direct line to a senior engineer. Response within a few hours.",
   path: "/contact",
 });
 
@@ -29,7 +29,7 @@ export default function ContactPage() {
         <PageHero
           eyebrow="Contact"
           title={<>Tell me about your <GradientText>project.</GradientText></>}
-          lede="Share your goals and I'll respond within 24 hours with clear next steps. You'll talk directly to the engineer who'll do the work."
+          lede="Share your goals and I'll respond within a few hours with clear next steps. You'll talk directly to the engineer who'll do the work."
         />
 
         <Section>
