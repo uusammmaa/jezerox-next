@@ -1,159 +1,83 @@
 import type { Metadata } from "next";
+import { Mail, CalendarClock, Clock, Check } from "lucide-react";
 import { Header, Footer } from "@/components/layout";
-import { Section, Button, Container } from "@/components/ui";
+import { PageHero } from "@/components/common";
+import { Section, Button, GradientText } from "@/components/ui";
 import { ContactForm } from "@/components/contact";
 import { createPageMetadata } from "@/lib/seo";
+import { company } from "@/lib/content";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Contact",
+  title: "Contact — Start a Project with JezeroX",
   description:
-    "Tell us about your product. JezeroX responds within 24 hours. Book a call or send a message.",
+    "Tell JezeroX about your AI automation, AI agent, or full-stack project. Direct line to a senior engineer. Response within a few hours.",
   path: "/contact",
 });
 
-const projectBriefChecklist = [
+const brief = [
   "What problem are you solving?",
-  "Who are your users or customers?",
-  "What does success look like (metrics or outcomes)?",
-  "Timeline and key milestones",
-  "Budget or engagement model preference",
-] as const;
-
-const locations = [
-  {
-    label: "HQ",
-    detail: "Remote-first. We work across time zones with clients worldwide.",
-  },
-  {
-    label: "Response time",
-    detail: "We respond to all inquiries within 24 hours.",
-  },
-] as const;
+  "What tools or systems are involved?",
+  "What does success look like?",
+  "Rough timeline and budget",
+];
 
 export default function ContactPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="min-h-screen">
-        {/* Hero */}
-        <section
-          className="relative overflow-hidden py-16 md:py-24 lg:py-32"
-          aria-label="Contact hero"
-        >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `linear-gradient(var(--border-subtle) 1px, transparent 1px),
-                linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px)`,
-              backgroundSize: "48px 48px",
-            }}
-          />
-          <Container className="relative">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-(family-name:--font-space-grotesk) text-4xl font-bold tracking-tight text-text-primary sm:text-5xl md:text-6xl md:leading-[1.1]">
-                Tell us about your product.
-              </h1>
-              <p className="mt-6 text-lg text-text-secondary sm:text-xl">
-                We respond within 24 hours. Share your goals, timeline, and we
-                will align on next steps.
-              </p>
-              <p className="mt-3 text-text-muted">
-                Start a project, book a call, or ask a question.
-              </p>
-            </div>
-          </Container>
-        </section>
+      <main id="main" className="min-h-screen">
+        <PageHero
+          eyebrow="Contact"
+          title={<>Tell me about your <GradientText>project.</GradientText></>}
+          lede="Share your goals and I'll respond within a few hours with clear next steps. You'll talk directly to the engineer who'll do the work."
+        />
 
-        {/* Contact form */}
-        <Section id="contact-form">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Send a message
-            </h2>
-            <p className="mt-2 text-text-muted">
-              Name, email, company, and a short description of your product or
-              goals.
-            </p>
-          </div>
-          <div className="mt-10">
-            <ContactForm />
-          </div>
-        </Section>
-
-        {/* Project brief checklist */}
-        <Section id="project-brief">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Help us help you: project brief checklist
-            </h2>
-            <p className="mt-2 text-text-muted">
-              Including these in your message speeds up our first conversation.
-            </p>
-          </div>
-          <ul className="mx-auto mt-10 max-w-xl space-y-3">
-            {projectBriefChecklist.map((item, i) => (
-              <li
-                key={item}
-                className="flex items-start gap-3 rounded-lg border border-border bg-bg-surface px-4 py-3"
-              >
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-(--accent-soft) text-sm font-semibold text-accent">
-                  {i + 1}
-                </span>
-                <span className="text-text-secondary">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </Section>
-
-        {/* Calendly / booking CTA */}
-        <Section id="book-a-call">
-          <div className="rounded-xl border border-border bg-bg-surface px-8 py-12 text-center md:py-16">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Prefer to talk first?
-            </h2>
-            <p className="mt-3 text-text-muted">
-              Book a call with our team. No commitment, we will listen and
-              suggest next steps.
-            </p>
-            <div className="mt-8">
-              <Button
-                href={process.env.CALENDLY_BOOKING_URL || ""}
-                variant="secondary"
-                size="lg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Book a call
-              </Button>
-            </div>
-            <p className="mt-4 text-sm text-text-muted">
-              Or use the form above and we will propose a time.
-            </p>
-          </div>
-        </Section>
-
-        {/* Locations / hours */}
-        <Section id="locations-hours">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Where we work
-            </h2>
-            <p className="mt-2 text-text-muted">
-              Remote-first. We respond within 24 hours, any day.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {locations.map(({ label, detail }) => (
-              <div
-                key={label}
-                className="rounded-lg border border-border bg-bg-surface p-6"
-              >
-                <h3 className="font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                  {label}
-                </h3>
-                <p className="mt-2 text-sm text-text-secondary">{detail}</p>
+        <Section>
+          <div className="grid gap-12 lg:grid-cols-[1.3fr_0.7fr]">
+            {/* Form */}
+            <div className="rounded-[var(--radius-2xl)] border border-line bg-ink-850 p-6 md:p-10">
+              <h2 className="text-2xl font-bold">Send a message</h2>
+              <p className="mt-2 text-fg-muted">A few lines is enough to get started.</p>
+              <div className="mt-8">
+                <ContactForm />
               </div>
-            ))}
+            </div>
+
+            {/* Sidebar */}
+            <aside className="flex flex-col gap-5">
+              <div className="rounded-[var(--radius-xl)] border border-line bg-ink-900 p-6">
+                <h3 className="flex items-center gap-2 font-semibold">
+                  <Check className="h-4 w-4 text-magenta" /> Helpful to include
+                </h3>
+                <ul className="mt-4 grid gap-2.5">
+                  {brief.map((b) => (
+                    <li key={b} className="flex items-start gap-2.5 text-sm text-fg-secondary">
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-magenta" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-[var(--radius-xl)] border border-line bg-ink-900 p-6">
+                <h3 className="flex items-center gap-2 font-semibold">
+                  <CalendarClock className="h-4 w-4 text-magenta" /> Prefer to talk?
+                </h3>
+                <p className="mt-3 text-sm text-fg-muted">Book a free discovery call — no commitment.</p>
+                <Button href={company.calendly} variant="secondary" size="md" target="_blank" rel="noopener noreferrer" className="mt-4 w-full">
+                  Book a call
+                </Button>
+              </div>
+
+              <div className="grid gap-4 rounded-[var(--radius-xl)] border border-line bg-ink-900 p-6 text-sm">
+                <div className="flex items-center gap-3 text-fg-secondary">
+                  <Clock className="h-4 w-4 text-magenta" /> {company.responseTime}
+                </div>
+                <a href={`mailto:${company.email}`} className="flex items-center gap-3 text-fg-secondary transition-colors hover:text-fg">
+                  <Mail className="h-4 w-4 text-magenta" /> {company.email}
+                </a>
+              </div>
+            </aside>
           </div>
         </Section>
       </main>

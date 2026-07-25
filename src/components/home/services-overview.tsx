@@ -1,97 +1,77 @@
 import Link from "next/link";
-import {
-  Target,
-  Palette,
-  Code,
-  Brain,
-  Cloud,
-  TrendingUp,
-  Check,
-} from "lucide-react";
-import { Section } from "@/components/ui";
-
-// cspell:ignore roadmaps
-const services = [
-  {
-    title: "Product strategy",
-    description:
-      "Align goals, validate scope, and define a roadmap that reduces risk.",
-    icon: Target,
-    bullets: ["Discovery", "Roadmaps", "MVP definition"],
-  },
-  {
-    title: "UX and UI design",
-    description: "Research, design systems, prototypes, and usability.",
-    icon: Palette,
-    bullets: ["Research", "Design systems", "Prototypes"],
-  },
-  {
-    title: "Web and mobile engineering",
-    description: "Scalable apps built with modern stacks.",
-    icon: Code,
-    bullets: ["Scalable apps", "Modern stacks", "Cross-platform"],
-  },
-  {
-    title: "Data, AI, and automation",
-    description:
-      "Custom AI and machine learning: LLM integration, predictive analytics, intelligent workflows, and production ML systems. From prototype to scalable, reliable AI products.",
-    icon: Brain,
-    bullets: ["Intelligent workflows", "Insights", "Automation"],
-  },
-  {
-    title: "Cloud, DevOps, and security",
-    description: "Infrastructure, observability, and compliance.",
-    icon: Cloud,
-    bullets: ["Infrastructure", "Observability", "Compliance"],
-  },
-  {
-    title: "Growth and optimization",
-    description: "Analytics, experiments, and conversion improvements.",
-    icon: TrendingUp,
-    bullets: ["Analytics", "Experiments", "Conversion"],
-  },
-] as const;
+import { ArrowUpRight, Check } from "lucide-react";
+import { Section, SectionHeading, IconTile, GradientText, TechTag, Reveal } from "@/components/ui";
+import { services } from "@/lib/content";
 
 export function ServicesOverview() {
+  const [feature, ...rest] = services;
+
   return (
     <Section id="services">
-      <div className="mb-20 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-        <div className="max-w-xl">
-          <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[var(--blue-500)]">
-            Core Expertise
-          </h2>
-          <h3 className="font-(family-name:--font-space-grotesk) text-4xl font-bold leading-tight text-text-primary md:text-5xl">
-            End-to-end product engineering.
-          </h3>
-        </div>
-        <p className="max-w-sm text-text-muted">
-          Strategy, UX, engineering, and growth in one focused team.
-        </p>
-      </div>
-      <div className="grid gap-8 md:grid-cols-3">
-        {services.map(({ title, description, icon: Icon, bullets }) => (
+      <Reveal>
+        <SectionHeading
+          eyebrow="What we do"
+          title={<>Intelligent software, <GradientText>end to end.</GradientText></>}
+          lede="AI automation, agents, full-stack builds, and consulting — one senior engineer across all of it."
+        />
+      </Reveal>
+
+      <div className="mt-14 grid gap-4 lg:grid-cols-2">
+        {/* Feature service */}
+        <Reveal>
           <Link
-            key={title}
-            href="/services"
-            className="glass group rounded-xl p-10 transition-all duration-500 hover:border-[var(--blue-500)]/50"
+            href={`/services/${feature.slug}`}
+            className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[var(--radius-2xl)] border border-line bg-ink-850 p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-ink-800 gradient-border"
           >
-            <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-lg bg-[var(--accent-soft)] transition-all group-hover:bg-[var(--blue-500)] group-hover:text-white">
-              <Icon className="h-7 w-7 text-[var(--blue-500)] group-hover:text-white" />
+            <div>
+              <IconTile icon={feature.icon} size="lg" />
+              <h3 className="mt-6 text-3xl font-bold">{feature.title}</h3>
+              <p className="mt-3 max-w-md text-fg-muted">{feature.description}</p>
+              <ul className="mt-6 grid gap-2.5">
+                {feature.bullets.map((b) => (
+                  <li key={b} className="flex items-start gap-2.5 text-sm text-fg-secondary">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-magenta" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h4 className="mb-4 font-(family-name:--font-space-grotesk) text-2xl font-bold text-text-primary">
-              {title}
-            </h4>
-            <p className="mb-8 leading-relaxed text-text-muted">{description}</p>
-            <ul className="space-y-3 text-sm font-medium text-text-secondary">
-              {bullets.map((bullet) => (
-                <li key={bullet} className="flex items-center gap-2">
-                  <Check className="h-4 w-4 shrink-0 text-[var(--blue-500)]" />
-                  {bullet}
-                </li>
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+              {feature.stack.slice(0, 6).map((s) => (
+                <TechTag key={s}>{s}</TechTag>
               ))}
-            </ul>
+              <ArrowUpRight className="ml-auto h-5 w-5 text-fg-faint transition-colors group-hover:text-magenta" />
+            </div>
           </Link>
-        ))}
+        </Reveal>
+
+        {/* Remaining services, stacked */}
+        <div className="grid gap-4">
+          {rest.map((s, i) => (
+            <Reveal key={s.slug} delay={(i + 1) * 90}>
+              <Link
+                href={`/services/${s.slug}`}
+                className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-2xl)] border border-line bg-ink-850 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-ink-800 gradient-border"
+              >
+                <div className="flex items-start gap-4">
+                  <IconTile icon={s.icon} />
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center justify-between gap-3">
+                      <h3 className="text-xl font-bold">{s.title}</h3>
+                      <ArrowUpRight className="h-5 w-5 shrink-0 text-fg-faint transition-colors group-hover:text-magenta" />
+                    </div>
+                    <p className="mt-1.5 text-sm text-fg-muted">{s.short}</p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {s.stack.slice(0, 5).map((t) => (
+                        <TechTag key={t}>{t}</TechTag>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </Section>
   );
