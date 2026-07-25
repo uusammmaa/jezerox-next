@@ -43,6 +43,18 @@ export default function PrivacyPage() {
           ],
         },
         {
+          heading: "Cookies & analytics",
+          paragraphs: [
+            "We use privacy-friendly, aggregate analytics (Vercel Analytics) to understand site usage. We do not use advertising cookies or cross-site trackers. Any cookies set are limited to what's needed for the site to function.",
+          ],
+        },
+        {
+          heading: "International users",
+          paragraphs: [
+            "JezeroX serves clients worldwide. If you contact us from outside the United States, your information may be processed in the US and in other countries where our service providers operate. By contacting us, you consent to this transfer.",
+          ],
+        },
+        {
           heading: "Data retention",
           paragraphs: [
             "We keep inquiry emails only as long as needed to respond and maintain our business records, then delete them.",

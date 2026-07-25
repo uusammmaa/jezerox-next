@@ -43,6 +43,12 @@ export default function TermsPage() {
           ],
         },
         {
+          heading: "Third-party links",
+          paragraphs: [
+            "This site may link to third-party websites (for example scheduling, social, or code-repository links). We are not responsible for the content, policies, or practices of those external sites.",
+          ],
+        },
+        {
           heading: "Limitation of liability",
           paragraphs: [
             "To the fullest extent permitted by law, we are not liable for any indirect or consequential damages arising from your use of this website.",

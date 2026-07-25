@@ -2,6 +2,7 @@ export { Hero } from "./Hero";
 export { StatsBar } from "./stats-bar";
 export { ServicesOverview } from "./services-overview";
 export { AiSpotlight } from "./ai-spotlight";
+export { Industries } from "./industries";
 export { FeaturedWork } from "./featured-work";
 export { ProcessOverview } from "./process-overview";
 export { Testimonials } from "./Testimonials";

@@ -8,6 +8,7 @@ import {
   StatsBar,
   ServicesOverview,
   AiSpotlight,
+  Industries,
   FeaturedWork,
   ProcessOverview,
   Testimonials,
@@ -32,6 +33,7 @@ export default function HomePage() {
         <Marquee items={capabilities} />
         <ServicesOverview />
         <AiSpotlight />
+        <Industries />
         <FeaturedWork />
         <ProcessOverview />
         <Testimonials />

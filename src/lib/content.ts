@@ -20,6 +20,14 @@ import {
   Cpu,
   Layers,
   Compass,
+  Building2,
+  ShoppingCart,
+  Stethoscope,
+  Scale,
+  Landmark,
+  Megaphone,
+  Users,
+  Rocket,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -403,7 +411,7 @@ export const projects: Project[] = [
       "Automated 3-step outreach with merge fields",
       "Daily cron follow-ups & CSV export",
     ],
-    stack: ["Next.js", "Supabase", "Apify", "SendGrid", "TypeScript"],
+    stack: ["Next.js", "Node", "Supabase", "Apify", "SendGrid", "TypeScript"],
     icon: Workflow,
     image: "/work/leadpipe-leads.jpg",
     gallery: [
@@ -680,9 +688,24 @@ export const techGroups: { label: string; icon: LucideIcon; items: string[] }[] 
 /* ------------------------------------------------------------------ */
 
 export const expectations: { key: string; label: string; detail: string }[] = [
-  { key: "24h", label: "Response time", detail: "Every inquiry gets a real reply from me within one business day." },
+  { key: "Fast", label: "Real replies", detail: "Every inquiry gets a real reply from me — usually within a few hours, not days." },
   { key: "Senior", label: "Only, on your build", detail: "You work directly with a senior engineer — the person who scopes it ships it." },
   { key: "Fixed", label: "Scope & price up front", detail: "Clear deliverables and pricing agreed before we start. No surprises." },
+];
+
+/* ------------------------------------------------------------------ */
+/* Industries / niches served (US-market SEO + self-identification)    */
+/* ------------------------------------------------------------------ */
+
+export const industries: { name: string; blurb: string; icon: LucideIcon }[] = [
+  { name: "Real estate", blurb: "Lead capture, instant follow-up, and listing automation.", icon: Building2 },
+  { name: "E-commerce", blurb: "Cart recovery, order ops, and support automation.", icon: ShoppingCart },
+  { name: "Healthcare & dental", blurb: "Scheduling, intake, and reminder workflows.", icon: Stethoscope },
+  { name: "Legal", blurb: "Document review, intake, and case-file automation.", icon: Scale },
+  { name: "Financial services", blurb: "Reporting, reconciliation, and compliance flows.", icon: Landmark },
+  { name: "Marketing agencies", blurb: "White-label automation and AI content pipelines.", icon: Megaphone },
+  { name: "Recruiting & HR", blurb: "Candidate sourcing, screening, and onboarding.", icon: Users },
+  { name: "SaaS & startups", blurb: "AI features, onboarding, and internal tooling.", icon: Rocket },
 ];
 
 /* ------------------------------------------------------------------ */
