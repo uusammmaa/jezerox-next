@@ -1,46 +1,52 @@
-import { Section, Card } from "@/components/ui";
-
-const testimonials = [
-  {
-    quote:
-      "JezeroX delivered on time and helped us ship a secure, scalable product. Clear communication and senior execution.",
-    author: "Placeholder",
-    role: "Client",
-  },
-  {
-    quote:
-      "From discovery to launch, the team was focused on outcomes. We'd work with them again.",
-    author: "Placeholder",
-    role: "Client",
-  },
-] as const;
+import { Star, ArrowUpRight } from "lucide-react";
+import { Section, SectionHeading, GradientText, Reveal } from "@/components/ui";
+import { testimonials, company } from "@/lib/content";
 
 export function Testimonials() {
   return (
-    <Section id="testimonials" className="border-t border-border bg-bg-surface">
-      <div className="text-center">
-          <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-            Teams trust JezeroX to deliver
-          </h2>
-          <p className="mt-2 text-text-muted">
-            Clear outcomes, predictable delivery, and software that performs.
-          </p>
-        </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {testimonials.map(({ quote, author, role }) => (
-            <Card key={quote.slice(0, 24)} className="glass">
-              <blockquote className="text-text-secondary">
-                &ldquo;{quote}&rdquo;
-              </blockquote>
-              <footer className="mt-4">
-                <cite className="not-italic font-semibold text-text-primary">
-                  {author}
-                </cite>
-                <span className="text-sm text-text-muted"> — {role}</span>
-              </footer>
-            </Card>
-          ))}
-        </div>
+    <Section id="testimonials" tone="surface">
+      <Reveal>
+        <SectionHeading
+          center
+          eyebrow="Client reviews"
+          title={<>Teams keep <GradientText>coming back.</GradientText></>}
+          lede="Verbatim reviews from verified Upwork clients — Top Rated, 100% Job Success."
+        />
+        {company.upworkUrl ? (
+          <div className="mt-6 text-center">
+            <a
+              href={company.upworkUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-line px-4 py-2 text-sm font-medium text-fg-secondary transition-colors hover:border-line-strong hover:text-fg"
+            >
+              <Star className="h-4 w-4 fill-amber text-amber" />
+              Top Rated · 100% Job Success on Upwork
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
+        ) : null}
+      </Reveal>
+      <div className="mt-12 columns-1 gap-5 md:columns-2 lg:columns-3 [&>*]:mb-5">
+        {testimonials.map((t, i) => (
+          <Reveal key={t.quote.slice(0, 24)} delay={(i % 3) * 80} className="break-inside-avoid">
+            <figure className="rounded-[var(--radius-xl)] border border-line bg-ink-850 p-6">
+              <div className="flex gap-0.5" aria-label={`${t.rating} out of 5 stars`}>
+                {Array.from({ length: t.rating }).map((_, s) => (
+                  <Star key={s} className="h-4 w-4 fill-amber text-amber" />
+                ))}
+              </div>
+              <blockquote className="mt-4 text-fg-secondary">“{t.quote}”</blockquote>
+              <figcaption className="mt-4 border-t border-line pt-4">
+                <div className="text-sm font-semibold text-fg">{t.author}</div>
+                <div className="font-mono text-[0.7rem] uppercase tracking-wide text-fg-faint">
+                  {t.context}
+                </div>
+              </figcaption>
+            </figure>
+          </Reveal>
+        ))}
+      </div>
     </Section>
   );
 }

@@ -1,44 +1,32 @@
-import { Section } from "@/components/ui";
-
-const steps = [
-  { name: "Discover", duration: "1 to 2 weeks", detail: "Goals, scope, roadmap, risks." },
-  { name: "Design", duration: "2 to 4 weeks", detail: "Prototypes, UI system, usability validation." },
-  { name: "Build", duration: "4 to 12+ weeks", detail: "Production-ready web or mobile product." },
-  { name: "Scale", duration: "Ongoing", detail: "Performance, analytics, reliability, and growth." },
-] as const;
+import { Section, SectionHeading, GradientText, Reveal } from "@/components/ui";
+import { processSteps } from "@/lib/content";
 
 export function ProcessOverview() {
   return (
-    <Section id="process" className="border-t border-border bg-bg-surface">
-      <div className="text-center">
-          <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-            Discover. Design. Build. Scale.
-          </h2>
-          <p className="mt-2 text-text-muted">
-            A proven delivery system with clear outcomes at every stage.
-          </p>
-        </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map(({ name, duration, detail }, i) => (
-            <div
-              key={name}
-              className="glass relative rounded-xl p-6"
-            >
-              <span className="text-sm font-semibold text-accent">
-                Step {i + 1}
-              </span>
-              <h3 className="mt-2 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                {name}
-              </h3>
-              <p className="mt-1 text-sm font-medium text-text-muted">
-                {duration}
+    <Section id="process">
+      <Reveal>
+        <SectionHeading
+          eyebrow="How we work"
+          title={<>Discover. Design. Build. <GradientText>Scale.</GradientText></>}
+          lede="A lean delivery process with clear scope, pricing, and demos at every stage."
+        />
+      </Reveal>
+      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {processSteps.map((step, i) => (
+          <Reveal key={step.name} delay={i * 90}>
+            <div className="relative h-full overflow-hidden rounded-[var(--radius-xl)] border border-line bg-ink-850 p-7">
+              <div className="font-display text-5xl font-bold leading-none">
+                <GradientText>{i + 1}</GradientText>
+              </div>
+              <h3 className="mt-4 text-lg font-semibold">{step.name}</h3>
+              <p className="mt-1 font-mono text-[0.7rem] uppercase tracking-widest text-fg-faint">
+                {step.duration}
               </p>
-              <p className="mt-2 text-sm text-text-secondary">
-                {detail}
-              </p>
+              <p className="mt-3 text-sm text-fg-muted">{step.detail}</p>
             </div>
-          ))}
-        </div>
+          </Reveal>
+        ))}
+      </div>
     </Section>
   );
 }

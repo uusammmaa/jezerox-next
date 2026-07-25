@@ -1,356 +1,156 @@
 import type { Metadata } from "next";
+import { GraduationCap, MapPin, Star, Briefcase } from "lucide-react";
 import { Header, Footer } from "@/components/layout";
-import { Section, Button, Card, Container } from "@/components/ui";
+import { PageHero, CtaBand } from "@/components/common";
+import { Section, SectionHeading, Stat, TechTag, IconTile, GradientText, Reveal } from "@/components/ui";
 import { createPageMetadata } from "@/lib/seo";
+import { company, stats, journey, values, techGroups } from "@/lib/content";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "About",
+  title: "About — Usama Akram, Founder of JezeroX",
   description:
-    "JezeroX is a product engineering partner for ambitious teams. Learn about our mission, values, leadership, and how we deliver secure, scalable software.",
+    "JezeroX is led by Usama Akram, a senior engineer with 5+ years shipping AI automation, AI agents, and full-stack products for fintech, SaaS, and startups. A Skycap LLC company.",
   path: "/about",
 });
 
-const milestones = [
-  {
-    year: "2019",
-    title: "Founded",
-    description:
-      "JezeroX started with a simple belief: ambitious teams deserve an engineering partner, not a vendor.",
-  },
-  {
-    year: "2020",
-    title: "First enterprise client",
-    description:
-      "Delivered a regulated fintech platform and proved our process at scale.",
-  },
-  {
-    year: "2021",
-    title: "Team of 20+",
-    description:
-      "Grew to a cross-functional team spanning strategy, design, engineering, and DevOps.",
-  },
-  {
-    year: "2022",
-    title: "Multi-industry expansion",
-    description:
-      "Expanded into healthcare, SaaS, logistics, retail, and education with deep domain expertise.",
-  },
-  {
-    year: "2023",
-    title: "AI and automation practice",
-    description:
-      "Launched our data, AI, and automation practice to help teams ship intelligent products.",
-  },
-  {
-    year: "2024",
-    title: "50+ products shipped",
-    description:
-      "Crossed 50 shipped products with 95% client retention and 99.9% uptime across deployments.",
-  },
-] as const;
-
-const values = [
-  {
-    title: "Ownership over output",
-    description:
-      "We take responsibility for outcomes, not just deliverables. Every decision is measured by its impact on your product.",
-    icon: "◆",
-  },
-  {
-    title: "Clarity over complexity",
-    description:
-      "Simple systems outperform clever ones. We choose clean architecture, clear communication, and honest timelines.",
-    icon: "◇",
-  },
-  {
-    title: "Security by default",
-    description:
-      "Security is not an afterthought. Every product we build starts with compliance, encryption, and access control baked in.",
-    icon: "◈",
-  },
-  {
-    title: "Move fast, stay reliable",
-    description:
-      "Speed matters, but not at the cost of quality. We ship quickly with automated testing, CI/CD, and observability.",
-    icon: "⬡",
-  },
-  {
-    title: "Transparent partnership",
-    description:
-      "No black boxes. You get full visibility into progress, decisions, and trade-offs from day one.",
-    icon: "▷",
-  },
-  {
-    title: "Continuous improvement",
-    description:
-      "Every sprint retrospective, every post-mortem, every release makes the next one better.",
-    icon: "▶",
-  },
-] as const;
-
-const leaders = [
-  {
-    name: "Alex Mercer",
-    role: "CEO and Co-founder",
-    bio: "15 years building and scaling software products across fintech and SaaS. Previously VP Engineering at a Series C startup.",
-  },
-  {
-    name: "Priya Sharma",
-    role: "CTO and Co-founder",
-    bio: "Full-stack architect with deep expertise in distributed systems, cloud infrastructure, and developer experience.",
-  },
-  {
-    name: "Jordan Ellis",
-    role: "VP of Design",
-    bio: "Led product design at two unicorn startups. Obsessed with accessible, conversion-focused UX systems.",
-  },
-  {
-    name: "Sam Nguyen",
-    role: "VP of Engineering",
-    bio: "10 years shipping production systems. Specializes in platform reliability, CI/CD, and engineering culture.",
-  },
-] as const;
-
-const principles = [
-  {
-    title: "Senior-only delivery",
-    description:
-      "Every project is staffed with senior engineers and designers. No juniors learning on your budget.",
-  },
-  {
-    title: "Cross-functional squads",
-    description:
-      "Strategy, design, engineering, and QA work together from day one, not in silos.",
-  },
-  {
-    title: "Async-first communication",
-    description:
-      "Detailed write-ups, recorded demos, and clear documentation over excessive meetings.",
-  },
-  {
-    title: "Continuous learning",
-    description:
-      "Weekly knowledge sharing, conference budgets, and dedicated time for experimentation.",
-  },
-] as const;
-
-const complianceBadges = [
-  "SOC 2 aligned",
-  "GDPR compliant",
-  "HIPAA ready",
-  "End-to-end encryption",
-  "Automated vulnerability scanning",
-  "Role-based access control",
-  "Secure CI/CD pipelines",
-  "Incident response plan",
-] as const;
+const credentials = [
+  { icon: Star, label: "4.9★ · 25+ projects (Upwork)" },
+  { icon: Briefcase, label: "5+ years, enterprise + startups" },
+  { icon: GraduationCap, label: "BSc (Hons) Software Engineering, Lancaster University (UK)" },
+  { icon: MapPin, label: "Remote-first · Worldwide" },
+];
 
 export default function AboutPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="min-h-screen">
-        {/* Hero */}
-        <section
-          className="relative overflow-hidden py-16 md:py-24 lg:py-32"
-          aria-label="About hero"
-        >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `linear-gradient(var(--border-subtle) 1px, transparent 1px),
-                linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px)`,
-              backgroundSize: "48px 48px",
-            }}
-          />
-          <Container className="relative">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-(family-name:--font-space-grotesk) text-4xl font-bold tracking-tight text-text-primary sm:text-5xl md:text-6xl md:leading-[1.1]">
-                Building software that matters
-              </h1>
-              <p className="mt-6 text-lg text-text-secondary sm:text-xl">
-                JezeroX is a product engineering partner for ambitious teams. We
-                combine strategy, design, and engineering to deliver secure,
-                reliable software that grows with your business.
-              </p>
-              <p className="mt-3 text-text-muted">
-                One senior team across strategy, design, engineering, and growth.
-              </p>
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <Button href="/contact" variant="primary" size="lg">
-                  Start a project
-                </Button>
-                <Button href="/work" variant="secondary" size="lg">
-                  See our work
-                </Button>
-              </div>
-            </div>
-          </Container>
-        </section>
+      <main id="main" className="min-h-screen">
+        <PageHero
+          eyebrow="About"
+          title={<>One senior engineer. <GradientText>Real production experience.</GradientText></>}
+          lede={`${company.brand} is the practice of ${company.founder} — bringing enterprise-grade engineering to AI automation, agents, and full-stack products, without the agency overhead.`}
+        />
 
-        {/* Story and timeline */}
-        <Section id="story">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Our story
-            </h2>
-            <p className="mt-2 text-text-muted">
-              From a small team with a clear mission to a trusted engineering
-              partner across industries.
-            </p>
-          </div>
-          <div className="relative mx-auto mt-10 max-w-2xl">
-            {/* Timeline line */}
-            <div
-              className="absolute left-[19px] top-0 h-full w-px bg-border"
-              aria-hidden
-            />
-            <div className="space-y-8">
-              {milestones.map(({ year, title, description }) => (
-                <div key={year} className="relative pl-12">
-                  {/* Timeline dot */}
+        {/* Founder */}
+        <Section>
+          <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-center">
+            <Reveal>
+              <div className="relative overflow-hidden rounded-[var(--radius-2xl)] border border-line bg-ink-850 p-10">
+                <div className="aurora-fallback pointer-events-none absolute inset-0 opacity-30" aria-hidden />
+                <div className="relative">
                   <div
-                    className="absolute left-2.5 top-1 size-3 rounded-full border-2 border-accent bg-bg-page"
+                    className="flex h-24 w-24 items-center justify-center rounded-2xl font-display text-4xl font-bold text-[#0a0710]"
+                    style={{ background: "var(--gradient-brand)" }}
                     aria-hidden
-                  />
-                  <span className="text-sm font-semibold text-accent">
-                    {year}
-                  </span>
-                  <h3 className="mt-1 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                    {title}
-                  </h3>
-                  <p className="mt-1 text-sm text-text-secondary">
-                    {description}
+                  >
+                    UA
+                  </div>
+                  <h2 className="mt-6 text-2xl font-bold">{company.founder}</h2>
+                  <p className="font-mono text-[0.72rem] uppercase tracking-widest text-magenta">{company.founderTitle}</p>
+                  <p className="mt-4 text-fg-muted">
+                    Senior software engineer and top-rated freelancer. I design and ship
+                    intelligent systems end to end — and I&apos;m the one who does the work.
                   </p>
                 </div>
-              ))}
-            </div>
+              </div>
+            </Reveal>
+            <Reveal delay={100}>
+              <div>
+                <p className="text-lg leading-relaxed text-fg-secondary">
+                  Over 5+ years I&apos;ve built enterprise fintech dashboards, real-time AI SaaS
+                  platforms, and security software — then went deep on AI automation and agents,
+                  becoming a top-rated freelancer with a 4.9★ average across 25+ projects.
+                </p>
+                <p className="mt-4 text-lg leading-relaxed text-fg-secondary">
+                  {company.brand}, operating as {company.legalName}, is how I bring that same
+                  senior, production-first standard to your automation, AI, and product work.
+                </p>
+                <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+                  {credentials.map((c) => (
+                    <li key={c.label} className="flex items-start gap-3 rounded-[var(--radius-md)] border border-line bg-ink-900 px-4 py-3">
+                      <c.icon className="mt-0.5 h-4 w-4 shrink-0 text-magenta" />
+                      <span className="text-sm text-fg-secondary">{c.label}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          </div>
+        </Section>
+
+        {/* Stats */}
+        <Section tone="surface">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {stats.map((s, i) => (
+              <Reveal key={s.label} delay={i * 70}>
+                <Stat value={s.value} label={s.label} note={s.note} />
+              </Reveal>
+            ))}
+          </div>
+        </Section>
+
+        {/* Journey */}
+        <Section>
+          <Reveal>
+            <SectionHeading eyebrow="Journey" title={<>From enterprise to <GradientText>AI automation.</GradientText></>} />
+          </Reveal>
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {journey.map((j, i) => (
+              <Reveal key={j.period} delay={i * 80}>
+                <div className="h-full rounded-[var(--radius-xl)] border border-line bg-ink-850 p-6">
+                  <div className="font-mono text-[0.7rem] uppercase tracking-widest text-magenta">{j.period}</div>
+                  <h3 className="mt-3 text-lg font-semibold">{j.title}</h3>
+                  <p className="mt-2 text-sm text-fg-muted">{j.detail}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </Section>
 
         {/* Values */}
-        <Section id="values">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              What we stand for
-            </h2>
-            <p className="mt-2 text-text-muted">
-              Principles that guide every product we build and every team we
-              partner with.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {values.map(({ title, description, icon }) => (
-              <Card key={title} className="h-full">
-                <span className="text-2xl text-accent" aria-hidden>
-                  {icon}
-                </span>
-                <h3 className="mt-4 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                  {title}
-                </h3>
-                <p className="mt-2 text-sm text-text-secondary">
-                  {description}
-                </p>
-              </Card>
+        <Section tone="surface">
+          <Reveal>
+            <SectionHeading center eyebrow="How I work" title={<>Principles that <GradientText>ship.</GradientText></>} />
+          </Reveal>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            {values.map((v, i) => (
+              <Reveal key={v.title} delay={i * 70}>
+                <div className="h-full rounded-[var(--radius-xl)] border border-line bg-ink-850 p-7">
+                  <h3 className="text-lg font-semibold">{v.title}</h3>
+                  <p className="mt-2 text-fg-muted">{v.detail}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </Section>
 
-        {/* Leadership */}
-        <Section id="leadership">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Leadership
-            </h2>
-            <p className="mt-2 text-text-muted">
-              Senior operators who have built, scaled, and shipped at every
-              stage.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {leaders.map(({ name, role, bio }) => (
-              <Card key={name} className="h-full text-center">
-                {/* Avatar placeholder */}
-                <div className="mx-auto size-20 rounded-full bg-bg-surface-2" />
-                <h3 className="mt-4 font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                  {name}
-                </h3>
-                <p className="mt-1 text-sm font-medium text-accent">{role}</p>
-                <p className="mt-3 text-sm text-text-secondary">{bio}</p>
-              </Card>
+        {/* Tech */}
+        <Section>
+          <Reveal>
+            <SectionHeading center eyebrow="Toolkit" title={<>Tools I <GradientText>build with.</GradientText></>} />
+          </Reveal>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {techGroups.map((g, i) => (
+              <Reveal key={g.label} delay={i * 70}>
+                <div className="h-full rounded-[var(--radius-xl)] border border-line bg-ink-850 p-6">
+                  <IconTile icon={g.icon} />
+                  <h3 className="mt-4 font-semibold">{g.label}</h3>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {g.items.map((t) => (
+                      <TechTag key={t}>{t}</TechTag>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
             ))}
           </div>
         </Section>
 
-        {/* Culture and principles */}
-        <Section id="culture">
-          <div className="text-center">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              How we work
-            </h2>
-            <p className="mt-2 text-text-muted">
-              Culture is how decisions get made when no one is watching. Here is
-              how we operate.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {principles.map(({ title, description }) => (
-              <div
-                key={title}
-                className="rounded-lg border border-border bg-bg-surface p-6"
-              >
-                <h3 className="font-(family-name:--font-space-grotesk) text-lg font-semibold text-text-primary">
-                  {title}
-                </h3>
-                <p className="mt-2 text-sm text-text-secondary">
-                  {description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        {/* Security and compliance */}
-        <Section id="security">
-          <div className="rounded-xl border border-border bg-bg-surface px-8 py-12 md:py-16">
-            <div className="text-center">
-              <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-                Security and compliance
-              </h2>
-              <p className="mt-3 text-text-muted">
-                Every product we build meets enterprise-grade security standards
-                from day one.
-              </p>
-            </div>
-            <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-3">
-              {complianceBadges.map((badge) => (
-                <span
-                  key={badge}
-                  className="rounded-(--radius-pill) border border-border bg-bg-surface-2 px-4 py-2 text-sm text-text-secondary"
-                >
-                  {badge}
-                </span>
-              ))}
-            </div>
-          </div>
-        </Section>
-
-        {/* CTA */}
-        <Section id="cta">
-          <div className="rounded-xl border border-border bg-bg-surface px-8 py-12 text-center md:py-16">
-            <h2 className="font-(family-name:--font-space-grotesk) text-2xl font-semibold text-text-primary md:text-3xl">
-              Ready to build with us?
-            </h2>
-            <p className="mt-3 text-text-muted">
-              Tell us about your goals and we will respond in 24 hours.
-            </p>
-            <div className="mt-8">
-              <Button href="/contact" variant="primary" size="lg">
-                Start a project
-              </Button>
-            </div>
-          </div>
-        </Section>
+        <CtaBand
+          title={<>Let&apos;s build something <GradientText animate>great together.</GradientText></>}
+          subtitle="Tell me about your goals and I'll respond within 24 hours."
+          secondary={{ label: "See our work", href: "/work" }}
+        />
       </main>
       <Footer />
     </>

@@ -1,1 +1,2 @@
-export { CaseStudiesGrid } from "./CaseStudiesGrid";
+export { WorkGrid } from "./WorkGrid";
+export { ProjectCard } from "./ProjectCard";
