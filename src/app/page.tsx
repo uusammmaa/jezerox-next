@@ -20,7 +20,7 @@ import {
 export const metadata: Metadata = createPageMetadata({
   title: "AI Automation, Internal Tools & Custom Software",
   description:
-    "JezeroX builds AI automation (n8n, Make, Zapier), AI-powered internal tools, and custom software that connects the systems you already use. 25 projects delivered, 4.9★. A Skycap LLC company.",
+    "JezeroX builds AI automation, AI-powered internal tools, and custom software that connect the systems you already use. 25 projects delivered, 4.9★.",
   path: "/",
 });
 

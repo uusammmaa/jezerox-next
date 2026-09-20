@@ -59,7 +59,7 @@ export default function AboutPage() {
                 <p className="text-lg leading-relaxed text-fg-secondary">
                   Over 5+ years I&apos;ve built enterprise fintech dashboards, real-time AI SaaS
                   platforms, and security software — then went deep on AI automation and agents,
-                  becoming a Top Rated freelancer with 100% Job Success across 25+ projects.
+                  becoming a Top Rated freelancer with 100% Job Success across 25 projects.
                 </p>
                 <p className="mt-4 text-lg leading-relaxed text-fg-secondary">
                   {company.brand}, operating as {company.legalName}, is how I bring that same
@@ -110,7 +110,7 @@ export default function AboutPage() {
         {/* Values */}
         <Section tone="surface">
           <Reveal>
-            <SectionHeading center eyebrow="How I work" title={<>Principles that <GradientText>ship.</GradientText></>} />
+            <SectionHeading center eyebrow="How we work" title={<>Principles that <GradientText>ship.</GradientText></>} />
           </Reveal>
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
             {values.map((v, i) => (
@@ -127,7 +127,7 @@ export default function AboutPage() {
         {/* Tech */}
         <Section>
           <Reveal>
-            <SectionHeading center eyebrow="Toolkit" title={<>Tools I <GradientText>build with.</GradientText></>} />
+            <SectionHeading center eyebrow="Toolkit" title={<>Tools we <GradientText>build with.</GradientText></>} />
           </Reveal>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {techGroups.map((g, i) => (
@@ -148,7 +148,7 @@ export default function AboutPage() {
 
         <CtaBand
           title={<>Let&apos;s build something <GradientText animate>great together.</GradientText></>}
-          subtitle="Tell me about your goals and I'll respond within a few hours."
+          subtitle="Tell us about your goals and we'll respond within a few hours."
           secondary={{ label: "See our work", href: "/work" }}
         />
       </main>

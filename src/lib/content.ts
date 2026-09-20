@@ -770,7 +770,7 @@ export const journey: { period: string; title: string; detail: string }[] = [
   { period: "2018–2020", title: "Started in enterprise software", detail: "Built AI platforms, calendar/email automations, and Angular dashboards — including a 2-week AI PoC that helped secure a major data-science partnership." },
   { period: "2020–2022", title: "Enterprise security & scale", detail: "Delivered 15+ modules for an enterprise threat-intelligence platform — Okta auth, real-time sockets, and a lazy-loaded, CI/CD architecture." },
   { period: "2022–2025", title: "Fintech, SaaS & AI at scale", detail: "Led front ends for fintech dashboards (50+ components), a real-time AI SaaS, and a payments marketplace at a global software consultancy." },
-  { period: "2025 →", title: "JezeroX — AI automation & agents", detail: "Now focused on AI automation and agents as a top-rated freelancer, delivering 25+ projects at a 4.9★ average — operating as JezeroX, a Skycap LLC company." },
+  { period: "2025 →", title: "JezeroX — AI automation & agents", detail: "Now focused on AI automation and agents as a top-rated freelancer, delivering 25 projects at a 4.9★ average — operating as JezeroX, a Skycap LLC company." },
 ];
 
 export const values: { title: string; detail: string }[] = [

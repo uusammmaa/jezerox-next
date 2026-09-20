@@ -35,17 +35,20 @@ export default function OpengraphImage() {
             <div style={{ fontSize: "30px", fontWeight: 700, letterSpacing: "0.14em" }}>JEZEROX</div>
           </div>
           <div style={{ fontSize: "20px", color: "#A9A2BD", letterSpacing: "0.14em" }}>
-            AI · AUTOMATION · FULL-STACK
+            AI AUTOMATION · INTERNAL TOOLS · CUSTOM SOFTWARE
           </div>
         </div>
 
         {/* headline */}
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: "96px", fontWeight: 800, lineHeight: 1.02, letterSpacing: "-0.03em" }}>
-            Build faster.
+          <div style={{ fontSize: "68px", fontWeight: 800, lineHeight: 1.05, letterSpacing: "-0.03em" }}>
+            Automate the work
           </div>
-          <div style={{ display: "flex", fontSize: "96px", fontWeight: 800, lineHeight: 1.02, letterSpacing: "-0.03em" }}>
-            <span>Scale&nbsp;</span>
+          <div style={{ fontSize: "68px", fontWeight: 800, lineHeight: 1.05, letterSpacing: "-0.03em" }}>
+            your team should
+          </div>
+          <div style={{ display: "flex", fontSize: "68px", fontWeight: 800, lineHeight: 1.05, letterSpacing: "-0.03em" }}>
+            <span>not be doing&nbsp;</span>
             <span
               style={{
                 background: "linear-gradient(100deg, #8A3AA6, #C42F86, #FFD34E)",
@@ -54,11 +57,11 @@ export default function OpengraphImage() {
                 color: "transparent",
               }}
             >
-              smarter.
+              manually.
             </span>
           </div>
           <div style={{ marginTop: "24px", fontSize: "30px", color: "#C6BFD8", maxWidth: "820px" }}>
-            AI automation, AI agents & full-stack products — MVP to enterprise.
+            AI automation, internal tools & custom software — connected to the systems you already use.
           </div>
         </div>
 
