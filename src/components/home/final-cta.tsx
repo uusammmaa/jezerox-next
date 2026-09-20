@@ -6,8 +6,8 @@ export function FinalCTA() {
   return (
     <CtaBand
       title={<>Ready to build something <GradientText animate>intelligent?</GradientText></>}
-      subtitle="Tell me about your goals and I'll respond within a few hours with clear next steps."
-      primary={{ label: "Start a project", href: "/contact" }}
+      subtitle="Tell us about your goals and you'll get a real reply within a few hours with clear next steps."
+      primary={{ label: "Tell us what you want to automate", href: "/contact" }}
       secondary={{ label: "Book a call", href: company.calendly, external: true }}
     />
   );

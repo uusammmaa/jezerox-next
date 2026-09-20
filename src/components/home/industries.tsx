@@ -6,7 +6,7 @@ export function Industries() {
     <Section id="industries" tone="surface">
       <Reveal>
         <SectionHeading
-          eyebrow="Who I work with"
+          eyebrow="Who we work with"
           title={<>Built for teams <GradientText>like yours.</GradientText></>}
           lede="Automation and AI tuned to the workflows that actually move the needle in your industry."
         />

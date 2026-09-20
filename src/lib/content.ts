@@ -12,6 +12,11 @@ import {
   Workflow,
   Bot,
   Code2,
+  Copy,
+  Timer,
+  FileSpreadsheet,
+  Unplug,
+  AlertTriangle,
   Boxes,
   ShieldCheck,
   Sparkles,
@@ -40,9 +45,9 @@ export const company = {
   founder: "Usama Akram",
   founderTitle: "Founder & Principal Engineer",
   entityLine: "JezeroX — a Skycap LLC company",
-  tagline: "Build faster. Scale smarter.",
+  tagline: "Automate the work your team should not be doing manually.",
   positioning:
-    "JezeroX designs, builds, and ships intelligent software — AI automation, AI agents, and full-stack products that scale from MVP to enterprise.",
+    "JezeroX builds production-ready AI automation and internal software that connects your tools, removes repetitive work, and helps your team move faster — without replacing the systems you already use.",
   location: "Remote-first · Worldwide",
   email: "inbox@contact.jezerox.com",
   calendly:
@@ -343,6 +348,55 @@ export const capabilities: string[] = [
   "Supabase",
   "AWS & Vercel",
   "Cloud & DevOps",
+];
+
+/* ------------------------------------------------------------------ */
+/* Problems we solve (homepage — leads with the pain, not the stack)   */
+/* ------------------------------------------------------------------ */
+
+// Qualitative descriptions of buyer pain only. Deliberately carries no metric:
+// "saves X hours" would be an unverifiable claim — see the header note above.
+export const businessProblems: {
+  title: string;
+  detail: string;
+  icon: LucideIcon;
+}[] = [
+  {
+    title: "Your team copies data between tools",
+    detail:
+      "Someone re-keys the same record into the CRM, the sheet, and the invoice every day. It is slow, and it quietly goes wrong.",
+    icon: Copy,
+  },
+  {
+    title: "Leads go cold before anyone replies",
+    detail:
+      "Enquiries land in an inbox and sit there. Enrichment, qualification, routing, and follow-up all wait on a human being free.",
+    icon: Timer,
+  },
+  {
+    title: "Reporting eats a day every month",
+    detail:
+      "Numbers are pulled by hand from four systems, pasted into a deck, and are already stale by the time anyone reads them.",
+    icon: FileSpreadsheet,
+  },
+  {
+    title: "Your tools do not talk to each other",
+    detail:
+      "Each system is fine on its own. The manual work lives in the gaps between them, and nobody owns those gaps.",
+    icon: Unplug,
+  },
+  {
+    title: "A half-built automation keeps breaking",
+    detail:
+      "Something was wired together once, has no error handling or alerting, and now fails silently until someone notices.",
+    icon: AlertTriangle,
+  },
+  {
+    title: "Your AI demo never reached production",
+    detail:
+      "It worked in the room. Grounding it in your data, evaluating it, and guarding its output is where it stalled.",
+    icon: Sparkles,
+  },
 ];
 
 /* ------------------------------------------------------------------ */

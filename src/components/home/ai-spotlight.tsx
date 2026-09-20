@@ -8,7 +8,7 @@ const steps = [
 
 export function AiSpotlight() {
   return (
-    <Section id="ai" tone="surface">
+    <Section id="ai">
       <div className="grid items-center gap-14 lg:grid-cols-2">
         <Reveal>
           <Eyebrow>AI &amp; Automation</Eyebrow>
@@ -16,7 +16,7 @@ export function AiSpotlight() {
             From prototype to <GradientText>production AI.</GradientText>
           </h2>
           <p className="mt-5 max-w-xl text-lg text-fg-muted">
-            I build AI systems that ship — not demos. Grounded retrieval, evaluated prompts,
+            We build AI systems that ship — not demos. Grounded retrieval, evaluated prompts,
             guarded outputs, and monitoring so your team can trust what it puts in front of users.
           </p>
           <div className="mt-8 flex flex-col gap-5">
