@@ -7,7 +7,7 @@ import { featuredProjects } from "@/lib/content";
 
 export function FeaturedWork() {
   return (
-    <Section id="work" tone="surface">
+    <Section id="work">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <Reveal>
           <SectionHeading

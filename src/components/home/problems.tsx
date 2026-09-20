@@ -19,7 +19,7 @@ export function Problems() {
 
       <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {businessProblems.map((p, i) => (
-          <Reveal key={p.title} delay={(i % 3) * 90} className="h-full">
+          <Reveal key={p.title} delay={i * 70} className="h-full">
             <div className="flex h-full flex-col rounded-[var(--radius-2xl)] border border-line bg-ink-850 p-6">
               <IconTile icon={p.icon} />
               <h3 className="mt-5 text-lg font-bold">{p.title}</h3>

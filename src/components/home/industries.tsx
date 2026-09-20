@@ -3,7 +3,7 @@ import { industries } from "@/lib/content";
 
 export function Industries() {
   return (
-    <Section id="industries" tone="surface">
+    <Section id="industries">
       <Reveal>
         <SectionHeading
           eyebrow="Who we work with"

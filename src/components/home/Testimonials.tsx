@@ -4,7 +4,7 @@ import { testimonials, company } from "@/lib/content";
 
 export function Testimonials() {
   return (
-    <Section id="testimonials" tone="surface">
+    <Section id="testimonials">
       <Reveal>
         <SectionHeading
           center

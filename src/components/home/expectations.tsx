@@ -3,7 +3,7 @@ import { expectations } from "@/lib/content";
 
 export function Expectations() {
   return (
-    <Section id="expect">
+    <Section id="expect" tone="surface">
       <Reveal>
         <SectionHeading
           center
