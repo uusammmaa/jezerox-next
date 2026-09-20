@@ -157,7 +157,7 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
 
         <CtaBand
           title={<>Have a similar <GradientText animate>project?</GradientText></>}
-          subtitle="Tell me about it and I'll respond within a few hours."
+          subtitle="Tell us about it and we'll respond within a few hours."
           secondary={{ label: "More work", href: "/work" }}
         />
       </main>

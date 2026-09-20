@@ -28,8 +28,8 @@ export default function ContactPage() {
       <main id="main" className="min-h-screen">
         <PageHero
           eyebrow="Contact"
-          title={<>Tell me about your <GradientText>project.</GradientText></>}
-          lede="Share your goals and I'll respond within a few hours with clear next steps. You'll talk directly to the engineer who'll do the work."
+          title={<>Tell us about your <GradientText>project.</GradientText></>}
+          lede="Share your goals and we'll respond within a few hours with clear next steps. You'll talk directly to the engineer who'll do the work."
         />
 
         <Section>

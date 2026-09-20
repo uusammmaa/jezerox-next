@@ -83,7 +83,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
               <div className="mt-14 rounded-[var(--radius-xl)] border border-line bg-ink-900 p-6">
                 <p className="text-fg-secondary">
                   <span className="font-semibold text-fg">Working on something like this?</span>{" "}
-                  I help teams ship AI automation and agents that actually hold up in production.
+                  We help teams ship AI automation and agents that actually hold up in production.
                 </p>
                 <Link href="/contact" className="mt-3 inline-flex items-center gap-1.5 font-medium text-magenta">
                   Start a conversation →
@@ -95,7 +95,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
 
         <CtaBand
           title={<>Build it <GradientText animate>right</GradientText> the first time.</>}
-          subtitle="Tell me about your project and I'll respond within a few hours."
+          subtitle="Tell us about your project and we'll respond within a few hours."
           secondary={{ label: "Read more insights", href: "/insights" }}
         />
       </main>
