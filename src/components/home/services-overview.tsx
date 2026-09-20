@@ -12,7 +12,7 @@ export function ServicesOverview() {
         <SectionHeading
           eyebrow="What we do"
           title={<>Intelligent software, <GradientText>end to end.</GradientText></>}
-          lede="AI automation, agents, full-stack builds, and consulting — one senior engineer across all of it."
+          lede="AI automation, agents, full-stack builds, and consulting. We start with the business problem, then use the simplest technology that solves it reliably."
         />
       </Reveal>
 

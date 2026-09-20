@@ -134,7 +134,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
         <CtaBand
           title={<>Ready to start your <GradientText animate>{service.title.toLowerCase()}</GradientText> project?</>}
-          subtitle="Tell me what you're building and I'll respond within a few hours."
+          subtitle="Tell us what you're building and we'll respond within a few hours."
           secondary={{ label: "See all services", href: "/services" }}
         />
       </main>

@@ -47,8 +47,8 @@ export default function InsightsPage() {
         </Section>
 
         <CtaBand
-          title={<>Have a question I haven&apos;t <GradientText animate>written about?</GradientText></>}
-          subtitle="Ask me directly — I'll give you a straight answer within a few hours."
+          title={<>Have a question we haven&apos;t <GradientText animate>written about?</GradientText></>}
+          subtitle="Ask us directly — you'll get a straight answer within a few hours."
           secondary={{ label: "View services", href: "/services" }}
         />
       </main>

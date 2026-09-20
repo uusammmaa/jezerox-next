@@ -3,7 +3,7 @@ import { processSteps } from "@/lib/content";
 
 export function ProcessOverview() {
   return (
-    <Section id="process">
+    <Section id="process" tone="surface">
       <Reveal>
         <SectionHeading
           eyebrow="How we work"

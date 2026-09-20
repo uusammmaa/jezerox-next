@@ -12,6 +12,11 @@ import {
   Workflow,
   Bot,
   Code2,
+  Copy,
+  Timer,
+  FileSpreadsheet,
+  Unplug,
+  AlertTriangle,
   Boxes,
   ShieldCheck,
   Sparkles,
@@ -40,9 +45,9 @@ export const company = {
   founder: "Usama Akram",
   founderTitle: "Founder & Principal Engineer",
   entityLine: "JezeroX — a Skycap LLC company",
-  tagline: "Build faster. Scale smarter.",
+  tagline: "Automate the work your team should not be doing manually.",
   positioning:
-    "JezeroX designs, builds, and ships intelligent software — AI automation, AI agents, and full-stack products that scale from MVP to enterprise.",
+    "JezeroX builds production-ready AI automation and internal software that connects your tools, removes repetitive work, and helps your team move faster — without replacing the systems you already use.",
   location: "Remote-first · Worldwide",
   email: "inbox@contact.jezerox.com",
   calendly:
@@ -64,7 +69,7 @@ export const company = {
 // All verifiable on the Upwork profile: Top Rated, 100% JSS, $10K+, 25 jobs, 415 hrs.
 export const stats: { value: string; label: string; note?: string }[] = [
   { value: "100%", label: "Job Success", note: "Top Rated on Upwork" },
-  { value: "25", label: "Projects delivered", note: "5★ average" },
+  { value: "25", label: "Projects delivered", note: "4.9★ average" },
   { value: "$10K+", label: "Earned on Upwork", note: "415+ hours" },
   { value: "5+ yrs", label: "Experience", note: "enterprise + startups" },
 ];
@@ -343,6 +348,55 @@ export const capabilities: string[] = [
   "Supabase",
   "AWS & Vercel",
   "Cloud & DevOps",
+];
+
+/* ------------------------------------------------------------------ */
+/* Problems we solve (homepage — leads with the pain, not the stack)   */
+/* ------------------------------------------------------------------ */
+
+// Qualitative descriptions of buyer pain only. Deliberately carries no metric:
+// "saves X hours" would be an unverifiable claim — see the header note above.
+export const businessProblems: {
+  title: string;
+  detail: string;
+  icon: LucideIcon;
+}[] = [
+  {
+    title: "Your team copies data between tools",
+    detail:
+      "Someone re-keys the same record into the CRM, the sheet, and the invoice every day. It is slow, and it quietly goes wrong.",
+    icon: Copy,
+  },
+  {
+    title: "Leads go cold before anyone replies",
+    detail:
+      "Enquiries land in an inbox and sit there. Enrichment, qualification, routing, and follow-up all wait on a human being free.",
+    icon: Timer,
+  },
+  {
+    title: "Reporting eats a day every month",
+    detail:
+      "Numbers are pulled by hand from four systems, pasted into a deck, and are already stale by the time anyone reads them.",
+    icon: FileSpreadsheet,
+  },
+  {
+    title: "Your tools do not talk to each other",
+    detail:
+      "Each system is fine on its own. The manual work lives in the gaps between them, and nobody owns those gaps.",
+    icon: Unplug,
+  },
+  {
+    title: "A half-built automation keeps breaking",
+    detail:
+      "Something was wired together once, has no error handling or alerting, and now fails silently until someone notices.",
+    icon: AlertTriangle,
+  },
+  {
+    title: "Your AI demo never reached production",
+    detail:
+      "It worked in the room. Grounding it in your data, evaluating it, and guarding its output is where it stalled.",
+    icon: Sparkles,
+  },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -716,7 +770,7 @@ export const journey: { period: string; title: string; detail: string }[] = [
   { period: "2018–2020", title: "Started in enterprise software", detail: "Built AI platforms, calendar/email automations, and Angular dashboards — including a 2-week AI PoC that helped secure a major data-science partnership." },
   { period: "2020–2022", title: "Enterprise security & scale", detail: "Delivered 15+ modules for an enterprise threat-intelligence platform — Okta auth, real-time sockets, and a lazy-loaded, CI/CD architecture." },
   { period: "2022–2025", title: "Fintech, SaaS & AI at scale", detail: "Led front ends for fintech dashboards (50+ components), a real-time AI SaaS, and a payments marketplace at a global software consultancy." },
-  { period: "2025 →", title: "JezeroX — AI automation & agents", detail: "Now focused on AI automation and agents as a top-rated freelancer, delivering 25+ projects at a 4.9★ average — operating as JezeroX, a Skycap LLC company." },
+  { period: "2025 →", title: "JezeroX — AI automation & agents", detail: "Now focused on AI automation and agents as a top-rated freelancer, delivering 25 projects at a 4.9★ average — operating as JezeroX, a Skycap LLC company." },
 ];
 
 export const values: { title: string; detail: string }[] = [

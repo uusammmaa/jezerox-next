@@ -28,31 +28,27 @@ export function Hero() {
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)]">
           <div className="max-w-2xl">
           <Reveal>
-            <Eyebrow>AI Systems · Automation · Full-Stack</Eyebrow>
+            <Eyebrow>AI Automation · Internal Tools · Custom Software</Eyebrow>
           </Reveal>
           <Reveal delay={120}>
-            <h1 className="mt-6 text-[clamp(3rem,8.2vw,6.4rem)] font-bold leading-[0.98] tracking-[-0.035em]">
-              Build faster.
-              <br />
-              Scale <GradientText animate>smarter.</GradientText>
+            {/* Longer headline than a two-word one, so the clamp ceiling is lower. */}
+            <h1 className="mt-6 text-[clamp(2.5rem,5.6vw,4.25rem)] font-bold leading-[1.02] tracking-[-0.03em]">
+              Automate the work your team should not be doing{" "}
+              <GradientText animate>manually.</GradientText>
             </h1>
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-7 max-w-xl text-lg text-fg-secondary md:text-xl">
-              {company.brand} designs, builds, and ships intelligent software — AI automation,
-              AI agents, and full-stack products that scale from MVP to enterprise.
-            </p>
-          </Reveal>
-          <Reveal delay={340}>
-            <p className="mt-3 text-fg-muted">
-              One senior engineer across automation, AI, and full-stack.
+              {company.brand} builds production-ready AI automation and internal software that
+              connects your tools, removes repetitive work, and helps your team move faster —
+              without replacing the systems you already use.
             </p>
           </Reveal>
           <Reveal delay={440}>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <MagneticButton>
                 <Button href="/contact" variant="primary" size="lg" className="w-full sm:w-auto">
-                  Start a project
+                  Tell us what you want to automate
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </MagneticButton>

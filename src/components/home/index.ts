@@ -1,4 +1,5 @@
 export { Hero } from "./Hero";
+export { Problems } from "./problems";
 export { StatsBar } from "./stats-bar";
 export { ServicesOverview } from "./services-overview";
 export { AiSpotlight } from "./ai-spotlight";

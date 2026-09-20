@@ -112,8 +112,8 @@ export default function ServicesPage() {
         </Section>
 
         <CtaBand
-          title={<>Not sure which you need? <GradientText animate>Let's talk.</GradientText></>}
-          subtitle="Tell me the problem and I'll recommend the right approach — no obligation."
+          title={<>Not sure which you need? <GradientText animate>Let&rsquo;s talk.</GradientText></>}
+          subtitle="Tell us the problem and we'll recommend the right approach — no obligation."
           secondary={{ label: "See our work", href: "/work" }}
         />
       </main>
