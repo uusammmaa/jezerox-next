@@ -2,6 +2,7 @@
 
 import { type ReactNode, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
+import { usePrefersReducedMotion } from "@/lib/use-prefers-reduced-motion";
 
 interface RevealProps {
   children: ReactNode;
@@ -16,20 +17,21 @@ interface RevealProps {
  */
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [shown, setShown] = useState(false);
+  const reduce = usePrefersReducedMotion();
+  const [inView, setInView] = useState(false);
+
+  // `reduce` is null until hydration, so the server and the first client render
+  // both emit the hidden state — the same markup this component shipped before.
+  const shown = reduce === true || inView;
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setShown(true);
-      return;
-    }
+    if (!el || reduce !== false) return;
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            setShown(true);
+            setInView(true);
             io.unobserve(e.target);
           }
         });
@@ -38,7 +40,7 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
     );
     io.observe(el);
     return () => io.disconnect();
-  }, []);
+  }, [reduce]);
 
   return (
     <div

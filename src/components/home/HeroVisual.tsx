@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
+import { usePrefersReducedMotion } from "@/lib/use-prefers-reduced-motion";
 
 const HeroScene = dynamic(() => import("./HeroScene"), { ssr: false });
 
@@ -21,14 +22,15 @@ const nodes = [
  */
 export function HeroVisual() {
   const ref = useRef<HTMLDivElement>(null);
-  const [use3d, setUse3d] = useState(false);
+  const reduce = usePrefersReducedMotion();
+
+  // `reduce` is null until hydration; WebGL stays off until we positively know
+  // motion is allowed, so the server still renders the static SVG core.
+  const use3d = reduce === false;
 
   useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    setUse3d(!reduce);
-
     const el = ref.current;
-    if (!el || reduce || !window.matchMedia("(pointer: fine)").matches) return;
+    if (!el || reduce !== false || !window.matchMedia("(pointer: fine)").matches) return;
     let raf = 0;
     const target = { x: 0, y: 0 };
     const cur = { x: 0, y: 0 };
@@ -48,7 +50,7 @@ export function HeroVisual() {
       window.removeEventListener("mousemove", onMove);
       cancelAnimationFrame(raf);
     };
-  }, []);
+  }, [reduce]);
 
   return (
     <div className="relative mx-auto aspect-square w-full max-w-[480px]" aria-hidden>
