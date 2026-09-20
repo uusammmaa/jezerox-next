@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/seo";
-import { services, projects } from "@/lib/content";
+import { services, projects, insights } from "@/lib/content";
 
 const baseUrl = getSiteUrl();
 
@@ -28,7 +28,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...workRoutes].map(({ path, priority, changeFrequency }) => ({
+  const insightRoutes = insights.map((i) => ({
+    path: `/insights/${i.slug}`,
+    priority: 0.6,
+    changeFrequency: "monthly" as const,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...workRoutes, ...insightRoutes].map(({ path, priority, changeFrequency }) => ({
     url: path === "/" ? baseUrl : `${baseUrl}${path}`,
     lastModified: new Date(),
     changeFrequency,
