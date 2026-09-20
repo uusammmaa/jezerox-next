@@ -62,9 +62,11 @@ Other load-bearing pieces:
 
 - **Design tokens** live as CSS custom properties in `src/app/globals.css` and are re-exported to
   Tailwind via `@theme inline`. No component hard-codes a hex value.
-- **Motion is gated on `prefers-reduced-motion`** in every animated component, via
-  `src/lib/use-prefers-reduced-motion.ts`. New animation must render a static state when reduce
-  is set.
+- **Motion is gated on `prefers-reduced-motion`** in every animated component. `Reveal` and
+  `HeroVisual` subscribe via `src/lib/use-prefers-reduced-motion.ts`; `AuroraField`,
+  `MagneticButton` and `Marquee` still read `window.matchMedia` once inside an effect, so they
+  do not react to the preference changing mid-session. New animation must render a static state
+  when reduce is set.
 - **`src/proxy.ts`** sets the security headers (Next.js 16 renamed middleware to `proxy.ts`).
 - **`src/lib/seo.ts`** builds all page metadata — use `createPageMetadata()` rather than
   assembling a `Metadata` object by hand.
