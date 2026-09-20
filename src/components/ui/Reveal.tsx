@@ -18,20 +18,21 @@ interface RevealProps {
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const reduce = usePrefersReducedMotion();
-  const [inView, setInView] = useState(false);
+  const [shown, setShown] = useState(false);
 
-  // `reduce` is null until hydration, so the server and the first client render
-  // both emit the hidden state — the same markup this component shipped before.
-  const shown = reduce === true || inView;
+  // Latched: once revealed, stay revealed. `reduce` is live, so a viewer turning
+  // the OS preference off mid-session would otherwise flip this back to false and
+  // animate already-visible content out and back in.
+  const revealed = reduce === true || shown;
 
   useEffect(() => {
     const el = ref.current;
-    if (!el || reduce !== false) return;
+    if (!el || reduce !== false || shown) return;
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            setInView(true);
+            setShown(true);
             io.unobserve(e.target);
           }
         });
@@ -40,14 +41,14 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
     );
     io.observe(el);
     return () => io.disconnect();
-  }, [reduce]);
+  }, [reduce, shown]);
 
   return (
     <div
       ref={ref}
       className={cn(
         "transition-all duration-700 ease-[var(--ease-out)] will-change-[opacity,transform]",
-        shown ? "translate-y-0 opacity-100" : "translate-y-7 opacity-0",
+        revealed ? "translate-y-0 opacity-100" : "translate-y-7 opacity-0",
         className,
       )}
       style={{ transitionDelay: `${delay}ms` }}
