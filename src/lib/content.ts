@@ -64,7 +64,7 @@ export const company = {
 // All verifiable on the Upwork profile: Top Rated, 100% JSS, $10K+, 25 jobs, 415 hrs.
 export const stats: { value: string; label: string; note?: string }[] = [
   { value: "100%", label: "Job Success", note: "Top Rated on Upwork" },
-  { value: "25", label: "Projects delivered", note: "5★ average" },
+  { value: "25", label: "Projects delivered", note: "4.9★ average" },
   { value: "$10K+", label: "Earned on Upwork", note: "415+ hours" },
   { value: "5+ yrs", label: "Experience", note: "enterprise + startups" },
 ];
