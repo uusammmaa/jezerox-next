@@ -33,7 +33,7 @@ The **git repository root is `jezerox-next/`**, not its parent. The parent direc
 
 ## Architecture
 
-A Next.js 16 App Router marketing site for JezeroX (public brand; **Skycap LLC** is the legal
+A Next.js 16 App Router marketing site for JezeroX (public brand; **SCKYCAP LLC** is the legal
 entity). React 19, TypeScript strict, Tailwind CSS v4, deployed on Vercel. Path alias `@/*` → `./src/*`.
 
 ### `src/lib/content.ts` is the single source of truth

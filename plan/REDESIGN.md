@@ -30,7 +30,7 @@ Five concrete tells, each fixable:
 
 | Decision | Choice |
 |----------|--------|
-| Brand / entity | **JezeroX** is the public brand; **Skycap LLC** appears in footer, legal pages, contracts, and schema.org. Tagline: *"JezeroX — a Skycap LLC company."* |
+| Brand / entity | **JezeroX** is the public brand; **SCKYCAP LLC** appears in footer, legal pages, contracts, and schema.org. Tagline: *"JezeroX — a SCKYCAP LLC company."* |
 | Palette | **Dark ink + logo gradient** (Aurora). Full tokens in §2. |
 | Motion | **WebGL showpiece** — animated shader flow-field hero + a motion library for orchestrated reveals and micro-interactions. |
 | Imagery | **Custom brand art + product-UI mockups + AI system diagrams.** No stock photography. |
@@ -244,7 +244,7 @@ LCP asset, `public/` for static art. Add a small `art/` subfolder + a generation
 **Global chrome**
 - **Header:** slimmer glass bar, real wordmark, animated gradient underline on active nav,
   gradient CTA. Mobile menu becomes a full-screen overlay with staggered links.
-- **Footer:** restructured — brand + *"a Skycap LLC company"*, Company / Services /
+- **Footer:** restructured — brand + *"a SCKYCAP LLC company"*, Company / Services /
   Resources / Legal columns, real social, newsletter opt-in (optional), entity line.
 
 **Home** (new section order):
@@ -257,13 +257,13 @@ process, numbered) → Selected work (real or honestly-empty) → AI/automation 
   timeline; stack; relevant case study; FAQ; CTA).
 - `/work` + **new** `/work/[slug]` case-study detail (only real work, or an honest
   "engagements under NDA / early-stage" state — not fabricated metrics).
-- `/about` — story, values, Skycap LLC entity, team (real or "founder-led / building the team").
+- `/about` — story, values, SCKYCAP LLC entity, team (real or "founder-led / building the team").
 - `/industries`, `/careers`, `/insights` + **new** `/insights/[slug]`, `/contact`,
   `/privacy`, `/terms`, `/not-found` — all restyled to Aurora + primitives.
 
 ---
 
-## 7. Content honesty & legal (Skycap LLC)
+## 7. Content honesty & legal (SCKYCAP LLC)
 
 **Non-negotiable before launch.** Replace fabricated proof with honest states:
 - Testimonials: use **real** quotes with attribution, or **remove the section** until you have them.
@@ -271,8 +271,8 @@ process, numbered) → Selected work (real or honestly-empty) → AI/automation 
   ("built for 99.9%-uptime targets") that doesn't assert an unverified result. `StatCard`
   supports an optional source footnote for exactly this.
 - Trust logos: show **real** clients/partners or drop the strip — no anonymous gray bars.
-- **Skycap LLC**: footer entity line, `/privacy` + `/terms` controller = Skycap LLC, and
-  `schema.org` `Organization.legalName = "Skycap LLC"`, `foundingDate` only if true.
+- **SCKYCAP LLC**: footer entity line, `/privacy` + `/terms` controller = SCKYCAP LLC, and
+  `schema.org` `Organization.legalName = "SCKYCAP LLC"`, `foundingDate` only if true.
 
 Rationale: US FTC endorsement guidelines prohibit fabricated testimonials and unsubstantiated
 performance claims. This protects the LLC and, honestly, converts better than obvious filler.
@@ -299,7 +299,7 @@ performance claims. This protects the LLC and, honestly, converts better than ob
 | **1 — Home** | `AuroraField` hero + fallback; marquee; services bento; process; AI spotlight w/ first SVG diagram; honest proof; final CTA; new header/footer. | Home fully Aurora; Lighthouse Perf ≥ 92 / A11y ≥ 98; reduced-motion verified; zero gray boxes. |
 | **2 — Services & Work** | `/services` + `/services/[slug]`; `/work` + `/work/[slug]`; real/honest content model; product-UI mockups. | Both index + detail templates live; no fabricated metrics. |
 | **3 — Rest** | About, Industries, Careers, Insights + `[slug]`, Contact, Privacy, Terms, 404. | All routes Aurora + primitives; forms accessible. |
-| **4 — Polish & launch** | OG image; full a11y AA pass; perf/LCP; SEO/schema (Skycap LLC); cross-browser + mobile QA; view transitions. | Lighthouse ≥ 95 across the board; WCAG AA; STATUS.md follow-ups closed. |
+| **4 — Polish & launch** | OG image; full a11y AA pass; perf/LCP; SEO/schema (SCKYCAP LLC); cross-browser + mobile QA; view transitions. | Lighthouse ≥ 95 across the board; WCAG AA; STATUS.md follow-ups closed. |
 
 ---
 
@@ -309,5 +309,5 @@ performance claims. This protects the LLC and, honestly, converts better than ob
 - DRY: every color/space/type value is a token; every repeated block is a primitive.
 - No placeholder copy, no gray-box images, no fabricated proof anywhere.
 - Lighthouse ≥ 95 Perf/A11y/BP/SEO on Home; motion lazy and off the LCP path.
-- Skycap LLC present in footer, legal, and schema.
+- SCKYCAP LLC present in footer, legal, and schema.
 - Works and looks intentional at 360px, 768px, 1280px, 1920px.
