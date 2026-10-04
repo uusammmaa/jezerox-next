@@ -18,7 +18,7 @@ const bricolage = Bricolage_Grotesque({
 const siteUrl = getSiteUrl();
 const defaultTitle = `${company.brand} — AI Automation, Internal Tools & Custom Software`;
 const defaultDescription =
-  "JezeroX builds AI automation (n8n, Make, Zapier), AI-powered internal tools, and custom software around the systems you already use. 25 projects, 4.9★. A Skycap LLC company.";
+  "JezeroX builds AI automation (n8n, Make, Zapier), AI-powered internal tools, and custom software around the systems you already use. 25 projects, 4.9★. A SCKYCAP LLC company.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

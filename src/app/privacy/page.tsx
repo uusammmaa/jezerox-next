@@ -6,7 +6,7 @@ import { company } from "@/lib/content";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy",
-  description: "How JezeroX (Skycap LLC) collects, uses, and protects your information.",
+  description: "How JezeroX (SCKYCAP LLC) collects, uses, and protects your information.",
   path: "/privacy",
   robots: "index, follow",
 });
