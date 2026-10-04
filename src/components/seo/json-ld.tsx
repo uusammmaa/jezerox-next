@@ -56,7 +56,7 @@ const websiteSchema = {
   name: company.brand,
   url: siteUrl,
   description:
-    "AI automation, AI agents, and full-stack development studio. A Skycap LLC company.",
+    "AI automation, AI agents, and full-stack development studio. A SCKYCAP LLC company.",
   publisher: { "@id": `${siteUrl}/#organization` },
 };
 

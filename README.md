@@ -1,6 +1,6 @@
 # jezerox-next
 
-Marketing site for **JezeroX** (public brand; **Skycap LLC** is the legal entity).
+Marketing site for **JezeroX** (public brand; **SCKYCAP LLC** is the legal entity).
 
 Next.js 16 App Router · React 19 · TypeScript (strict) · Tailwind CSS v4 · deployed on Vercel.
 

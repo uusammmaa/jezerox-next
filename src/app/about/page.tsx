@@ -9,7 +9,7 @@ import { company, stats, journey, values, techGroups } from "@/lib/content";
 export const metadata: Metadata = createPageMetadata({
   title: "About — Usama Akram, Founder of JezeroX",
   description:
-    "JezeroX is led by Usama Akram, a senior engineer with 5+ years shipping AI automation, AI agents, and full-stack products for fintech, SaaS, and startups. A Skycap LLC company.",
+    "JezeroX is led by Usama Akram, a senior engineer with 5+ years shipping AI automation, AI agents, and full-stack products for fintech, SaaS, and startups. A SCKYCAP LLC company.",
   path: "/about",
 });
 

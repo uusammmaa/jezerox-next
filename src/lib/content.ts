@@ -41,10 +41,10 @@ import {
 
 export const company = {
   brand: "JezeroX",
-  legalName: "Skycap LLC",
+  legalName: "SCKYCAP LLC",
   founder: "Usama Akram",
   founderTitle: "Founder & Principal Engineer",
-  entityLine: "JezeroX — a Skycap LLC company",
+  entityLine: "JezeroX — a SCKYCAP LLC company",
   tagline: "Automate the work your team should not be doing manually.",
   positioning:
     "JezeroX builds production-ready AI automation and internal software that connects your tools, removes repetitive work, and helps your team move faster — without replacing the systems you already use.",
@@ -770,7 +770,7 @@ export const journey: { period: string; title: string; detail: string }[] = [
   { period: "2018–2020", title: "Started in enterprise software", detail: "Built AI platforms, calendar/email automations, and Angular dashboards — including a 2-week AI PoC that helped secure a major data-science partnership." },
   { period: "2020–2022", title: "Enterprise security & scale", detail: "Delivered 15+ modules for an enterprise threat-intelligence platform — Okta auth, real-time sockets, and a lazy-loaded, CI/CD architecture." },
   { period: "2022–2025", title: "Fintech, SaaS & AI at scale", detail: "Led front ends for fintech dashboards (50+ components), a real-time AI SaaS, and a payments marketplace at a global software consultancy." },
-  { period: "2025 →", title: "JezeroX — AI automation & agents", detail: "Now focused on AI automation and agents as a top-rated freelancer, delivering 25 projects at a 4.9★ average — operating as JezeroX, a Skycap LLC company." },
+  { period: "2025 →", title: "JezeroX — AI automation & agents", detail: "Now focused on AI automation and agents as a top-rated freelancer, delivering 25 projects at a 4.9★ average — operating as JezeroX, a SCKYCAP LLC company." },
 ];
 
 export const values: { title: string; detail: string }[] = [
@@ -779,6 +779,93 @@ export const values: { title: string; detail: string }[] = [
   { title: "Clarity over complexity", detail: "Clear scope, clear price, clear communication. No jargon, no surprises." },
   { title: "Reliability by default", detail: "Error handling, guardrails, and observability built in from the start." },
 ];
+
+/* ------------------------------------------------------------------ */
+/* Partners: white-label engineering for agencies (/partners)          */
+/* ------------------------------------------------------------------ */
+
+export const partners = {
+  hero: {
+    eyebrow: "For agencies",
+    lede:
+      "You win the work, we ship it under your name. One senior engineer joins your Slack, your repos and your process, billed by the month, without a hiring cycle.",
+  },
+  rateLine: "About $32 to $35 an hour. You resell at your own rate and keep the margin.",
+  problems: [
+    {
+      icon: Timer,
+      title: "Senior hires take months",
+      detail: "A good full-stack engineer takes 2 to 4 months to find and onboard. Your clients will not wait that long.",
+    },
+    {
+      icon: Users,
+      title: "Freelancers need managing",
+      detail: "Juggling individual contractors means you review every line and chase every deadline yourself.",
+    },
+    {
+      icon: AlertTriangle,
+      title: "Saying no costs revenue",
+      detail: "Every project you turn down for lack of capacity is margin a competitor keeps.",
+    },
+  ],
+  offers: [
+    {
+      icon: Layers,
+      name: "Capacity block: 40h",
+      price: "about $1,400 / month",
+      bullets: ["40 senior engineering hours a month", "Works in your Slack, Jira and GitHub", "You bill your client your own rate"],
+    },
+    {
+      icon: Boxes,
+      name: "Capacity block: 80h",
+      price: "about $2,600 / month",
+      bullets: ["80 senior engineering hours a month", "A steady extension of your dev team", "Priority on your tickets"],
+    },
+    {
+      icon: Code2,
+      name: "White-label build",
+      price: "fixed price per scope",
+      bullets: ["A Next.js app, AI feature, automation or integration", "Scoped and priced up front", "Delivered under your brand"],
+    },
+  ],
+  steps: [
+    { name: "Intro call", duration: "20 minutes", detail: "We learn your stack, your clients and where the capacity gap is." },
+    { name: "Paid trial task", duration: "under 15 hours", detail: "One real ticket from your backlog. If you are not happy with it, you do not pay." },
+    { name: "Capacity block", duration: "monthly", detail: "A 40h or 80h block, reviewed monthly. Cancel any month." },
+    { name: "Scale up", duration: "when you need it", detail: "Bigger blocks, a dedicated engineer, or an AI service line we build and run for you." },
+  ],
+  proof: [
+    { value: "100%", label: "Job Success", note: "Top Rated on Upwork" },
+    { value: "25", label: "Projects delivered", note: "4.9★ average" },
+    { value: "5+ yrs", label: "Experience", note: "enterprise + startups" },
+  ],
+  faq: [
+    {
+      q: "Will your name appear anywhere in front of my client?",
+      a: "No. We work under your brand, in your tools, with your email or Slack identity if you prefer. We sign an NDA before we see any client detail.",
+    },
+    {
+      q: "Who owns the code?",
+      a: "You do, and through you your client. All work is assigned to you on payment.",
+    },
+    {
+      q: "What about time zones?",
+      a: "We are based in Pakistan and overlap with US Eastern mornings every working day, so handoffs do not wait a day.",
+    },
+    {
+      q: "What stack do you cover?",
+      a: "Next.js, React, Angular, Node.js, TypeScript, Python, FastAPI, PostgreSQL, Supabase, and AI integrations (Claude, OpenAI, RAG, agents).",
+    },
+    {
+      q: "Who reviews the work?",
+      a: "The principal engineer writes the work and reviews it before it reaches you. A second engineer is only added later, if you scale up.",
+    },
+    {
+      q: "What if it does not work out?",
+      a: "Start with the paid trial task. If you are not happy with it, you do not pay. Blocks run month to month.",
+    },
+  ],
+} as const;
 
 /* ------------------------------------------------------------------ */
 /* Navigation                                                          */
@@ -806,6 +893,7 @@ export const footerNav: { heading: string; links: { href: string; label: string 
     links: [
       { href: "/about", label: "About" },
       { href: "/work", label: "Work" },
+      { href: "/partners", label: "For agencies" },
       { href: "/contact", label: "Contact" },
     ],
   },

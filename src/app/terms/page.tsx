@@ -6,7 +6,7 @@ import { company } from "@/lib/content";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Terms of Service",
-  description: "The terms governing use of the JezeroX (Skycap LLC) website and services.",
+  description: "The terms governing use of the JezeroX (SCKYCAP LLC) website and services.",
   path: "/terms",
   robots: "index, follow",
 });
