@@ -4,12 +4,12 @@ import { Header, Footer } from "@/components/layout";
 import { PageHero, CtaBand, Faq } from "@/components/common";
 import { Section, SectionHeading, Button, IconTile, GradientText, Reveal, Stat } from "@/components/ui";
 import { createPageMetadata } from "@/lib/seo";
-import { company, partners, stats } from "@/lib/content";
+import { company, partners } from "@/lib/content";
 
 export const metadata: Metadata = createPageMetadata({
   title: "White-Label Engineering for Agencies",
   description:
-    "Senior Next.js, React, Python and AI engineers under your agency's brand. 40h or 80h monthly capacity blocks, a paid trial task, no hiring cycle.",
+    "A senior Next.js, React, Python and AI engineer under your agency's brand. 40h or 80h monthly capacity, a paid trial task, no hiring cycle.",
   path: "/partners",
 });
 
@@ -56,7 +56,7 @@ export default function PartnersPage() {
             <SectionHeading
               eyebrow="What we do"
               title={<>Capacity blocks and <GradientText>white-label builds.</GradientText></>}
-              lede="About $32 to $35 an hour. You resell at your own rate and keep the margin."
+              lede={partners.rateLine}
             />
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
@@ -108,11 +108,9 @@ export default function PartnersPage() {
             <SectionHeading center eyebrow="Track record" title={<>Proof, not <GradientText>promises.</GradientText></>} />
           </Reveal>
           <div className="mt-12 grid gap-5 sm:grid-cols-3">
-            {stats
-              .filter((s) => !s.value.startsWith("$"))
-              .map((s) => (
-                <Stat key={s.label} value={s.value} label={s.label} />
-              ))}
+            {partners.proof.map((s) => (
+              <Stat key={s.label} value={s.value} label={s.label} note={s.note} />
+            ))}
           </div>
         </Section>
 
@@ -130,7 +128,7 @@ export default function PartnersPage() {
           eyebrow="For agencies"
           title={<>Need capacity this month? <GradientText animate>Let&rsquo;s talk.</GradientText></>}
           subtitle="20 minutes to see if we fit your stack and your clients."
-          primary={{ label: "Book a 20-min call", href: company.calendly }}
+          primary={{ label: "Book a 20-min call", href: company.calendly, external: true }}
           secondary={{ label: "Email us", href: "/contact" }}
         />
       </main>

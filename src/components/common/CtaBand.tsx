@@ -6,7 +6,7 @@ interface CtaBandProps {
   eyebrow?: string;
   title: ReactNode;
   subtitle?: ReactNode;
-  primary?: { label: string; href: string };
+  primary?: { label: string; href: string; external?: boolean };
   secondary?: { label: string; href: string; external?: boolean };
 }
 
@@ -37,7 +37,12 @@ export function CtaBand({
             {subtitle ? <p className="mx-auto mt-6 max-w-xl text-lg text-fg-secondary">{subtitle}</p> : null}
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <MagneticButton>
-                <Button href={primary.href} variant="primary" size="lg">
+                <Button
+                  href={primary.href}
+                  variant="primary"
+                  size="lg"
+                  {...(primary.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                >
                   {primary.label}
                   <ArrowRight className="h-4 w-4" />
                 </Button>

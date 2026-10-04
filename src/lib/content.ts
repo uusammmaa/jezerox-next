@@ -781,10 +781,6 @@ export const values: { title: string; detail: string }[] = [
 ];
 
 /* ------------------------------------------------------------------ */
-/* Navigation                                                          */
-/* ------------------------------------------------------------------ */
-
-/* ------------------------------------------------------------------ */
 /* Partners: white-label engineering for agencies (/partners)          */
 /* ------------------------------------------------------------------ */
 
@@ -792,8 +788,9 @@ export const partners = {
   hero: {
     eyebrow: "For agencies",
     lede:
-      "You win the work, we ship it under your name. Senior engineers who join your Slack, your repos and your process, billed by the month, without a hiring cycle.",
+      "You win the work, we ship it under your name. One senior engineer joins your Slack, your repos and your process, billed by the month, without a hiring cycle.",
   },
+  rateLine: "About $32 to $35 an hour. You resell at your own rate and keep the margin.",
   problems: [
     {
       icon: Timer,
@@ -837,6 +834,11 @@ export const partners = {
     { name: "Capacity block", duration: "monthly", detail: "A 40h or 80h block, reviewed monthly. Cancel any month." },
     { name: "Scale up", duration: "when you need it", detail: "Bigger blocks, a dedicated engineer, or an AI service line we build and run for you." },
   ],
+  proof: [
+    { value: "100%", label: "Job Success", note: "Top Rated on Upwork" },
+    { value: "25", label: "Projects delivered", note: "4.9★ average" },
+    { value: "5+ yrs", label: "Experience", note: "enterprise + startups" },
+  ],
   faq: [
     {
       q: "Will your name appear anywhere in front of my client?",
@@ -856,7 +858,7 @@ export const partners = {
     },
     {
       q: "Who reviews the work?",
-      a: "Every pull request is reviewed by our principal engineer before it reaches you.",
+      a: "The principal engineer writes the work and reviews it before it reaches you. A second engineer is only added later, if you scale up.",
     },
     {
       q: "What if it does not work out?",
@@ -864,6 +866,10 @@ export const partners = {
     },
   ],
 } as const;
+
+/* ------------------------------------------------------------------ */
+/* Navigation                                                          */
+/* ------------------------------------------------------------------ */
 
 export const primaryNav: { href: string; label: string }[] = [
   { href: "/services", label: "Services" },
