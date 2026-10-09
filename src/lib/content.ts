@@ -49,7 +49,7 @@ export const company = {
   positioning:
     "JezeroX builds production-ready AI automation and internal software that connects your tools, removes repetitive work, and helps your team move faster — without replacing the systems you already use.",
   location: "Remote-first · Worldwide",
-  email: "inbox@contact.jezerox.com",
+  email: "info@jezerox.com",
   calendly:
     process.env.NEXT_PUBLIC_CALENDLY_URL ??
     process.env.CALENDLY_BOOKING_URL ??
