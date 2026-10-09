@@ -34,7 +34,7 @@ async function sendContactEmail(data: {
 }): Promise<{ success: boolean; error?: string }> {
   try {
     const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
-    const toEmail = process.env.CONTACT_EMAIL || "contact@jezerox.com";
+    const toEmail = process.env.CONTACT_EMAIL || "info@jezerox.com";
 
     await resend.emails.send({
       from: `JezeroX Contact Form <${fromEmail}>`,
